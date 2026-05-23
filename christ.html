@@ -2,79 +2,217 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scientific Evidence - Truth Archive</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Christ — Deity of Jesus | Truth Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #0a0a0a;
-  color: white;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  border-bottom: 1px solid #1f1f1f;
-}
+  body {
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+  }
 
-.nav a {
-  color: #00ff88;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 32px;
+    border-bottom: 1px solid #1e2a1f;
+    background: #0a0c0a;
+  }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
+  .nav a {
+    color: #8effb2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+  }
 
-h1 {
-  color: #00ff88;
-  margin-bottom: 20px;
-}
+  .nav a:hover {
+    color: #c0ffd6;
+    text-shadow: 0 0 4px #2eff7a40;
+  }
 
-.content-box {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  padding: 25px;
-  border-radius: 12px;
-  line-height: 1.7;
-  color: #ccc;
-}
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-.sidebar {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .nav-links a {
+    border: 1px solid #2a4b2f;
+    background: #0f120f;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 
-.sidebar a {
-  border: 1px solid #00ff88;
-  color: #00ff88;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 13px;
-}
+  .nav-links a:hover {
+    background: #1e3a22;
+    border-color: #8effb2;
+  }
 
-.sidebar a:hover {
-  background: #00ff88;
-  color: black;
-}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d0ffd0, #7effa3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .sub {
+    color: #9aa899;
+    border-left: 3px solid #5eff8e;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .evidence-card {
+    background: #0c0e0c;
+    border: 1px solid #202520;
+    border-radius: 28px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: #101310;
+    padding: 20px 28px;
+    border-bottom: 1px solid #2a302a;
+  }
+
+  .card-header h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #b5ffcc;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: #1f3a25;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 60px;
+    color: #bbffcc;
+  }
+
+  .card-body {
+    padding: 28px;
+  }
+
+  .card-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .scripture-block {
+    background: #0a100a;
+    border-radius: 20px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-left: 4px solid #e2b84d;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: #f0e6c5;
+  }
+
+  .stat-block {
+    background: #080b08;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #5eff8e;
+  }
+
+  .quote {
+    font-style: italic;
+    background: #111a12;
+    padding: 20px;
+    border-radius: 24px;
+    margin: 20px 0;
+    border: 1px solid #2a452e;
+    color: #d0ecd6;
+  }
+
+  .quote-author {
+    margin-top: 12px;
+    color: #8effb2;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  ul, ol {
+    margin: 18px 0 18px 24px;
+  }
+
+  li {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  hr {
+    border-color: #2a302a;
+    margin: 24px 0;
+  }
+
+  .verse-ref {
+    color: #e2b84d;
+    font-family: monospace;
+  }
+
+  footer {
+    text-align: center;
+    border-top: 1px solid #1e2a1f;
+    padding-top: 32px;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: #6f7e6f;
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 28px 16px;
+    }
+    .card-header h2 {
+      font-size: 1.3rem;
+    }
+  }
 </style>
 </head>
-
 <body>
 
 <div class="nav">
-  <a href="index.html">← Return to Archive</a>
-  <div class="sidebar">
+  <a href="index.html" style="font-weight:500;">← Return to Archive</a>
+  <div class="nav-links">
     <a href="scientific.html">Scientific</a>
     <a href="healing.html">Healing</a>
     <a href="prophecy.html">Prophecy</a>
@@ -84,25 +222,203 @@ h1 {
 </div>
 
 <div class="container">
+  <h1>Christ — The Deity of Jesus</h1>
+  <div class="sub">What the New Testament actually says. Not metaphor. Not parable. Direct claims. And why Jewish men who would die before worshiping anyone but God called Jesus God.</div>
 
-  <h1>Scientific Evidence</h1>
+  <!-- Direct statements calling Jesus God -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>✝️ They Called Him God <span class="badge">Direct statements · No ambiguity</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “Thomas answered and said to Him, 'My Lord and my God!'” — John 20:28
+      </div>
+      <p>Thomas fell at Jesus' feet after the resurrection and called Him "my God." Jesus accepted it. No correction. No "don't worship me." A faithful Jew would never let that pass unless it was true. He didn't flinch.</p>
 
-  <div class="content-box">
-    This is your blank canvas for structured content.
+      <div class="scripture-block">
+        “But unto the Son He saith, 'Thy throne, O God, is for ever and ever.'” — Hebrews 1:8
+      </div>
+      <p>The Father Himself addresses the Son and calls Him God. Not a parable. Not a metaphor. The Father says it. That's about as clear as it gets.</p>
 
-    <br><br>
+      <div class="scripture-block">
+        “In the beginning was the Word, and the Word was with God, and the Word was God... And the Word was made flesh.” — John 1:1,14
+      </div>
+      <p>John opens his Gospel with this. He had walked with Jesus for three years. He ate with Him. He saw Him die. He saw Him risen. He knew exactly what he was saying. The Word was God. Then the Word became a man.</p>
 
-    You can now add:
-    <ul>
-      <li>Research papers</li>
-      <li>Arguments</li>
-      <li>Charts or visuals</li>
-      <li>Quotes and citations</li>
-    </ul>
+      <div class="scripture-block">
+        “This is the true God, and eternal life.” — 1 John 5:20
+      </div>
+      <p>At the end of his first letter, John writes this. The entire sentence points to Jesus Christ. No ambiguity. No wiggle room.</p>
 
-    Keep everything modular and structured for readability.
+      <div class="scripture-block">
+        “Christ came, who is over all, God blessed for ever.” — Romans 9:5
+      </div>
+      <p>Paul, writing to his fellow Jews in Rome, describes Christ as "God blessed for ever." He wasn't writing poetry. He was making a theological statement about who Jesus is. A monotheistic Jew doesn't write that unless he means it.</p>
+
+      <div class="scripture-block">
+        “Looking for that blessed hope, and the glorious appearing of the great God and our Saviour Jesus Christ.” — Titus 2:13
+      </div>
+      <p>The Greek grammar here makes it impossible to read this as two separate beings. One person is in view. "The great God and our Saviour" — same person. Paul says Jesus is the great God.</p>
+
+      <div class="scripture-block">
+        “Through the righteousness of God and our Saviour Jesus Christ.” — 2 Peter 1:1
+      </div>
+      <p>Peter opens his second letter the same way. Peter — the man who denied Jesus three times, the man who walked with Him daily, the man who was crucified upside down for his faith — calls Jesus God.</p>
+
+      <div class="scripture-block">
+        “Thou shalt call His name Emmanuel, which being interpreted is, God with us.” — Matthew 1:23
+      </div>
+      <p>Before Jesus was even born, the angel told Joseph the child would be called Emmanuel — "God with us." His name was a claim to deity from the very beginning. They named Him God with us.</p>
+    </div>
   </div>
 
+  <!-- Jesus claimed the name of God -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🔥 Jesus Claimed the Name of God <span class="badge">I AM · The divine name</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “And God said unto Moses, 'I AM THAT I AM.'” — Exodus 3:14
+      </div>
+      <p>At the burning bush, Moses asked God His name. God answered, "I AM THAT I AM." This is the sacred name, YHWH. It was so holy that Jews wouldn't even speak it aloud. They substituted "Adonai" (Lord) because the name was too sacred.</p>
+
+      <div class="scripture-block">
+        “Jesus said unto them, 'Verily, verily, I say unto you, Before Abraham was, I AM.'” — John 8:58-59
+      </div>
+      <p>Centuries later, Jesus stands in the temple arguing with religious leaders. They ask if He thinks He's greater than Abraham. Jesus answers, "Before Abraham was, I AM." He didn't say "I was." He used the present tense of the divine name. The crowd immediately grabbed stones to kill Him for blasphemy. Nobody misunderstood what He was claiming.</p>
+      <div class="quote">
+        They didn't pick up stones because He said He was old. They picked up stones because He said He was God.
+      </div>
+    </div>
+  </div>
+
+  <!-- Jesus did things only God can do -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>⚡ Jesus Did Things Only God Can Do <span class="badge">Forgive sins · Judge nations · Raise Himself</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “Jesus said unto the sick of the palsy, 'Son, thy sins be forgiven thee.'” — Mark 2:5-7
+      </div>
+      <p>A paralyzed man was lowered through a roof. Jesus looked at him and said, "Your sins are forgiven." The religious leaders whispered, "Who can forgive sins but God alone?" They were right. That was the point. Jesus was making a claim. Then He healed the man to prove He had the authority.</p>
+
+      <div class="scripture-block">
+        “When the Son of Man shall come in His glory... before Him shall be gathered all nations.” — Matthew 25:31-32
+      </div>
+      <p>The Old Testament says God alone will gather the nations and judge them. Joel 3:2 says the Lord will sit in judgment. Jesus says the Son of Man will sit on a throne, gather all nations, and separate them like sheep from goats. Same scene. Same role. Same person.</p>
+
+      <div class="scripture-block">
+        “Destroy this temple, and in three days I will raise it up... I have power to lay my life down, and I have power to take it again.” — John 2:19, John 10:18
+      </div>
+      <p>Jesus said He would raise Himself from the dead. Nobody talks like this unless they believe they hold authority over life and death. Dead people don't raise themselves. He claimed the power to do it.</p>
+
+      <div class="scripture-block">
+        “I am the good shepherd.” — John 10:11,14
+      </div>
+      <p>God promised in Ezekiel that He Himself would be the shepherd of His people. Psalm 23 says the LORD is the shepherd. Then Jesus announces, "I am the good shepherd." He doesn't say He's a helper or an assistant. He takes the title God reserved for Himself.</p>
+    </div>
+  </div>
+
+  <!-- Old Testament prophecies said the Messiah would be God -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📜 Old Testament Prophecies — The Messiah Would Be God <span class="badge">Isaiah · Micah · Zechariah</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “Unto us a child is born... and His name shall be called Wonderful, Counsellor, Mighty God, Everlasting Father.” — Isaiah 9:6
+      </div>
+      <p>Isaiah says a child will be born and His name will be called "Mighty God, Everlasting Father." The Messiah was never meant to be just a man. The prophecy explicitly calls Him God.</p>
+
+      <div class="scripture-block">
+        “Whose goings forth have been from of old, from everlasting.” — Micah 5:2
+      </div>
+      <p>Micah says the coming ruler's "goings forth have been from of old, from everlasting." The Messiah existed before time. That's not language you use for a created being. That's eternal existence.</p>
+
+      <div class="scripture-block">
+        “They shall look upon Me whom they have pierced.” — Zechariah 12:10
+      </div>
+      <p>Zechariah records God Himself speaking: "They shall look upon Me whom they have pierced." YHWH says they will pierce Him. When Jesus was crucified, John writes that this verse was fulfilled. They pierced Jesus. They pierced God. (John 19:37)</p>
+
+      <div class="scripture-block">
+        “He was wounded for our transgressions... He bare the sin of many.” — Isaiah 53:5,12
+      </div>
+      <p>Isaiah 53 describes a Servant who bears sin, is pierced, buried with the rich, and intercedes for sinners. Only God can forgive sins, and this Servant does exactly that. Jesus fulfills every detail. The early church didn't invent this. It's right there in the Hebrew Scriptures.</p>
+    </div>
+  </div>
+
+  <!-- Firstborn means rank, not origin -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📖 "Firstborn" — About Rank, Not Origin <span class="badge">Colossians 1:15 explained</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “Who is the image of the invisible God, the firstborn of every creature.” — Colossians 1:15
+      </div>
+      <p>Critics point to this verse and say it means Jesus was created. The word "firstborn" doesn't work that way in Scripture. Let me show you.</p>
+
+      <div class="scripture-block">
+        “Also I will make him my firstborn, higher than the kings of the earth.” — Psalm 89:27
+      </div>
+      <p>David was the youngest son of Jesse. He had older brothers. Yet God calls him "firstborn." Everyone reading knows it means highest rank, not birth order.</p>
+
+      <div class="scripture-block">
+        “I have caused Ephraim to come forth as my firstborn.” — Jeremiah 31:9
+      </div>
+      <p>Ephraim was the younger brother. Manasseh was born first. Yet God calls Ephraim "firstborn." Same pattern. Rank, not chronology.</p>
+
+      <div class="scripture-block">
+        “Israel is my son, my firstborn.” — Exodus 4:22
+      </div>
+      <p>Israel was not the first nation. Egypt, Babylon, and others existed before. But God calls Israel His firstborn. The word means chosen, exalted, preeminent. Always has.</p>
+      <p>Paul knew this. When he called Jesus the firstborn of creation, he meant Jesus outranks it. He is preeminent over everything. The very next verse says Jesus created everything. You can't create everything and be part of it.</p>
+      <div class="scripture-block">
+        “For by Him were all things created, that are in heaven, and that are in earth.” — Colossians 1:16
+      </div>
+    </div>
+  </div>
+
+  <!-- The resurrection claim -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🕊️ One Last Thing — He Raised Himself <span class="badge">The ultimate claim</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="scripture-block">
+        “Destroy this temple, and in three days I will raise it up.” — John 2:19
+      </div>
+      <div class="scripture-block">
+        “If thou shalt confess with thy mouth the Lord Jesus, and shalt believe in thine heart that God raised Him from the dead.” — Romans 10:9
+      </div>
+      <p>Jesus said He would raise Himself from the dead. Paul says the Father raised Him. Both are true. Same event. Same power. Same God. The Trinity isn't a contradiction. It's the only way to make sense of what the text actually says.</p>
+    </div>
+  </div>
+
+  <!-- Bottom line -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🎯 Bottom Line</h2>
+    </div>
+    <div class="card-body">
+      <p>Jewish men who would die before worshiping anyone but God called Jesus God. They wrote it down in scripture after scripture. Not once. Not twice. Over and over again.</p>
+      <p>Jesus claimed the divine name. He forgave sins. He said He would judge the nations. He called Himself the Good Shepherd — a title God reserved for Himself. He said He would raise Himself from the dead.</p>
+      <p>He wasn't misunderstood. He wasn't a good teacher. Good teachers don't claim to be God. He said who He was, and they killed Him for it. Then He rose.</p>
+      <div class="quote">
+        Either Jesus is who He said He is, or He was a liar or a lunatic. Those are the only options. The evidence says He told the truth.
+      </div>
+      <p>So there it is. The Christ archive stands. The scriptures are on the table.</p>
+      <p>The question isn't <em>did Jesus claim to be God?</em> The question is <em>what are you going to do with the fact that He did?</em></p>
+    </div>
+  </div>
+
+  <footer>
+    Truth Archive — Christ · The deity of Jesus from the scriptures. Direct claims, prophetic fulfillment, and the testimony of those who walked with Him.<br>
+    Sources: The Gospel of John, Gospel of Matthew, Gospel of Mark, Romans, Titus, Hebrews, 1 John, 2 Peter, Isaiah, Micah, Zechariah, Psalms, Exodus, Colossians.
+  </footer>
 </div>
 
 </body>
