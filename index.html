@@ -4,75 +4,47 @@
 <meta charset="UTF-8">
 <title>Truth Archive</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 <style>
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: Inter, sans-serif;
   background: #0a0a0a;
   color: white;
-  position: relative;
+  overflow-x: hidden;
 }
 
-/* Background verse rotator - subtle, in the distance */
-.verse-background {
+/* ===== FLOATING VERSE CANVAS ===== */
+.verse-canvas {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   pointer-events: none;
   z-index: 0;
   overflow: hidden;
 }
 
-.verse-text {
+.floating-verse {
   position: absolute;
-  bottom: 8%;
-  right: 3%;
-  max-width: 380px;
-  text-align: right;
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: rgba(100, 140, 100, 0.18);
+  max-width: 280px;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  color: rgba(120, 180, 120, 0.28);
   font-style: italic;
   font-weight: 300;
-  letter-spacing: 0.3px;
-  transition: opacity 1.8s ease-in-out;
-  opacity: 0;
-  font-family: 'Inter', sans-serif;
-  pointer-events: none;
   white-space: pre-line;
-}
-
-.verse-text.visible {
-  opacity: 0.22;
-}
-
-/* Second verse spot - top left for balance */
-.verse-text-top {
-  position: absolute;
-  top: 12%;
-  left: 3%;
-  max-width: 340px;
-  text-align: left;
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(100, 140, 100, 0.16);
-  font-style: italic;
-  font-weight: 300;
-  transition: opacity 2s ease-in-out;
   opacity: 0;
-  pointer-events: none;
-  font-family: 'Inter', sans-serif;
+  text-shadow: 0 0 10px rgba(0, 40, 0, 0.25);
+  transition: opacity 2.5s ease;
+  will-change: transform, opacity;
 }
 
-.verse-text-top.visible {
-  opacity: 0.2;
-}
-
-/* Main content sits above background */
+/* ===== MAIN UI ===== */
 .hero, .section, footer {
   position: relative;
   z-index: 2;
@@ -81,28 +53,25 @@ body {
 .hero {
   text-align: center;
   padding: 120px 20px 60px;
+  background: radial-gradient(ellipse at center, rgba(10,10,10,0.6), rgba(10,10,10,0.85));
 }
 
 h1 {
   font-size: 56px;
-  margin: 0;
   color: #00ff88;
-  letter-spacing: 2px;
 }
 
 .subtitle {
-  color: #aaa;
-  font-size: 18px;
+  color: #ccc;
   margin-top: 15px;
   max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 .section {
   max-width: 1100px;
   margin: auto;
-  padding: 40px 20px 70px;
+  padding: 40px 20px;
 }
 
 h2 {
@@ -117,87 +86,58 @@ h2 {
 }
 
 .card {
-  background: #111;
-  border: 1px solid #1f1f1f;
+  background: rgba(17,17,17,0.85);
+  border: 1px solid #2a2f2a;
   padding: 24px;
   border-radius: 18px;
   cursor: pointer;
-  transition: 0.25s ease;
-  backdrop-filter: blur(0px);
+  transition: 0.25s;
 }
 
 .card:hover {
   border-color: #00ff88;
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.08);
 }
 
 .card h3 {
   color: #00ff88;
-  margin-bottom: 10px;
 }
 
 .card p {
-  color: #bbb;
+  color: #ccc;
   font-size: 14px;
-  line-height: 1.5;
 }
 
 footer {
   text-align: center;
-  padding: 40px 20px;
-  color: #555;
-  font-size: 13px;
-  border-top: 1px solid #151515;
-}
-
-/* POWr counter styling */
-.powr-visitor-counter {
-  margin-top: 20px !important;
+  padding: 40px;
+  color: #777;
+  border-top: 1px solid #1a2a1a;
 }
 </style>
 </head>
+
 <body>
 
-<!-- Subtle background verses that rotate smoothly -->
-<div class="verse-background">
-  <div class="verse-text" id="verseBottom"></div>
-  <div class="verse-text-top" id="verseTop"></div>
-</div>
+<!-- FLOATING VERSES -->
+<div class="verse-canvas" id="verseCanvas"></div>
 
 <div class="hero">
   <h1>TRUTH ARCHIVE</h1>
   <p class="subtitle">
-    A structured archive of scientific reasoning, historical claims, theology, and philosophical inquiry.
+    A structured archive of truth, theology, philosophy, and inquiry.
   </p>
-
-  <!-- POWr Visitor Counter -->
-  <div class="powr-visitor-counter" id="9cf3e2c0_1779540342"></div>
 </div>
 
 <div class="section">
   <h2>Enter a Category</h2>
+
   <div class="grid">
-    <div class="card" onclick="location.href='scientific.html'">
-      <h3>Scientific Evidence</h3>
-      <p>Cosmology, physics, fine-tuning arguments, and natural law exploration.</p>
-    </div>
-    <div class="card" onclick="location.href='healing.html'">
-      <h3>Healing & Prayer</h3>
-      <p>Documented testimonies and reported experiences involving prayer-based healing claims.</p>
-    </div>
-    <div class="card" onclick="location.href='prophecy.html'">
-      <h3>Prophetic Interpretations</h3>
-      <p>Analysis of claimed fulfilled prophecies and their interpretations in modern events.</p>
-    </div>
-    <div class="card" onclick="location.href='christ.html'">
-      <h3>Deity of Christ</h3>
-      <p>Historical, textual, and theological arguments regarding Jesus Christ.</p>
-    </div>
-    <div class="card" onclick="location.href='deep.html'">
-      <h3>Deep Waters</h3>
-      <p>Personal testimonies, supernatural encounters, UFOs, interdimensional beings, Nephilim giants, and the mass deception of the last days.</p>
-    </div>
+    <div class="card"><h3>Scientific Evidence</h3><p>Cosmology, physics, fine-tuning arguments.</p></div>
+    <div class="card"><h3>Healing & Prayer</h3><p>Testimonies and reported healing claims.</p></div>
+    <div class="card"><h3>Prophecy</h3><p>Analysis of claimed fulfilled prophecy.</p></div>
+    <div class="card"><h3>Deity of Christ</h3><p>Theological and historical arguments.</p></div>
+    <div class="card"><h3>Deep Waters</h3><p>Spiritual and unexplained phenomena.</p></div>
   </div>
 </div>
 
@@ -205,94 +145,69 @@ footer {
   Built to seek truth — not opinion.
 </footer>
 
-<script src="https://www.powr.io/powr.js?platform=html"></script>
-
 <script>
-  // Array of Bible verses with references
-  const verses = [
-    { text: "“Jesus said to him, ‘I am the way, the truth, and the life. No one comes to the Father except through Me.’”", ref: "— John 14:6" },
-    { text: "“Nor is there salvation in any other, for there is no other name under heaven given among men by which we must be saved.”", ref: "— Acts 4:12" },
-    { text: "“Not by works of righteousness which we have done, but according to His mercy He saved us…”", ref: "— Titus 3:5" },
-    { text: "“The one who comes to Me I will by no means cast out.”", ref: "— John 6:37" },
-    { text: "“God demonstrates His own love toward us, in that while we were still sinners, Christ died for us.”", ref: "— Romans 5:8" },
-    { text: "“If anyone is in Christ, he is a new creation; old things have passed away…”", ref: "— 2 Corinthians 5:17" },
-    { text: "“Though your sins are like scarlet, they shall be as white as snow…”", ref: "— Isaiah 1:18" },
-    { text: "“He is also able to save to the uttermost those who come to God through Him…”", ref: "— Hebrews 7:25" },
-    { text: "“For there is one God and one Mediator between God and men, the Man Christ Jesus…”", ref: "— 1 Timothy 2:5" }
-  ];
+const verses = [
+  { t: "I am the way, the truth, and the life.", r: "John 14:6" },
+  { t: "Nor is there salvation in any other.", r: "Acts 4:12" },
+  { t: "By grace you have been saved through faith.", r: "Ephesians 2:8" },
+  { t: "Come to Me, and I will give you rest.", r: "Matthew 11:28" },
+  { t: "God demonstrates His love toward us.", r: "Romans 5:8" },
+  { t: "If anyone is in Christ, he is a new creation.", r: "2 Corinthians 5:17" },
+  { t: "I will never cast out the one who comes to Me.", r: "John 6:37" },
+  { t: "He is able to save to the uttermost.", r: "Hebrews 7:25" },
+  { t: "Nothing can separate us from the love of God.", r: "Romans 8:38–39" }
+];
 
-  let currentIndex = 0;
-  const verseBottom = document.getElementById('verseBottom');
-  const verseTop = document.getElementById('verseTop');
+const canvas = document.getElementById("verseCanvas");
 
-  function updateVerses() {
-    // Get current verse and next verse for smooth transition
-    const currentVerse = verses[currentIndex];
-    const nextIndex = (currentIndex + 1) % verses.length;
-    const nextVerse = verses[nextIndex];
-    
-    // Format full text with reference on new line
-    const formattedCurrent = `${currentVerse.text}\n\n${currentVerse.ref}`;
-    const formattedNext = `${nextVerse.text}\n\n${nextVerse.ref}`;
-    
-    // Fade out both
-    verseBottom.classList.remove('visible');
-    verseTop.classList.remove('visible');
-    
-    setTimeout(() => {
-      // Swap content
-      verseBottom.innerText = formattedCurrent;
-      verseTop.innerText = formattedNext;
-      
-      // Fade in both with subtle delay
-      setTimeout(() => {
-        verseBottom.classList.add('visible');
-        verseTop.classList.add('visible');
-      }, 100);
-    }, 500);
-    
-    // Move to next verse for next cycle
-    currentIndex = nextIndex;
+function spawnVerse() {
+  const v = verses[Math.floor(Math.random() * verses.length)];
+
+  const el = document.createElement("div");
+  el.className = "floating-verse";
+  el.textContent = `${v.t}\n— ${v.r}`;
+
+  const x = Math.random() * window.innerWidth;
+  const y = Math.random() * window.innerHeight;
+
+  el.style.left = x + "px";
+  el.style.top = y + "px";
+
+  const driftX = (Math.random() - 0.5) * 80;
+  const driftY = (Math.random() - 0.5) * 80;
+  const duration = 12000 + Math.random() * 12000;
+
+  canvas.appendChild(el);
+
+  requestAnimationFrame(() => {
+    el.style.opacity = "0.45";
+  });
+
+  let start = performance.now();
+
+  function animate(t) {
+    const p = (t - start) / duration;
+
+    if (p > 1) {
+      el.style.opacity = "0";
+      setTimeout(() => el.remove(), 2000);
+      return;
+    }
+
+    el.style.transform = `translate(${driftX * p}px, ${driftY * p}px)`;
+    requestAnimationFrame(animate);
   }
-  
-  // Initialize with first two verses
-  function initVerses() {
-    const firstVerse = verses[0];
-    const secondVerse = verses[1];
-    verseBottom.innerText = `${firstVerse.text}\n\n${firstVerse.ref}`;
-    verseTop.innerText = `${secondVerse.text}\n\n${secondVerse.ref}`;
-    verseBottom.classList.add('visible');
-    verseTop.classList.add('visible');
-    currentIndex = 2;
-  }
-  
-  initVerses();
-  
-  // Rotate verses every 12 seconds - smooth, not intrusive
-  setInterval(() => {
-    const nextIndex = (currentIndex) % verses.length;
-    const newVerse = verses[nextIndex];
-    const otherIndex = (nextIndex + 1) % verses.length;
-    const otherVerse = verses[otherIndex];
-    
-    const formattedNew = `${newVerse.text}\n\n${newVerse.ref}`;
-    const formattedOther = `${otherVerse.text}\n\n${otherVerse.ref}`;
-    
-    verseBottom.classList.remove('visible');
-    verseTop.classList.remove('visible');
-    
-    setTimeout(() => {
-      verseBottom.innerText = formattedNew;
-      verseTop.innerText = formattedOther;
-      
-      setTimeout(() => {
-        verseBottom.classList.add('visible');
-        verseTop.classList.add('visible');
-      }, 100);
-    }, 500);
-    
-    currentIndex = (nextIndex + 1) % verses.length;
-  }, 14000);
+
+  requestAnimationFrame(animate);
+}
+
+// continuous flow
+setInterval(spawnVerse, 900);
+
+// initial burst
+for (let i = 0; i < 15; i++) {
+  setTimeout(spawnVerse, i * 250);
+}
 </script>
 
 </body>
