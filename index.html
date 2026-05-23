@@ -4,74 +4,41 @@
 <meta charset="UTF-8">
 <title>Truth Archive</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: Inter, sans-serif;
   background: #0a0a0a;
   color: white;
-  overflow-x: hidden;
-}
-
-/* ===== FLOATING VERSE CANVAS ===== */
-.verse-canvas {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.floating-verse {
-  position: absolute;
-  max-width: 280px;
-  font-size: 0.78rem;
-  line-height: 1.6;
-  color: rgba(120, 180, 120, 0.28);
-  font-style: italic;
-  font-weight: 300;
-  white-space: pre-line;
-  opacity: 0;
-  text-shadow: 0 0 10px rgba(0, 40, 0, 0.25);
-  transition: opacity 2.5s ease;
-  will-change: transform, opacity;
-}
-
-/* ===== MAIN UI ===== */
-.hero, .section, footer {
-  position: relative;
-  z-index: 2;
 }
 
 .hero {
   text-align: center;
-  padding: 120px 20px 60px;
-  background: radial-gradient(ellipse at center, rgba(10,10,10,0.6), rgba(10,10,10,0.85));
+  padding: 140px 20px 80px;
 }
 
 h1 {
   font-size: 56px;
+  margin: 0;
   color: #00ff88;
+  letter-spacing: 2px;
 }
 
 .subtitle {
-  color: #ccc;
+  color: #aaa;
+  font-size: 18px;
   margin-top: 15px;
   max-width: 650px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {
   max-width: 1100px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 60px 20px;
 }
 
 h2 {
@@ -82,133 +49,91 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 .card {
-  background: rgba(17,17,17,0.85);
-  border: 1px solid #2a2f2a;
-  padding: 24px;
-  border-radius: 18px;
+  background: #111;
+  border: 1px solid #1f1f1f;
+  padding: 22px;
+  border-radius: 14px;
   cursor: pointer;
   transition: 0.25s;
 }
 
 .card:hover {
   border-color: #00ff88;
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,136,0.08);
 }
 
 .card h3 {
   color: #00ff88;
+  margin-bottom: 10px;
 }
 
 .card p {
-  color: #ccc;
+  color: #bbb;
   font-size: 14px;
+  line-height: 1.5;
 }
 
 footer {
   text-align: center;
-  padding: 40px;
-  color: #777;
-  border-top: 1px solid #1a2a1a;
+  padding: 50px;
+  color: #555;
+  font-size: 13px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- FLOATING VERSES -->
-<div class="verse-canvas" id="verseCanvas"></div>
-
 <div class="hero">
   <h1>TRUTH ARCHIVE</h1>
   <p class="subtitle">
-    A structured archive of truth, theology, philosophy, and inquiry.
+    A structured archive of scientific reasoning, historical claims, theology, and philosophical inquiry.
   </p>
 </div>
 
 <div class="section">
+
   <h2>Enter a Category</h2>
 
   <div class="grid">
-    <div class="card"><h3>Scientific Evidence</h3><p>Cosmology, physics, fine-tuning arguments.</p></div>
-    <div class="card"><h3>Healing & Prayer</h3><p>Testimonies and reported healing claims.</p></div>
-    <div class="card"><h3>Prophecy</h3><p>Analysis of claimed fulfilled prophecy.</p></div>
-    <div class="card"><h3>Deity of Christ</h3><p>Theological and historical arguments.</p></div>
-    <div class="card"><h3>Deep Waters</h3><p>Spiritual and unexplained phenomena.</p></div>
+
+    <div class="card" onclick="location.href='scientific.html'">
+      <h3>Scientific Evidence</h3>
+      <p>Cosmology, physics, fine-tuning arguments, and natural law exploration.</p>
+    </div>
+
+    <div class="card" onclick="location.href='healing.html'">
+      <h3>Healing & Prayer</h3>
+      <p>Documented testimonies and reported experiences involving prayer-based healing claims.</p>
+    </div>
+
+    <div class="card" onclick="location.href='prophecy.html'">
+      <h3>Prophetic Interpretations</h3>
+      <p>Analysis of claimed fulfilled prophecies and their interpretations in modern events.</p>
+    </div>
+
+    <div class="card" onclick="location.href='christ.html'">
+      <h3>Deity of Christ</h3>
+      <p>Historical, textual, and theological arguments regarding Jesus Christ.</p>
+    </div>
+
+    <div class="card" onclick="location.href='deep.html'">
+      <h3>Deep Waters</h3>
+      <p>Personal testimonies, supernatural encounters, UFOs, interdimensional beings, Nephilim giants, and the mass deception of the last days.</p>
+    </div>
+
   </div>
+
 </div>
 
 <footer>
   Built to seek truth — not opinion.
 </footer>
-
-<script>
-const verses = [
-  { t: "I am the way, the truth, and the life.", r: "John 14:6" },
-  { t: "Nor is there salvation in any other.", r: "Acts 4:12" },
-  { t: "By grace you have been saved through faith.", r: "Ephesians 2:8" },
-  { t: "Come to Me, and I will give you rest.", r: "Matthew 11:28" },
-  { t: "God demonstrates His love toward us.", r: "Romans 5:8" },
-  { t: "If anyone is in Christ, he is a new creation.", r: "2 Corinthians 5:17" },
-  { t: "I will never cast out the one who comes to Me.", r: "John 6:37" },
-  { t: "He is able to save to the uttermost.", r: "Hebrews 7:25" },
-  { t: "Nothing can separate us from the love of God.", r: "Romans 8:38–39" }
-];
-
-const canvas = document.getElementById("verseCanvas");
-
-function spawnVerse() {
-  const v = verses[Math.floor(Math.random() * verses.length)];
-
-  const el = document.createElement("div");
-  el.className = "floating-verse";
-  el.textContent = `${v.t}\n— ${v.r}`;
-
-  const x = Math.random() * window.innerWidth;
-  const y = Math.random() * window.innerHeight;
-
-  el.style.left = x + "px";
-  el.style.top = y + "px";
-
-  const driftX = (Math.random() - 0.5) * 80;
-  const driftY = (Math.random() - 0.5) * 80;
-  const duration = 12000 + Math.random() * 12000;
-
-  canvas.appendChild(el);
-
-  requestAnimationFrame(() => {
-    el.style.opacity = "0.45";
-  });
-
-  let start = performance.now();
-
-  function animate(t) {
-    const p = (t - start) / duration;
-
-    if (p > 1) {
-      el.style.opacity = "0";
-      setTimeout(() => el.remove(), 2000);
-      return;
-    }
-
-    el.style.transform = `translate(${driftX * p}px, ${driftY * p}px)`;
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
-}
-
-// continuous flow
-setInterval(spawnVerse, 900);
-
-// initial burst
-for (let i = 0; i < 15; i++) {
-  setTimeout(spawnVerse, i * 250);
-}
-</script>
 
 </body>
 </html>
