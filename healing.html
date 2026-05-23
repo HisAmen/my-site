@@ -2,79 +2,237 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scientific Evidence - Truth Archive</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healing Evidence | Truth Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #0a0a0a;
-  color: white;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  border-bottom: 1px solid #1f1f1f;
-}
+  body {
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+  }
 
-.nav a {
-  color: #00ff88;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 32px;
+    border-bottom: 1px solid #1e2a1f;
+    background: #0a0c0a;
+  }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
+  .nav a {
+    color: #8effb2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+  }
 
-h1 {
-  color: #00ff88;
-  margin-bottom: 20px;
-}
+  .nav a:hover {
+    color: #c0ffd6;
+    text-shadow: 0 0 4px #2eff7a40;
+  }
 
-.content-box {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  padding: 25px;
-  border-radius: 12px;
-  line-height: 1.7;
-  color: #ccc;
-}
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-.sidebar {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .nav-links a {
+    border: 1px solid #2a4b2f;
+    background: #0f120f;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 
-.sidebar a {
-  border: 1px solid #00ff88;
-  color: #00ff88;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 13px;
-}
+  .nav-links a:hover {
+    background: #1e3a22;
+    border-color: #8effb2;
+  }
 
-.sidebar a:hover {
-  background: #00ff88;
-  color: black;
-}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d0ffd0, #7effa3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .sub {
+    color: #9aa899;
+    border-left: 3px solid #5eff8e;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .evidence-card {
+    background: #0c0e0c;
+    border: 1px solid #202520;
+    border-radius: 28px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: #101310;
+    padding: 20px 28px;
+    border-bottom: 1px solid #2a302a;
+  }
+
+  .card-header h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #b5ffcc;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: #1f3a25;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 60px;
+    color: #bbffcc;
+  }
+
+  .card-body {
+    padding: 28px;
+  }
+
+  .card-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .stat-block {
+    background: #080b08;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #5eff8e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+  }
+
+  .quote {
+    font-style: italic;
+    background: #111a12;
+    padding: 20px;
+    border-radius: 24px;
+    margin: 20px 0;
+    border: 1px solid #2a452e;
+    color: #d0ecd6;
+  }
+
+  .quote-author {
+    margin-top: 12px;
+    color: #8effb2;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  ul, ol {
+    margin: 18px 0 18px 24px;
+  }
+
+  li {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  .grid-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .stat-item {
+    background: #101a12;
+    border-radius: 24px;
+    padding: 16px 22px;
+    flex: 1;
+    min-width: 160px;
+    text-align: center;
+    border: 1px solid #2c4a30;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #b2ffc2;
+    font-family: monospace;
+  }
+
+  .case-link {
+    color: #8effb2;
+    text-decoration: none;
+    border-bottom: 1px dotted #5eff8e;
+  }
+
+  .case-link:hover {
+    color: #c0ffd6;
+  }
+
+  hr {
+    border-color: #2a302a;
+    margin: 24px 0;
+  }
+
+  footer {
+    text-align: center;
+    border-top: 1px solid #1e2a1f;
+    padding-top: 32px;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: #6f7e6f;
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 28px 16px;
+    }
+    .card-header h2 {
+      font-size: 1.3rem;
+    }
+  }
 </style>
 </head>
-
 <body>
 
 <div class="nav">
-  <a href="index.html">← Return to Archive</a>
-  <div class="sidebar">
+  <a href="index.html" style="font-weight:500;">← Return to Archive</a>
+  <div class="nav-links">
     <a href="scientific.html">Scientific</a>
     <a href="healing.html">Healing</a>
     <a href="prophecy.html">Prophecy</a>
@@ -84,25 +242,234 @@ h1 {
 </div>
 
 <div class="container">
+  <h1>Healing Evidence</h1>
+  <div class="sub">Documented medical miracles, peer-reviewed prayer studies, and the Lourdes Medical Bureau — what happens when medicine meets the supernatural.</div>
 
-  <h1>Scientific Evidence</h1>
-
-  <div class="content-box">
-    This is your blank canvas for structured content.
-
-    <br><br>
-
-    You can now add:
-    <ul>
-      <li>Research papers</li>
-      <li>Arguments</li>
-      <li>Charts or visuals</li>
-      <li>Quotes and citations</li>
-    </ul>
-
-    Keep everything modular and structured for readability.
+  <!-- John G. Lake - Tumor Dematerialized -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🧬 John G. Lake — Tumor Dematerialized While Woman Slept <span class="badge">Conservation of mass violation</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://documentedhealings.com/john-g-lake/" style="color:#8effb2;">DocumentedHealings.com</a> | <strong>Initial source:</strong> <em>Spiritual Hunger</em> and other sermons by John G. Lake.</p>
+      <p>Here is a strange one. A woman had a tumor. It was so big that doctors actually misdiagnosed it as a pregnancy because they could feel it moving. That's how large this thing was.</p>
+      <p>Someone prayed for her. After the prayer, the choking stopped. She felt comfortable for the first time in a long while. She went to sleep.</p>
+      <p>The next morning she woke up completely normal. Her corset fit. No discharge. No surgery. No medical explanation. The tumor was just gone.</p>
+      <div class="quote">
+        "The living Spirit of God absolutely dematerialized the tumor... while the woman slept."
+        <div class="quote-author">— John G. Lake</div>
+      </div>
+      <p>Think about that for a second. Matter doesn't just disappear. That's a violation of conservation of mass. Either this is a lie, or something outside the normal laws of physics intervened. There is no middle ground.</p>
+    </div>
   </div>
 
+  <!-- Lourdes Medical Bureau -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>⛲ Lourdes Medical Bureau — 72 Officially Recognized Miracles <span class="badge">Updated 2025 · 7,000+ claims · 72 accepted</span></h2>
+    </div>
+    <div class="card-body">
+      <p>The Bureau of Medical Observations was created in 1883 at the Sanctuary of Our Lady of Lourdes, France. Since 1858, they have recorded more than 7,000 claims of cures. Each claim undergoes rigorous medical investigation. Most get rejected. Only 72 have passed.</p>
+      <div class="grid-stats">
+        <div class="stat-item"><span class="stat-number">7,000+</span><br>claims examined</div>
+        <div class="stat-item"><span class="stat-number">72</span><br>officially recognized as miraculous</div>
+        <div class="stat-item"><span class="stat-number">82%</span><br>are women</div>
+      </div>
+      <p><strong>The most recent recognized miracle (2025):</strong> Antonia Raco. Before that, Sister Bernadette Moriau in 2008.</p>
+      <p><strong>Living confirmed miracle cases (interviewed by CBS News 60 Minutes in 2022):</strong></p>
+      <ul>
+        <li><strong>Vittorio Micheli:</strong> Recovered from osteosarcoma (bone cancer) in his hip in 1963. Still healthy at the time of the interview.</li>
+        <li><strong>Sister Luigina Traverso:</strong> Cured of near total paralysis in 1965.</li>
+        <li><strong>Delizia Cirolli:</strong> Had a cancerous tumor vanish from her right knee in 1976.</li>
+        <li><strong>Sister Bernadette Moriau:</strong> Cured of Cauda Equina syndrome (nerve and spine disorder causing paralysis) in 2008.</li>
+      </ul>
+      <div class="stat-block">
+        <strong>📋 The Seven Lambertini Criteria (what it takes to be recognized):</strong><br><br>
+        1. A diagnosis of a severe disease with a severe prognosis.<br>
+        2. The cure must be sudden.<br>
+        3. It must be instantaneous.<br>
+        4. It must be complete.<br>
+        5. It must be lasting and permanent.<br>
+        6. There must be no possible medical explanation.<br>
+        7. All other criteria must be met simultaneously.
+      </div>
+      <p><strong>Who decides?</strong> The Medical Bureau is overseen by Dr. Alessandro de Franciscis — a former pediatrician and Harvard-trained epidemiologist. Here is the process: all medical records before and after the healing are reviewed. The patient's original physicians are consulted. Independent medical experts are brought in. Finally, the International Medical Committee of Lourdes gives final approval.</p>
+      <p><strong>Statistical breakdown of the 72 cases:</strong> 82 percent are women. The average age at healing is 20 to 49 years (65 percent of cases). The age range goes from 2 years old to 78 years old. The diseases healed include tuberculosis (39 percent), neurological disorders including multiple sclerosis and paralysis (19 percent), osteomyelitis, tumors, heart disease, and joint infections.</p>
+      <p><strong>Now think about this.</strong> These are not spontaneous remissions. Spontaneous remissions happen when a sickness vanishes on its own. They are rare but they do occur. Lourdes requires something more. Instantaneous. Complete. Permanent. And the Bureau actively consults skeptical physicians. They have rejected over 6,900 claims. Only 72 passed.</p>
+      <p>Source: <a href="https://www.lourdes-france.com/en/day-pilgrims/the-miracles/" style="color:#8effb2;">Lourdes Official Miracles Page</a></p>
+    </div>
+  </div>
+
+  <!-- Parkinson Disease Healed -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🧠 Parkinson Disease Healed After Prayer <span class="badge">Peer-reviewed · Amsterdam UMC</span></h2>
+    </div>
+    <div class="card-body">
+      <p>A woman born in 1959 was diagnosed with Parkinson disease. By 2012, her condition was at an advanced stage, rapidly progressive, with major debilitating symptoms. She required high doses of oral medication just to function. She had given up hope.</p>
+      <p>Then someone prayed for her. Not her praying for herself. Someone else prayed on her behalf. That's called intercessory prayer.</p>
+      <p>After the prayer, she experienced an instantaneous, nearly complete healing. It was so dramatic that a medical assessment team at the Amsterdam University Medical Centre in the Netherlands reviewed her case. They described her recovery as "remarkable."</p>
+      <p>Following the healing, there was no recurrence of her former Parkinson symptoms. Any remaining symptoms continued to improve over time. She regained all of her abilities at work and in daily life. Her medication needs were drastically reduced or eliminated.</p>
+      <p>What makes this case so compelling is that the clinical course contradicted imaging studies and the common medical understanding of Parkinson disease. The patient, her family, and her doctors were all astonished. The patient reported that when she had given up hope, "life was given back to her."</p>
+      <div class="quote">
+        "Any attempt to investigate such healings requires input from multiple disciplines, including medical, psychological, theological, and philosophical perspectives."
+        <div class="quote-author">— Kruijthoff et al., Advances in Mind-Body Medicine, 2021</div>
+      </div>
+      <p><strong>Source:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/33620331/" style="color:#8effb2;">PubMed ID: 33620331</a></p>
+    </div>
+  </div>
+
+  <!-- Genetic Disorder Healing -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🧬 Genetic Disorder Healing — 11 Year Old Boy <span class="badge">2024 · Advances in Mind-Body Medicine</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Here is another one from the peer-reviewed literature. An 11 year old male patient who had been symptomatic since 5 months of age.</p>
+      <p><strong>His condition before prayer:</strong> He was completely dependent on TPN — a feeding tube directly into his bloodstream. He could not tolerate any oral food. Severe malabsorption. Muscular atrophy. Frontal lobe epilepsy with seizures. Multiple genetic tests over 11 years. No definitive diagnosis. The prognosis gave no hope of recovery.</p>
+      <p><strong>The intervention:</strong> A single session of proximal intercessory prayer (PIP).</p>
+      <p><strong>The outcome, documented in medical records:</strong> From that moment onward, he immediately tolerated oral feedings. TPN was discontinued. The feeding tube was no longer needed. All seizure medications were discontinued. Seizures stopped completely. He showed progressive improvement in hematological disorders, BMI, and muscular symptoms.</p>
+      <div class="quote">
+        "The present case report describes a novel association between PIP and the lasting resolution of multiple symptoms likely related to a genetic disorder."
+      </div>
+      <p>This is not a spontaneous remission case. The patient had suffered for 11 years with no recovery expected. The change occurred immediately after a single prayer session and was documented in medical records.</p>
+      <p><strong>Source:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/38837782/" style="color:#8effb2;">PubMed ID: 38837782</a></p>
+    </div>
+  </div>
+
+  <!-- Amsterdam UMC Hearing Study -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>👂 The Amsterdam Paradox — Hearing Healed, But Tests Say No <span class="badge">Horizontal epistemology</span></h2>
+    </div>
+    <div class="card-body">
+      <p>This one is really interesting. A medical assessment team at Amsterdam UMC evaluated reports of prayer healing. Here is what they found with three patients who reported instantaneous hearing improvement upon prayer.</p>
+      <p>They ran extensive audiological testing. Four different testing methods. Here is the paradox. No measurable objective changes were found. But in-depth interviews, family testimony, and validated questionnaires all confirmed the healings. The researchers could not find any equivalent of such mismatches in medical literature.</p>
+      <p>The patients reported that their healing involved "their entire being with profound positive effects" and a perception of a benevolent God acting upon them.</p>
+      <p><strong>The larger study (2022 — 27 cases):</strong> 27 prayer healing reports were evaluated. 11 of the 27 were evaluated as "medically remarkable." Doctors could not explain them through natural causes. None were labeled as "medically unexplained" — the researchers avoided that term entirely.</p>
+      <p><strong>Recurring characteristics across all healings:</strong> A temporal connection with prayer. Instantaneity and unexpectedness. Strong emotional and physical manifestations during the healing event. A sense of "being overwhelmed" and transformed. The positive effects persisted for 5 to 33 years with only 2 relapses.</p>
+      <div class="stat-block">
+        <strong>Their conclusion:</strong> All healings were interpreted by patients as acts of God. The findings "do not fit well in the traditional biomedical conceptual framework." They called for a "horizontal epistemology" — meaning medical science should leave room for different causations rather than forcing all healings into a naturalistic framework.
+      </div>
+      <p><strong>Source:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/34052122/" style="color:#8effb2;">PubMed ID: 34052122</a></p>
+    </div>
+  </div>
+
+  <!-- Systematic Review 2000 -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📊 Systematic Review — 23 Trials, 2,774 Patients <span class="badge">2000 · ACP Journals</span></h2>
+    </div>
+    <div class="card-body">
+      <p>A systematic review of 23 randomized controlled trials on distant intercessory prayer. That means a person prays for someone else who is far away. The person being prayed for doesn't even know it.</p>
+      <p><strong>The finding:</strong> 57 percent of the studies showed statistically significant treatment effects favoring distant healing. The effect was small but reproducible.</p>
+      <p><strong>The limitation acknowledged by authors:</strong> The studies varied in quality. But the consistency of positive findings across multiple independent research groups was notable.</p>
+      <p><strong>Source:</strong> <a href="https://www.acpjournals.org/doi/abs/10.7326/0003-4819-132-11-200006060-00009" style="color:#8effb2;">ACP Journals</a></p>
+    </div>
+  </div>
+
+  <!-- Dr. Jacalyn Duffin -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🩺 The Skeptical Hematologist Who Changed Her Mind <span class="badge">Dr. Jacalyn Duffin · Oxford University Press</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Dr. Jacalyn Duffin is a hematologist — a blood specialist — and a medical historian at Queen's University in Canada. She was initially skeptical of miracles.</p>
+      <p>Then she examined over 1,400 miracle claims from the Vatican's Secret Archives covering the 16th through 20th centuries.</p>
+      <p>95 percent of the claims were healings. The accounts included testimony from skeptical physicians who had treated the patients. The healings were documented in medical records before and after each event.</p>
+      <p>She reviewed bone marrow evidence from a healing case that she could not explain through any known medical mechanism. As a hematologist, she understood the data. She concluded that something beyond natural explanation had occurred.</p>
+      <div class="quote">
+        She did not become a believer in God. But she became convinced that something real was happening in these cases that could not be dismissed as fraud or error.
+      </div>
+      <p><strong>Source:</strong> <em>Medical Miracles: Doctors, Saints, and Healing in the Modern World</em> (Oxford University Press) — <a href="https://academic.oup.com/book/6133" style="color:#8effb2;">academic.oup.com/book/6133</a></p>
+    </div>
+  </div>
+
+  <!-- IVF Prayer Study -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>👶 IVF Prayer Study — 50% vs 26% Pregnancy Rate <span class="badge">Triple blind · South Korea</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Researchers conducted a triple blind study on prayer and fertility. Triple blind means that the patients, the doctors, and the people analyzing the results did not know which patients were being prayed for. This removes placebo effects and bias.</p>
+      <p>The study involved 219 women undergoing IVF treatment. One group was prayed for by distant intercessors who were given only the women's first names. The other group received no prayer.</p>
+      <p><strong>The results:</strong> The women who were prayed for had a 50% pregnancy rate. The women who were not prayed for had a 26% pregnancy rate. The standard success rate for a single IVF cycle is usually between 21% and 25%. That means the prayed-for group achieved roughly double the expected success rate.</p>
+      <p>Because the study was triple blind, the women did not know they were being prayed for. Nothing about their behavior or beliefs could have caused the difference. The only variable was the prayer itself.</p>
+      <div class="stat-block">
+        <strong>A quick rebuttal for skeptics.</strong> Some might say the women who got pregnant just happened to live healthier lives or had less stress. But the triple blind design rules that out. The women did not know they were in a prayer study, so they had no reason to change anything. The only difference between the two groups was that someone else was praying for one of them. If prayer does nothing, these results should not exist. But they do.
+      </div>
+      <p><strong>Note:</strong> The women themselves weren't praying. Someone else was praying for them in a blind case study.</p>
+      <p><strong>Source:</strong> <a href="https://www.acpjournals.org/doi/abs/10.7326/0003-4819-132-11-200006060-00009" style="color:#8effb2;">ACP Journals</a></p>
+    </div>
+  </div>
+
+  <!-- Blind Woman Receives Sight -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>👁️ Blind Woman Receives Sight After Prayer <span class="badge">Juvenile macular degeneration · 47+ years intact</span></h2>
+    </div>
+    <div class="card-body">
+      <p>A young woman was diagnosed with juvenile macular degeneration at age 18 in 1959. She lost her vision over three months and was legally blind for over 12 years. Medical records from 1960 showed her vision was less than 20/400 in both eyes — legal blindness. She attended a school for the blind, read Braille, and walked with a white cane. She had never seen her husband's face or her daughter's face.</p>
+      <p>In 1972, her husband prayed for her before they went to bed. He put his hand on her shoulder and prayed with great feeling. At the close of the prayer, she opened her eyes and saw her husband kneeling in front of her. This was her first clear visual perception after almost 13 years of blindness.</p>
+      <p>In 1974, her vision was 20/100 in each eye without correction. From 2001 to 2017, her corrected vision was recorded at 20/30 to 20/40. Her eyesight has remained intact for over 47 years with only common age-related problems.</p>
+      <p>Juvenile macular degeneration has no known cure and no reported cases of spontaneous recovery in medical literature. The timing of the event, coming right after prayer, fits the pattern of sudden and complete healing that the Lambertini criteria describe.</p>
+      <p><strong>Source:</strong> <a href="https://www.sciencedirect.com/science/article/pii/S1550830720300926" style="color:#8effb2;">ScienceDirect</a></p>
+    </div>
+  </div>
+
+  <!-- Dreams and Visions of Jesus -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🌙 Dreams and Visions of Jesus Among Muslim Converts <span class="badge">Fuller Theological Seminary · 16 year study</span></h2>
+    </div>
+    <div class="card-body">
+      <p>A 16 year research project conducted by Fuller Theological Seminary studied how Muslims come to faith in Christ. The researchers found that between 27% and 40% of converts from Islam reported experiencing a dream or vision of Jesus before they decided to convert.</p>
+      <p>These were not people who were already curious about Christianity. Many of them had never met a Christian or read a Bible. The dreams often happened spontaneously. In the dreams, Jesus would appear in bright light, identify himself, and tell the person to seek out someone who could explain more.</p>
+      <p>After waking, these individuals would search for Christians, and the Christians would confirm that the dream was true. This pattern has been documented across multiple countries including Iran, Afghanistan, Egypt, Indonesia, and Turkey.</p>
+      <p>The study was conducted by Dr. J. Dudley Woodberry, a professor of Islamic Studies at Fuller Theological Seminary's School of Intercultural Studies.</p>
+      <p><strong>The Cairo Case:</strong> A Muslim woman living in Cairo had a dream in which she was walking with Jesus. In the dream, Jesus told her that "his friend" would find her the next day and tell her more about him. The next day, she went to a local marketplace. There she encountered a person she had never met before. That person was exactly the same person from her dream. The person shared the Gospel message with her, and she converted to Christianity. What makes this case remarkable is the precognitive element. The woman received specific information in the dream about a person she had no natural way of knowing. That information was verified the next day.</p>
+      <p><strong>Source:</strong> <a href="https://www.christianitytoday.com/2007/10/why-muslims-follow-jesus/" style="color:#8effb2;">Christianity Today</a></p>
+    </div>
+  </div>
+
+  <!-- Contemplative Prayer Study -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🙏 Christian Contemplative Prayer Study <span class="badge">2024 · Biola University · Long-term effects</span></h2>
+    </div>
+    <div class="card-body">
+      <p>In 2024, Biola University published a study on the long term effects of contemplative prayer. The researchers interviewed 36 people who had practiced contemplative prayer regularly for anywhere from 2 to over 40 years.</p>
+      <p>The goal was to understand their lived experience. What did prayer actually do for them over the long haul? The researchers organized their findings into four main themes:</p>
+      <ul>
+        <li><strong>Holistic healing:</strong> Prayer affected not just physical health but emotions, relationships, and sense of purpose.</li>
+        <li><strong>Spiritual formation:</strong> Their character and habits changed over time. More patient. More compassionate. More self aware.</li>
+        <li><strong>Soul care:</strong> Prayer provided a way to process grief, fear, and anxiety. Deep rest and restoration.</li>
+        <li><strong>Faith:</strong> Their belief in God deepened and became more resilient through struggles and doubts.</li>
+      </ul>
+      <p>This study was presented at the Holy Spirit Symposium at Biola University in 2023 before being published in 2024.</p>
+      <p><strong>Source:</strong> <a href="https://journals.sagepub.com/doi/abs/10.1177/19397909241247177" style="color:#8effb2;">SAGE Journals</a></p>
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📌 Summary — What All of This Means</h2>
+    </div>
+    <div class="card-body">
+      <p>The IVF study showed a measurable medical effect from distant prayer. The genetic disorder case showed a sudden physical healing that canceled a feeding tube after 11 years. The Lourdes Bureau has rejected over 6,900 claims and still ended up with 72 that even skeptical physicians cannot explain. The Amsterdam studies found healings that worked — even when the tests couldn't measure them. A hematologist examined the evidence and changed her mind. Blind people see. Parkinson's patients walk. Tumors dematerialize while people sleep.</p>
+      <div class="quote">
+        None of this fits easily into a purely materialist explanation. Something happens after prayer that cannot always be explained by natural causes. The question is whether you're willing to look at the evidence.
+      </div>
+      <p>So there it is. The healing archive stands. The data is on the table.</p>
+      <p>The question isn't <em>can people be healed?</em> The question is <em>what are you going to do with the fact that they are?</em></p>
+    </div>
+  </div>
+
+  <footer>
+    Truth Archive — Healing Evidence · Documented miracles, peer-reviewed studies, and medical bureau records.<br>
+    Sources: Lourdes Medical Bureau, Amsterdam UMC, Advances in Mind-Body Medicine, ACP Journals, Oxford University Press, Fuller Theological Seminary, Biola University.
+  </footer>
 </div>
 
 </body>
