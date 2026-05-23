@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Site</title>
+</head>
+<body style="font-family: Arial; text-align:center; margin-top:80px;">
+  <h1>My Website is Live</h1>
+  <p>Built with Vercel + Cloudflare domain</p>
+</body>
+</html>
