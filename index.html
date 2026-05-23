@@ -12,6 +12,70 @@ body {
   font-family: Inter, sans-serif;
   background: #0a0a0a;
   color: white;
+  position: relative;
+}
+
+/* Background verse rotator - subtle, in the distance */
+.verse-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.verse-text {
+  position: absolute;
+  bottom: 8%;
+  right: 3%;
+  max-width: 380px;
+  text-align: right;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(100, 140, 100, 0.18);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  transition: opacity 1.8s ease-in-out;
+  opacity: 0;
+  font-family: 'Inter', sans-serif;
+  pointer-events: none;
+  white-space: pre-line;
+}
+
+.verse-text.visible {
+  opacity: 0.22;
+}
+
+/* Second verse spot - top left for balance */
+.verse-text-top {
+  position: absolute;
+  top: 12%;
+  left: 3%;
+  max-width: 340px;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(100, 140, 100, 0.16);
+  font-style: italic;
+  font-weight: 300;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  pointer-events: none;
+  font-family: 'Inter', sans-serif;
+}
+
+.verse-text-top.visible {
+  opacity: 0.2;
+}
+
+/* Main content sits above background */
+.hero, .section, footer {
+  position: relative;
+  z-index: 2;
 }
 
 .hero {
@@ -33,28 +97,6 @@ h1 {
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.visitor-counter {
-  margin-top: 28px;
-  display: inline-block;
-  padding: 6px 16px;
-  background: rgba(0, 255, 136, 0.06);
-  border: 1px solid rgba(0, 255, 136, 0.2);
-  border-radius: 40px;
-  font-size: 13px;
-  color: #8effb2;
-}
-
-.visitor-counter span {
-  color: #00ff88;
-  font-weight: 600;
-  margin: 0 2px;
-}
-
-/* POWr counter styling - matches the aesthetic */
-.powr-visitor-counter {
-  margin-top: 20px !important;
 }
 
 .section {
@@ -81,6 +123,7 @@ h2 {
   border-radius: 18px;
   cursor: pointer;
   transition: 0.25s ease;
+  backdrop-filter: blur(0px);
 }
 
 .card:hover {
@@ -107,10 +150,20 @@ footer {
   font-size: 13px;
   border-top: 1px solid #151515;
 }
+
+/* POWr counter styling */
+.powr-visitor-counter {
+  margin-top: 20px !important;
+}
 </style>
 </head>
-
 <body>
+
+<!-- Subtle background verses that rotate smoothly -->
+<div class="verse-background">
+  <div class="verse-text" id="verseBottom"></div>
+  <div class="verse-text-top" id="verseTop"></div>
+</div>
 
 <div class="hero">
   <h1>TRUTH ARCHIVE</h1>
@@ -118,11 +171,7 @@ footer {
     A structured archive of scientific reasoning, historical claims, theology, and philosophical inquiry.
   </p>
 
-  <div class="visitor-counter">
-    📖 visited <span id="visit-counter">...</span> times
-  </div>
-
-  <!-- POWr Visitor Counter - neatly placed below the existing counter -->
+  <!-- POWr Visitor Counter -->
   <div class="powr-visitor-counter" id="9cf3e2c0_1779540342"></div>
 </div>
 
@@ -157,15 +206,93 @@ footer {
 </footer>
 
 <script src="https://www.powr.io/powr.js?platform=html"></script>
+
 <script>
-  fetch('https://api.countapi.xyz/hit/trutharchive2026/homepageviews')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('visit-counter').innerText = data.value.toLocaleString();
-    })
-    .catch(() => {
-      document.getElementById('visit-counter').innerText = '?';
-    });
+  // Array of Bible verses with references
+  const verses = [
+    { text: "“Jesus said to him, ‘I am the way, the truth, and the life. No one comes to the Father except through Me.’”", ref: "— John 14:6" },
+    { text: "“Nor is there salvation in any other, for there is no other name under heaven given among men by which we must be saved.”", ref: "— Acts 4:12" },
+    { text: "“Not by works of righteousness which we have done, but according to His mercy He saved us…”", ref: "— Titus 3:5" },
+    { text: "“The one who comes to Me I will by no means cast out.”", ref: "— John 6:37" },
+    { text: "“God demonstrates His own love toward us, in that while we were still sinners, Christ died for us.”", ref: "— Romans 5:8" },
+    { text: "“If anyone is in Christ, he is a new creation; old things have passed away…”", ref: "— 2 Corinthians 5:17" },
+    { text: "“Though your sins are like scarlet, they shall be as white as snow…”", ref: "— Isaiah 1:18" },
+    { text: "“He is also able to save to the uttermost those who come to God through Him…”", ref: "— Hebrews 7:25" },
+    { text: "“For there is one God and one Mediator between God and men, the Man Christ Jesus…”", ref: "— 1 Timothy 2:5" }
+  ];
+
+  let currentIndex = 0;
+  const verseBottom = document.getElementById('verseBottom');
+  const verseTop = document.getElementById('verseTop');
+
+  function updateVerses() {
+    // Get current verse and next verse for smooth transition
+    const currentVerse = verses[currentIndex];
+    const nextIndex = (currentIndex + 1) % verses.length;
+    const nextVerse = verses[nextIndex];
+    
+    // Format full text with reference on new line
+    const formattedCurrent = `${currentVerse.text}\n\n${currentVerse.ref}`;
+    const formattedNext = `${nextVerse.text}\n\n${nextVerse.ref}`;
+    
+    // Fade out both
+    verseBottom.classList.remove('visible');
+    verseTop.classList.remove('visible');
+    
+    setTimeout(() => {
+      // Swap content
+      verseBottom.innerText = formattedCurrent;
+      verseTop.innerText = formattedNext;
+      
+      // Fade in both with subtle delay
+      setTimeout(() => {
+        verseBottom.classList.add('visible');
+        verseTop.classList.add('visible');
+      }, 100);
+    }, 500);
+    
+    // Move to next verse for next cycle
+    currentIndex = nextIndex;
+  }
+  
+  // Initialize with first two verses
+  function initVerses() {
+    const firstVerse = verses[0];
+    const secondVerse = verses[1];
+    verseBottom.innerText = `${firstVerse.text}\n\n${firstVerse.ref}`;
+    verseTop.innerText = `${secondVerse.text}\n\n${secondVerse.ref}`;
+    verseBottom.classList.add('visible');
+    verseTop.classList.add('visible');
+    currentIndex = 2;
+  }
+  
+  initVerses();
+  
+  // Rotate verses every 12 seconds - smooth, not intrusive
+  setInterval(() => {
+    const nextIndex = (currentIndex) % verses.length;
+    const newVerse = verses[nextIndex];
+    const otherIndex = (nextIndex + 1) % verses.length;
+    const otherVerse = verses[otherIndex];
+    
+    const formattedNew = `${newVerse.text}\n\n${newVerse.ref}`;
+    const formattedOther = `${otherVerse.text}\n\n${otherVerse.ref}`;
+    
+    verseBottom.classList.remove('visible');
+    verseTop.classList.remove('visible');
+    
+    setTimeout(() => {
+      verseBottom.innerText = formattedNew;
+      verseTop.innerText = formattedOther;
+      
+      setTimeout(() => {
+        verseBottom.classList.add('visible');
+        verseTop.classList.add('visible');
+      }, 100);
+    }, 500);
+    
+    currentIndex = (nextIndex + 1) % verses.length;
+  }, 14000);
 </script>
 
 </body>
