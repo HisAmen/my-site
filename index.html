@@ -14,68 +14,78 @@ body {
   color: white;
 }
 
-/* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 140px 20px 80px;
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 56px;
   margin: 0;
   color: #00ff88;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .subtitle {
   color: #aaa;
   font-size: 18px;
   margin-top: 15px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* BUTTON */
-.button {
-  margin-top: 30px;
-  display: inline-block;
-  padding: 12px 24px;
-  border: 1px solid #00ff88;
-  color: #00ff88;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: #00ff88;
-  color: black;
-}
-
-/* SECTIONS */
 .section {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
 }
 
+h2 {
+  color: #00ff88;
+  margin-bottom: 25px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* CARD */
 .card {
   background: #111;
   border: 1px solid #1f1f1f;
-  padding: 20px;
-  border-radius: 12px;
-  margin-top: 15px;
+  padding: 22px;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.card:hover {
+  border-color: #00ff88;
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,255,136,0.08);
 }
 
 .card h3 {
   color: #00ff88;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   color: #555;
-  font-size: 14px;
+  font-size: 13px;
 }
 </style>
 </head>
@@ -84,27 +94,42 @@ footer {
 
 <div class="hero">
   <h1>TRUTH ARCHIVE</h1>
-  <p class="subtitle">Exploring Biblical truth, evidence, and reason in a modern world.</p>
-  <a class="button" href="#start">Enter</a>
+  <p class="subtitle">
+    A structured archive of scientific reasoning, historical claims, theology, and philosophical inquiry.
+  </p>
 </div>
 
-<div class="section" id="start">
+<div class="section">
 
-  <h2 style="color:#00ff88;">Core Topics</h2>
+  <h2>Enter a Category</h2>
 
-  <div class="card">
-    <h3>Evidence for God</h3>
-    <p>Philosophy, science, and historical arguments supporting the existence of God.</p>
-  </div>
+  <div class="grid">
 
-  <div class="card">
-    <h3>Biblical Reliability</h3>
-    <p>Why the Bible stands as a historically and textually reliable document.</p>
-  </div>
+    <div class="card" onclick="location.href='scientific.html'">
+      <h3>Scientific Evidence</h3>
+      <p>Cosmology, physics, fine-tuning arguments, and natural law exploration.</p>
+    </div>
 
-  <div class="card">
-    <h3>Faith & Reason</h3>
-    <p>Understanding how logic and faith work together, not against each other.</p>
+    <div class="card" onclick="location.href='healing.html'">
+      <h3>Healing & Prayer</h3>
+      <p>Documented testimonies and reported experiences involving prayer-based healing claims.</p>
+    </div>
+
+    <div class="card" onclick="location.href='prophecy.html'">
+      <h3>Prophetic Interpretations</h3>
+      <p>Analysis of claimed fulfilled prophecies and their interpretations in modern events.</p>
+    </div>
+
+    <div class="card" onclick="location.href='christ.html'">
+      <h3>Deity of Christ</h3>
+      <p>Historical, textual, and theological arguments regarding Jesus Christ.</p>
+    </div>
+
+    <div class="card" onclick="location.href='deep.html'">
+      <h3>Deep Waters</h3>
+      <p>Advanced philosophical and theological exploration beyond introductory concepts.</p>
+    </div>
+
   </div>
 
 </div>
