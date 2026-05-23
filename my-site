@@ -1,10 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Site</title>
+<meta charset="UTF-8">
+<title>Truth Archive</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+
+h1 {
+  font-size: 52px;
+  margin: 0;
+  color: #00ff88;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+/* BUTTON */
+.button {
+  margin-top: 30px;
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background: #00ff88;
+  color: black;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.card {
+  background: #111;
+  border: 1px solid #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.card h3 {
+  color: #00ff88;
+  margin-bottom: 8px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #555;
+  font-size: 14px;
+}
+</style>
 </head>
-<body style="font-family: Arial; text-align:center; margin-top:80px;">
-  <h1>My Website is Live</h1>
-  <p>Built with Vercel + Cloudflare domain</p>
+
+<body>
+
+<div class="hero">
+  <h1>TRUTH ARCHIVE</h1>
+  <p class="subtitle">Exploring Biblical truth, evidence, and reason in a modern world.</p>
+  <a class="button" href="#start">Enter</a>
+</div>
+
+<div class="section" id="start">
+
+  <h2 style="color:#00ff88;">Core Topics</h2>
+
+  <div class="card">
+    <h3>Evidence for God</h3>
+    <p>Philosophy, science, and historical arguments supporting the existence of God.</p>
+  </div>
+
+  <div class="card">
+    <h3>Biblical Reliability</h3>
+    <p>Why the Bible stands as a historically and textually reliable document.</p>
+  </div>
+
+  <div class="card">
+    <h3>Faith & Reason</h3>
+    <p>Understanding how logic and faith work together, not against each other.</p>
+  </div>
+
+</div>
+
+<footer>
+  Built to seek truth — not opinion.
+</footer>
+
 </body>
 </html>
