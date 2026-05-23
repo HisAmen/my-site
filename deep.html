@@ -2,79 +2,205 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scientific Evidence - Truth Archive</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deep Waters | Truth Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #0a0a0a;
-  color: white;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  border-bottom: 1px solid #1f1f1f;
-}
+  body {
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+  }
 
-.nav a {
-  color: #00ff88;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 32px;
+    border-bottom: 1px solid #1e2a1f;
+    background: #0a0c0a;
+  }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
+  .nav a {
+    color: #8effb2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+  }
 
-h1 {
-  color: #00ff88;
-  margin-bottom: 20px;
-}
+  .nav a:hover {
+    color: #c0ffd6;
+    text-shadow: 0 0 4px #2eff7a40;
+  }
 
-.content-box {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  padding: 25px;
-  border-radius: 12px;
-  line-height: 1.7;
-  color: #ccc;
-}
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-.sidebar {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .nav-links a {
+    border: 1px solid #2a4b2f;
+    background: #0f120f;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 
-.sidebar a {
-  border: 1px solid #00ff88;
-  color: #00ff88;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 13px;
-}
+  .nav-links a:hover {
+    background: #1e3a22;
+    border-color: #8effb2;
+  }
 
-.sidebar a:hover {
-  background: #00ff88;
-  color: black;
-}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d0ffd0, #7effa3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .sub {
+    color: #9aa899;
+    border-left: 3px solid #5eff8e;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .evidence-card {
+    background: #0c0e0c;
+    border: 1px solid #202520;
+    border-radius: 28px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: #101310;
+    padding: 20px 28px;
+    border-bottom: 1px solid #2a302a;
+  }
+
+  .card-header h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #b5ffcc;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: #1f3a25;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 60px;
+    color: #bbffcc;
+  }
+
+  .card-body {
+    padding: 28px;
+  }
+
+  .card-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .stat-block {
+    background: #080b08;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #5eff8e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+  }
+
+  .deep-block {
+    background: #0a100a;
+    border-radius: 20px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-left: 4px solid #8b5cf6;
+  }
+
+  .quote {
+    font-style: italic;
+    background: #111a12;
+    padding: 20px;
+    border-radius: 24px;
+    margin: 20px 0;
+    border: 1px solid #2a452e;
+    color: #d0ecd6;
+  }
+
+  .quote-author {
+    margin-top: 12px;
+    color: #8effb2;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .warning-box {
+    background: #1a0f0a;
+    border: 1px solid #8b3a2a;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+
+  footer {
+    text-align: center;
+    border-top: 1px solid #1e2a1f;
+    padding-top: 32px;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: #6f7e6f;
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 28px 16px;
+    }
+    .card-header h2 {
+      font-size: 1.3rem;
+    }
+  }
 </style>
 </head>
-
 <body>
 
 <div class="nav">
-  <a href="index.html">← Return to Archive</a>
-  <div class="sidebar">
+  <a href="index.html" style="font-weight:500;">← Return to Archive</a>
+  <div class="nav-links">
     <a href="scientific.html">Scientific</a>
     <a href="healing.html">Healing</a>
     <a href="prophecy.html">Prophecy</a>
@@ -84,25 +210,160 @@ h1 {
 </div>
 
 <div class="container">
+  <h1>Deep Waters</h1>
+  <div class="sub">Bigfoot DNA · Interdimensional beings · The Kandahar giant · Nephilim architecture · Transhumanism · And what the Bible says about all of it.</div>
 
-  <h1>Scientific Evidence</h1>
-
-  <div class="content-box">
-    This is your blank canvas for structured content.
-
-    <br><br>
-
-    You can now add:
-    <ul>
-      <li>Research papers</li>
-      <li>Arguments</li>
-      <li>Charts or visuals</li>
-      <li>Quotes and citations</li>
-    </ul>
-
-    Keep everything modular and structured for readability.
+  <!-- David Paulides - Bigfoot DNA & Interdimensional Connection -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🦍 David Paulides — Bigfoot, DNA & The Interdimensional Connection <span class="badge">110 DNA samples · 5 PhDs · No known match</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=68NE9xo38_Q" style="color:#8effb2;">YouTube Link</a></p>
+      <p>David Paulides spent 20 years as a police officer before two tech founders — both with separate Bigfoot encounters in their youth — funded his investigation. He set up on the Hoopa Reservation in Northern California, about 35 miles south of the Patterson-Gimlin film site.</p>
+      <p>Native American sheriffs at the local substation opened doors for him immediately, connecting him with tribal elders that normally would have taken five to ten years to reach. Over two years, Paulides collected 110 DNA samples including hair, blood, saliva, and tissue. A team of five PhDs across five certified labs ran the analysis.</p>
+      <div class="stat-block">
+        <strong>🧬 The results came back the same across multiple independent samples:</strong><br><br>
+        Nuclear DNA on the male side has no known match in GenBank.<br><br>
+        On the female side, mitochondrial DNA traces back roughly 12,000 years to the Middle East.<br><br>
+        GenBank contacted the team asking if they had discovered an unknown tribe in the Amazon.
+      </div>
+      <p>Paulides also tested 58 samples from elongated Peruvian skulls. The mitochondrial DNA came back Middle Eastern. Carbon-14 dating placed them around 800 years old — centuries before Columbus. Multiple labs ran the same samples blind and got the same results. No contamination.</p>
+      <div class="quote">
+        "When people say cryptid, I say no. A cryptid implies it's an unknown animal. In my viewpoint, it's some kind of hybrid human."
+        <div class="quote-author">— David Paulides</div>
+      </div>
+      <p><strong>The interdimensional angle:</strong> A NASA theoretical physicist named John Brandenburg sat down with Paulides for a History Channel special and explained that nine physicists at NASA meet regularly to discuss portals — not whether they exist, but how to use them offensively in warfare. He reviewed Paulides' missing persons cases and said the only explanation for a man who vanished above the tree line on Mount Shasta with no crevices and no snow was that "he got taken up by a portal."</p>
+      <p>Colin Keller, the chief researcher at Skinwalker Ranch for 16 years under Robert Bigelow, described an incident where physicists watched an orb on a mountainside expand into a three-dimensional opening. A large dark figure crawled through it, dropped to the ground, and walked away before the portal closed.</p>
+      <p>A cattleman's journal from the late 1800s, later broadcast by Rod Serling, records a Native elder in Northern California explaining that once or twice a year "a moon flies in, lands on the grass, and this person just like him and others step out of the moon." Beings that looked more human piloted the craft, waved to those watching, and departed.</p>
+      <p>In 1924, three Native American tribes held a press conference covered by <em>The Oregonian</em> stating that Bigfoot were "a group of people" with their own language who traded with the tribes regularly. They told the sheriff, who wanted to form a posse to kill them, "Leave them alone. They'll leave you alone."</p>
+      <div class="warning-box">
+        <strong>⚠️ The danger is real.</strong> Scott Carpenter was Paulides' close friend and a key researcher for the documentary <em>American Sasquatch</em>. Five days after filming with Paulides in the Great Smoky Mountains, Carpenter died suddenly. L.A. Marzulli spoke with him by phone shortly beforehand. Carpenter was terrified. He said entities were banging on the outside walls of his house at night. He had lost what Marzulli called his spiritual protection. They prayed together. It was the last time Marzulli heard from him.
+      </div>
+      <p>Paulides visited Carpenter's home a few years earlier. Late one night, standing in the driveway, a rock the size of two softballs slammed into the aluminum carport next to them with a force neither man could have generated. It came from the woods behind the house, near a river corridor.</p>
+      <p>A woman in Canada reported watching a Sasquatch materialize behind a bush, watch her neighbor hang laundry across a field for several minutes, then slowly dematerialize. It never looked at her.</p>
+      <p>Paulides' work is compiled in his books <em>The Hoopa Project</em>, <em>Tribal Bigfoot</em>, and <em>American Sasquatch</em>, as well as his website the Can-Am Missing Project.</p>
+      <div class="quote">
+        "The supernatural world is real. It surrounds us. Sometimes it manifests to people like you and me."
+        <div class="quote-author">— L.A. Marzulli</div>
+      </div>
+    </div>
   </div>
 
+  <!-- L.A. Marzulli — UAPs as Interdimensional & The Kandahar Giant -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>👽 L.A. Marzulli — UAPs as Interdimensional · The Kandahar Giant <span class="badge">Fallen angels · The coming great deception</span></h2>
+    </div>
+    <div class="card-body">
+      <p>This topic is deep. It helps to understand the Book of Genesis and the Book of Enoch, which Jude — the brother of Jesus — actually quoted from. So let's talk about UFOs, UAPs, and alien craft.</p>
+      <p>A couple of years ago, a US F18 Hornet fighter jet spotted one of these objects off the coast of California. The jet could not keep up with it. The object flew at a speed that theoretically would have destroyed the F18 from G force alone. The US Government released the footage themselves. And this is just one of many incidents showing these things operating in our skies.</p>
+      <p>One common theme keeps appearing. These objects break the laws of physics. That suggests they are not physical in the normal sense. They are interdimensional beings. Spiritual or supernatural objects.</p>
+      <p>People in Peru have been reporting objects like this for decades. They say the craft land in water and come out of water. That pattern connects to something bigger.</p>
+      <div class="deep-block">
+        <strong>📖 The biblical framework:</strong> Genesis 3:15 describes a cosmic war between the human bloodline and the serpent's bloodline. Satan's strategy has always been to corrupt the human genome and prevent the Messiah from being born.<br><br>
+        Consider the book of Daniel. An angel could not reach Daniel because the spirit of Persia fought against him. The angel was delayed until Michael the archangel arrived to help (Daniel 10:12-13). Even in the Bible, some form of technology or dimensional travel is being used.
+      </div>
+      <p><strong>The Kandahar Giant:</strong> In Afghanistan, US troops near Kandahar reported a giant around 15 to 20 feet tall with red hair, six fingers, six toes, and a spear the size of a tree. A Chinook helicopter reportedly extracted the giant. Stories spread through nearby US bases.</p>
+      <p><strong>The Coming Great Deception (according to Marzulli):</strong> A false flag event, likely nuclear, will bring in the alien deception. Why? To explain away the rapture of the church. The rapture was foretold in the Old Testament, even in Genesis, when Enoch was caught up to heaven without dying. Enoch did not see death. That is the first example of the rapture.</p>
+      <p>The deception will unite the world under one government. Aliens will appear as saviors offering peace and technology. They will also explain the rapture by claiming the raptured people were evil or taken away for their own good.</p>
+      <div class="quote">
+        "Even him, whose coming is after the working of Satan with all power and signs and lying wonders... because they received not the love of the truth, that they might be saved. And for this cause God shall send them strong delusion, that they should believe a lie."
+        <div class="quote-author">— 2 Thessalonians 2:9-11</div>
+      </div>
+      <p>Here is the clincher. Witnesses from alien abduction experiences all report the same thing. When they invoke the name of Jesus Christ, the experience stops immediately. Aliens are just a fancy word for demons.</p>
+      <div class="stat-block">
+        <strong>➕ Addition (4/28/2026):</strong><br><br>
+        According to Joe Jordan and the CE4 Research Group, there are over 400 documented cases where calling on the name of Jesus permanently stops alien abductions. The entities flee because every knee will bow to Him (Philippians 2:8-11). There is no name with greater authority than that of Jesus Christ.<br><br>
+        Joe's website: <a href="https://stopalienabduction.com/" style="color:#8effb2;">stopalienabduction.com</a>
+      </div>
+      <p>And here is what British occultist Alister Crowley (1875-1947) said about demons: "Today we call them angels and demons. Tomorrow we'll call them something else." Tomorrow is today. Now we call them aliens.</p>
+    </div>
+  </div>
+
+  <!-- L.A. Marzulli — Giza Power Plant & Global Nephilim Architecture -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🏛️ Giza Power Plant & Global Nephilim Architecture <span class="badge">Sacsayhuamán · Pumapunku · Baalbek · Newark</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=EJtAi23KUtg" style="color:#8effb2;">YouTube Link</a></p>
+      <p><strong>Giza Pyramid Claims:</strong> The Egyptians did not build the Great Pyramid. The engineering required was beyond a 4,500 year old society. Christopher Dunn's <em>Giza Power Plant</em> theory notes the eight-sided concave structure suggests an energy function. In 2025, Italian scientists detected 648 meter deep cylindrical shafts with spiral staircases inside.</p>
+      <p><strong>Global Nephilim Architecture:</strong></p>
+      <ul>
+        <li><strong>Sacsayhuamán in Peru:</strong> Uses 300 ton stones cut with impossible precision.</li>
+        <li><strong>Pumapunku in Bolivia:</strong> Dead level H blocks with mechanical apertures. Copper tools could not have made these. The evidence suggests advanced mechanical tools or lasers.</li>
+        <li><strong>Baalbek in Lebanon:</strong> Holds the Stone of the Pregnant Woman with even larger stones beneath it.</li>
+        <li><strong>Newark Earthworks in Ohio:</strong> Complex geometry linked to Giza through spherical trigonometry.</li>
+      </ul>
+      <p>These structures appear on every continent. The same impossibly precise stonework. The same massive blocks that modern cranes would struggle to move. Someone — or something — built them. And it wasn't a bronze age civilization with copper chisels.</p>
+    </div>
+  </div>
+
+  <!-- Giant Bones Found Worldwide -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🦴 Giant Bones Found Worldwide <span class="badge">Lovelock Cave · Catalina Island · Sardinia · Kandahar</span></h2>
+    </div>
+    <div class="card-body">
+      <p>These finds contradict evolution and support the biblical record.</p>
+      <p><strong>North America:</strong> Lovelock Cave in Nevada yielded giant bones around 8 to 10 feet tall with red hair and double rows of teeth. Spirit Cave in Nevada produced mummies with elongated skulls. The Ohio and Mississippi Valley burial mounds contained skeletons 7 to 9 feet tall with oversized skulls. The west coast of Florida in the cenotes turned up bog mummies, also tall, also with red hair.</p>
+      <p><strong>Peru and South America:</strong> Near Cusco, skeletons claimed to be 10 to 12 feet tall were found with elongated skulls built for larger brains. The Amazon Basin holds oversized tools and weapons stuck in ancient ruins that regular people could not have used.</p>
+      <p><strong>Catalina Island (southwest of California):</strong> Ralph Glidden excavated a giant skeleton ranging from 7 to 9 feet before full measurement. The Smithsonian took the remains.</p>
+      <p><strong>Europe:</strong> Sardinia's Tombs of the Giants produced bones of people 8 to 10 feet tall, with some reports reaching 15 feet. Sicily yielded massive jaws and teeth from skeletons around 7 to 9 feet found near giant stone structures. France and Germany have produced similar finds of tall skeletons with double rows of teeth.</p>
+      <p>One elderly Italian man, interviewed at age 100 before his death, testified that as a child he dug on a vineyard and found massive human skeletons of two to three meters. Government officials in black suits took the bones. His interview remains on YouTube.</p>
+      <p><strong>Afghanistan and the Middle East:</strong> Soldiers near Kandahar reported a giant around 15 to 20 feet tall with red hair, six fingers, six toes, and a spear the size of a tree. Stories spread through nearby US bases. In Jordan and Israel — where the Bible mentions the Anakim and Rephaim — people have found skeletons 9 to 12 feet tall.</p>
+      <p><strong>Repeating oddities across all locations:</strong> Double rows of teeth. Six fingers and six toes. Red or auburn hair. Unusually large skulls shaped differently than normal human skulls.</p>
+    </div>
+  </div>
+
+  <!-- Timothy Alberino — Nephilim, Watchers, Transhumanism -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📖 Timothy Alberino — Nephilim, Watchers & Transhumanism <span class="badge">Genesis 6 · Book of Enoch · Days of Noah</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=e0v6Xbq2RB0" style="color:#8effb2;">YouTube Link</a></p>
+      <p><strong>Genesis 6 + Book of Enoch:</strong> Fallen angels called Watchers mated with human women and produced hybrid offspring known as the Nephilim. This act corrupted God's created order. Their goal was to replace humanity with a hybrid race — just as in the days of Noah when the human gene pool was nearly destroyed.</p>
+      <p>The pre-Flood world was not a simple or innocent society. It was an advanced civilization filled with moral decay, violence, and forbidden knowledge taught by the Watchers.</p>
+      <div class="deep-block">
+        <strong>🤖 Modern parallel: Transhumanism</strong><br><br>
+        Transhumanism is the movement to merge humans with AI, neural implants, genetic engineering, and cybernetics. It mirrors what the Watchers did. Both attempt to upgrade humanity beyond God's design, corrupt the human genome, and bring us back to the days of Noah — meaning the last days.<br><br>
+        <strong>The warning:</strong> If you lose your humanity and become posthuman, you lose the image of God and disqualify yourself from salvation. Jesus became a man to save humans, not hybrids or machines.<br><br>
+        Therefore: Transhumanism is the Watchers' sin all over again. It trades your humanity for technology.
+      </div>
+      <p><strong>According to the Book of Enoch, the fallen angels taught humans the following:</strong> charms and enchantments, cutting of roots, knowledge of plants, how to make swords, knives, shields, and breastplates, working with metals, bracelets and ornaments, use of antimony and beautifying the eyelids (cosmetics), all kinds of costly stones, colouring tinctures (dyes), resolving of enchantments, astrology, constellations, knowledge of the clouds, signs of the earth, signs of the sun, course of the moon, writing with ink and paper, bitter and sweet (secrets of wisdom), smitings of the womb (abortion), and weapons of death.</p>
+      <p><strong>Cattle mutilations:</strong> These same entities drain the blood from cows. Why cows? Cow blood is nearly identical to human blood. They use it for one purpose: creating hybrids. Their goal has never changed. They want to corrupt the gene pool, just as they did in the days of Noah. Demons need bodies to embody.</p>
+      <div class="warning-box">
+        <strong>⚠️ Consider the implants.</strong> La Marzulli's close friend, a surgeon, removed dozens of implants from UFO abductees — some were carrying these implants for 40 years. The technology inside those implants did not exist back then. Not in any human lab. This is not conspiracy. This is a surgeon's testimony backed by physical evidence.
+      </div>
+      <p>This is what you are dealing with. Same sin as the Watchers. Same goal as the days of Noah. Only now they call it transhumanism and aliens.</p>
+    </div>
+  </div>
+
+  <!-- The Bottom Line -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🎯 The Bottom Line</h2>
+    </div>
+    <div class="card-body">
+      <p>We have DNA evidence of something that is not fully human. Labs don't know what it is. GenBank has no match. The mitochondrial DNA traces to the Middle East 12,000 years ago.</p>
+      <p>We have NASA physicists talking about portals as a real phenomenon. Not science fiction. Actual classified discussions about using them for warfare.</p>
+      <p>We have giant skeletons on every continent. Double rows of teeth. Six fingers. Red hair. The same pattern everywhere. The Smithsonian took them. The public never saw them.</p>
+      <p>We have ancient structures that could not have been built with bronze age technology. 300 ton stones cut with laser precision. Spiral staircases inside the Giza pyramid detected with modern radar.</p>
+      <p>And we have a biblical framework that explains all of it. The Watchers. The Nephilim. The corruption of the human genome. The same pattern repeating in the last days through transhumanism and the alien deception.</p>
+      <div class="quote">
+        When you invoke the name of Jesus Christ, the abductions stop. The entities flee. Every knee will bow. Every tongue will confess. That includes them.
+      </div>
+      <p>So there it is. The deep archive stands. The evidence is on the table.</p>
+      <p>The question isn't <em>is any of this real?</em> The question is <em>what are you going to do now that you know?</em></p>
+    </div>
+  </div>
+
+  <footer>
+    Truth Archive — Deep Waters · Bigfoot DNA, interdimensional beings, Nephilim giants, transhumanism, and the coming deception.<br>
+    Sources: David Paulides (The Hoopa Project, Can-Am Missing Project), L.A. Marzulli, Timothy Alberino, Joe Jordan (CE4 Research Group), Book of Enoch, Genesis 6, 2 Thessalonians 2.
+  </footer>
 </div>
 
 </body>
