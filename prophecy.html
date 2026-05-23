@@ -2,79 +2,238 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Scientific Evidence - Truth Archive</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prophecy Evidence | Truth Archive</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body {
-  margin: 0;
-  font-family: Inter, sans-serif;
-  background: #0a0a0a;
-  color: white;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  border-bottom: 1px solid #1f1f1f;
-}
+  body {
+    background: #050505;
+    font-family: 'Inter', sans-serif;
+    color: #e5e5e5;
+    line-height: 1.5;
+  }
 
-.nav a {
-  color: #00ff88;
-  text-decoration: none;
-  font-weight: 500;
-}
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 32px;
+    border-bottom: 1px solid #1e2a1f;
+    background: #0a0c0a;
+  }
 
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
+  .nav a {
+    color: #8effb2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+  }
 
-h1 {
-  color: #00ff88;
-  margin-bottom: 20px;
-}
+  .nav a:hover {
+    color: #c0ffd6;
+    text-shadow: 0 0 4px #2eff7a40;
+  }
 
-.content-box {
-  background: #111;
-  border: 1px solid #1f1f1f;
-  padding: 25px;
-  border-radius: 12px;
-  line-height: 1.7;
-  color: #ccc;
-}
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
-.sidebar {
-  margin-top: 30px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  .nav-links a {
+    border: 1px solid #2a4b2f;
+    background: #0f120f;
+    padding: 6px 14px;
+    border-radius: 40px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
 
-.sidebar a {
-  border: 1px solid #00ff88;
-  color: #00ff88;
-  padding: 8px 14px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 13px;
-}
+  .nav-links a:hover {
+    background: #1e3a22;
+    border-color: #8effb2;
+  }
 
-.sidebar a:hover {
-  background: #00ff88;
-  color: black;
-}
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 24px 80px 24px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d0ffd0, #7effa3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+  }
+
+  .sub {
+    color: #9aa899;
+    border-left: 3px solid #5eff8e;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  .evidence-card {
+    background: #0c0e0c;
+    border: 1px solid #202520;
+    border-radius: 28px;
+    margin-bottom: 48px;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: #101310;
+    padding: 20px 28px;
+    border-bottom: 1px solid #2a302a;
+  }
+
+  .card-header h2 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #b5ffcc;
+    letter-spacing: -0.3px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    background: #1f3a25;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 60px;
+    color: #bbffcc;
+  }
+
+  .card-body {
+    padding: 28px;
+  }
+
+  .card-body p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .card-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .stat-block {
+    background: #080b08;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #5eff8e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+  }
+
+  .prophecy-block {
+    background: #0a100a;
+    border-radius: 20px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    border-left: 4px solid #e2b84d;
+  }
+
+  .quote {
+    font-style: italic;
+    background: #111a12;
+    padding: 20px;
+    border-radius: 24px;
+    margin: 20px 0;
+    border: 1px solid #2a452e;
+    color: #d0ecd6;
+  }
+
+  .quote-author {
+    margin-top: 12px;
+    color: #8effb2;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .timeline-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 20px 0;
+  }
+
+  .timeline-item {
+    background: #101a12;
+    border-radius: 20px;
+    padding: 16px;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #2c4a30;
+  }
+
+  .timeline-date {
+    color: #e2b84d;
+    font-weight: 700;
+    font-family: monospace;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0a0f0a;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #2a3a2a;
+  }
+
+  th {
+    background: #172218;
+  }
+
+  footer {
+    text-align: center;
+    border-top: 1px solid #1e2a1f;
+    padding-top: 32px;
+    margin-top: 24px;
+    font-size: 0.8rem;
+    color: #6f7e6f;
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 28px 16px;
+    }
+    .card-header h2 {
+      font-size: 1.3rem;
+    }
+  }
 </style>
 </head>
-
 <body>
 
 <div class="nav">
-  <a href="index.html">← Return to Archive</a>
-  <div class="sidebar">
+  <a href="index.html" style="font-weight:500;">← Return to Archive</a>
+  <div class="nav-links">
     <a href="scientific.html">Scientific</a>
     <a href="healing.html">Healing</a>
     <a href="prophecy.html">Prophecy</a>
@@ -84,25 +243,147 @@ h1 {
 </div>
 
 <div class="container">
+  <h1>Prophecy Evidence</h1>
+  <div class="sub">Specific predictions. Verified outcomes. Mathematical impossibility. And a timeline that keeps lining up.</div>
 
-  <h1>Scientific Evidence</h1>
-
-  <div class="content-box">
-    This is your blank canvas for structured content.
-
-    <br><br>
-
-    You can now add:
-    <ul>
-      <li>Research papers</li>
-      <li>Arguments</li>
-      <li>Charts or visuals</li>
-      <li>Quotes and citations</li>
-    </ul>
-
-    Keep everything modular and structured for readability.
+  <!-- Brandon's Prophecy on Trump Assassination Attempt -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🎯 Brandon's Prophecy — Trump Assassination Attempt <span class="badge">Predicted March 14 · Happened July 13 · Shot in ear</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=FCGfE9yMnXc" style="color:#8effb2;">YouTube Link</a></p>
+      <p>On March 14, 2024 — four full months before the event — a man named Brandon predicted the assassination attempt on Donald Trump. He didn't just say someone would try. He gave specific details. He said Trump would be shot in the ear but would survive.</p>
+      <p>On July 13, 2024, Thomas Crooks climbed a roof in Butler, Pennsylvania, and fired multiple rounds. One bullet grazed Trump's ear. An inch to the right and it would have been a headshot. Trump survived.</p>
+      <div class="stat-block">
+        <strong>Think about this.</strong> Four months before. Specific detail about the ear. No known inside information. No connection to the shooter. Just a prediction. And it happened exactly as described.
+      </div>
+      <p>The same person also saw something else. During the tribulation period described in the book of Revelation, people who do not take the mark of the beast will be hunted. Even drones will be used to detect who has the mark and who doesn't. People won't be able to buy or sell. They will have to go off-grid to survive. Whether you believe that or not, the accuracy of the first prediction makes you stop and think.</p>
+    </div>
   </div>
 
+  <!-- Dead Sea Scrolls UPDATE - Ken Johnson -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📜 Dead Sea Scrolls UPDATE — Ken Johnson <span class="badge">Essene calendar · Jubilee timeline · 2026-2076</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Source:</strong> <a href="https://www.youtube.com/watch?v=kIChiT3FY_w" style="color:#8effb2;">YouTube Link</a> | <strong>Website:</strong> <a href="https://biblefacts.org/" style="color:#8effb2;">biblefacts.org</a></p>
+      <p>Here is what Ken Johnson has found from the Dead Sea Scrolls. The Essenes had a calendar. They tracked jubilees — 50-year cycles. And here is the thing. They predicted Jesus' first coming with accuracy. According to their calculations, it happened in 32 AD — one shmita after the 9th jubilee.</p>
+      <div class="prophecy-block">
+        <strong>📅 The Timeline:</strong><br><br>
+        Last jubilee: March 2026 → extends to 2076.<br><br>
+        Expected events: Gaza conflict. Southern Lebanon (Obadiah prophecy). Gilead, which is modern Jordan. And eventually, an Iran conflict.
+      </div>
+      <p>Now look at Matthew 24. Jesus talked about the fig tree. That's a symbol for Israel. The fig tree was planted in 1948 — that's when Israel became a nation again. It started budding in 1967 — the Six-Day War when Jerusalem was reunited. Jesus said this generation will not pass away until all these things are fulfilled. Psalm 90:10 says a generation is 70 to 80 years. Do the math. We are in the window.</p>
+      <div class="quote">
+        "We don't have that much time left till the book of Revelation begins playing out."
+        <div class="quote-author">— Ken Johnson</div>
+      </div>
+      <p>One more thing. The Essenes didn't disappear. They accepted Jesus. They became early Christians. The scrolls even name Paul — calling him the "apostle to the Gentiles." This isn't some fringe theory. It's in the documents.</p>
+    </div>
+  </div>
+
+  <!-- NATO & Trump - April 4 Timing -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🏛️ NATO & Trump — April 4 Timing <span class="badge">77 years · Biblical perfection</span></h2>
+    </div>
+    <div class="card-body">
+      <p>This is not political. This is just an interesting correlation that you should be aware of.</p>
+      <div class="prophecy-block">
+        <strong>TRUMP DIRECT QUOTE (April 3-4, 2026):</strong><br><br>
+        "I do not require Congress's approval to withdraw from NATO. NATO wasn't there for us, and they won't be there for us in the future! We WOULD have always been there for them, but now, based on their actions? I guess we don't have to be, do we?!"
+      </div>
+      <div class="timeline-grid">
+        <div class="timeline-item"><span class="timeline-date">April 4, 1949</span><br>NATO founded (Washington Treaty signed)</div>
+        <div class="timeline-item"><span class="timeline-date">April 1-4, 2026</span><br>Trump issues most severe threats against NATO</div>
+        <div class="timeline-item"><span class="timeline-date">April 4, 2026</span><br>NATO turns 77 years old; Trump quote issued</div>
+      </div>
+      <p>The number 77. In the Bible, 7 represents completion or perfection. Double 7 — 77 — represents the fulfillment of a purpose or a complete cycle. Lamech said "seventy and sevenfold" (Genesis 4:24). The timing is either a coincidence or it means something. You decide.</p>
+    </div>
+  </div>
+
+  <!-- Peter Stoner's Calculations - From Scientific Tab -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>📊 Peter Stoner's Calculations — The Math of Prophecy <span class="badge">1 in 10¹⁷ · 1 in 10¹⁵⁷ · Mathematically impossible by chance</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Peter Stoner, <em>Science Speaks</em> (Moody Press, 1963)</strong> — He was a mathematician. He looked at 8 specific Messianic prophecies. Here is what he found.</p>
+      <table>
+        <thead><tr><th>Prophecy</th><th>Estimated Odds (1 in...)</th></tr></thead>
+        <tbody>
+          <tr><td>Born in Bethlehem (Micah 5:2)</td><td>280,000</td></tr>
+          <tr><td>Preceded by a messenger (Malachi 3:1)</td><td>1,000</td></tr>
+          <tr><td>Betrayed by a friend (Psalm 41:9)</td><td>10</td></tr>
+          <tr><td>Betrayed for 30 pieces of silver (Zechariah 11:12)</td><td>100,000</td></tr>
+          <tr><td>Money thrown in temple & used for potter's field (Zechariah 11:13)</td><td>100,000</td></tr>
+          <tr><td>Silent before accusers (Isaiah 53:7)</td><td>1,000</td></tr>
+          <tr><td>Hands and feet pierced (Psalm 22:16)</td><td>10,000</td></tr>
+          <tr><td>Remaining silent (Isaiah 53:7)</td><td>1,000</td></tr>
+        </tbody>
+      </table>
+      <p><strong>The result for just 8 prophecies: 1 in 10¹⁷</strong> — that's 100 quadrillion. To visualize that, imagine covering the entire state of Texas two feet deep in silver dollars. Mark one of them. Blindfold someone and have them pick one. That's the odds.</p>
+      <p><strong>Expand to 48 prophecies: 1 in 10¹⁵⁷</strong> — that's more than the number of atoms in a trillion universes. Any probability below 1 in 10⁵⁰ is considered mathematically impossible by chance. These numbers are so far below that line that they are effectively zero.</p>
+      <div class="quote">
+        "The conclusion is intentional supernatural design."
+      </div>
+    </div>
+  </div>
+
+  <!-- Specific Old Testament Prophecies - Tyre, Cyrus, Isaiah 53, Zechariah 12:10 -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🏛️ Specific Prophecies — Tyre · Cyrus · Isaiah 53 · Zechariah 12:10 <span class="badge">Fulfilled to the letter</span></h2>
+    </div>
+    <div class="card-body">
+      <div class="prophecy-block">
+        <strong>📍 Ezekiel 26 (Tyre Prophecy) — odds ~1 in 75 million</strong><br><br>
+        Ezekiel predicted in 587 or 586 BC that the mainland city of Tyre would be destroyed and its rubble thrown into the sea. Alexander the Great did exactly that in 332 BC. He destroyed the mainland city, used the rubble to build a causeway to the island half a mile offshore, then destroyed that city too. Every detail fulfilled.
+      </div>
+
+      <div class="prophecy-block">
+        <strong>📍 Isaiah 45:1 (Cyrus) — named 150 years in advance</strong><br><br>
+        Around 700 BC, Isaiah did something a fortune cookie never does. He got specific. He named a man — Cyrus — who would free the Jewish exiles and order Jerusalem's temple rebuilt. He even said Cyrus would subdue nations and open gates that would not be shut. That's exactly how the Persian army entered Babylon. Isaiah called Cyrus the LORD's "anointed" — language reserved for Israel's own kings. This prophecy was written 150 years before Cyrus was even born.
+      </div>
+
+      <div class="prophecy-block">
+        <strong>📍 Isaiah 53 (The Suffering Servant) — pierced for our transgressions</strong><br><br>
+        Written 700 years before Jesus. It describes a man who would be despised and rejected, wounded for our transgressions, bruised for our iniquities. He would be led like a lamb to the slaughter. He would be pierced. He would be buried with the rich. And he would bear the sin of many. The Jewish scribes who preserved this text never understood it until they saw Jesus. Then it all made sense.
+      </div>
+
+      <div class="prophecy-block">
+        <strong>📍 Zechariah 12:10 — they will look upon Me whom they have pierced</strong><br><br>
+        Zechariah records God Himself speaking: "They shall look upon Me whom they have pierced." YHWH says they will pierce Him. When Jesus was crucified, John writes that this verse was fulfilled (John 19:37). They pierced Jesus. They pierced God. And then — here is the kicker — the verse says they will mourn for Him as one mourns for an only son. That is exactly what happened after the crucifixion. The early church grew out of that mourning turning to joy.
+      </div>
+
+      <p>These are not vague horoscope readings. These are specific names, specific cities, specific methods of death, written centuries before they happened. And every single one came true.</p>
+    </div>
+  </div>
+
+  <!-- The Bottom Line -->
+  <div class="evidence-card">
+    <div class="card-header">
+      <h2>🎯 The Bottom Line</h2>
+    </div>
+    <div class="card-body">
+      <p>We have a modern prophecy — Trump shot in the ear, predicted four months in advance, exactly as described.</p>
+      <p>We have the Dead Sea Scrolls giving us a timeline that points to 2026 and beyond, with the fig tree generation (1948 + 70-80 years) putting us right in the window.</p>
+      <p>We have the NATO 77-year timing, which may be nothing — or may be the kind of pattern the Bible uses to signal the fulfillment of a purpose.</p>
+      <p>And we have the Old Testament prophecies. Hundreds of them. Peter Stoner did the math. Just 8 prophecies give you odds of 1 in 100 quadrillion. 48 prophecies give you odds that make no sense in a real universe — 1 in 10¹⁵⁷.</p>
+      <div class="quote">
+        Any probability below 1 in 10⁵⁰ is mathematically impossible by chance. These numbers sit far below that line. The conclusion is intentional supernatural design.
+      </div>
+      <p>So there it is. The prophecy archive stands. The predictions are on the table.</p>
+      <p>The question isn't <em>did these prophecies come true?</em> The question is <em>what are you going to do with the fact that they did?</em></p>
+    </div>
+  </div>
+
+  <footer>
+    Truth Archive — Prophecy Evidence · Modern predictions, ancient fulfillments, and mathematical certainty.<br>
+    Sources: Brandon's prophecy (March 14, 2024), Ken Johnson (Dead Sea Scrolls / BibleFacts.org), Peter Stoner (Science Speaks, 1963), Ezekiel 26, Isaiah 45:1, Isaiah 53, Zechariah 12:10.
+  </footer>
 </div>
 
 </body>
