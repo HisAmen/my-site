@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Truth Archive</title>
+<link rel="canonical" href="https://jesusinvictus.com/blog.html">
+<meta name="description" content="Latest news and discoveries that confirm the Bible — archaeological finds, scientific studies, and prophetic updates.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #050505; font-family: 'Inter', sans-serif; color: #e5e5e5; line-height: 1.5; }
+  .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 3px; background: linear-gradient(90deg, #00ff88, #8effb2); z-index: 1000; transition: width 0.08s linear; }
+  .back-to-top { position: fixed; bottom: 30px; right: 30px; background: #00ff88; color: #0a0a0a; width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: all 0.3s; z-index: 100; font-size: 22px; font-weight: bold; box-shadow: 0 6px 18px rgba(0,255,136,0.3); }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover { transform: scale(1.1); background: #5effa3; }
+  .nav { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 20px 32px; border-bottom: 1px solid #1e2a1f; background: #0a0c0a; }
+  .nav a { color: #8effb2; text-decoration: none; font-weight: 600; transition: 0.2s; }
+  .nav a:hover { color: #c0ffd6; text-shadow: 0 0 4px #2eff7a40; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 10px; }
+  .nav-links a { border: 1px solid #2a4b2f; background: #0f120f; padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; }
+  .nav-links a:hover { background: #1e3a22; border-color: #8effb2; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px 24px; }
+  h1 { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #d0ffd0, #7effa3); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 12px; letter-spacing: -1px; }
+  .sub { color: #9aa899; border-left: 3px solid #5eff8e; padding-left: 20px; margin-bottom: 40px; font-weight: 400; }
+  
+  .blog-grid { display: flex; flex-direction: column; gap: 24px; }
+  .blog-post { background: #0c0e0c; border: 1px solid #202520; border-radius: 20px; overflow: hidden; transition: all 0.3s ease; }
+  .blog-post:hover { border-color: #00ff88; transform: translateX(4px); }
+  .blog-content { padding: 24px; }
+  .blog-date { font-size: 12px; color: #8effb2; margin-bottom: 6px; font-family: monospace; }
+  .blog-source { font-size: 11px; color: #6a9a6a; margin-bottom: 10px; font-family: monospace; }
+  .blog-source a { color: #6a9a6a; text-decoration: none; }
+  .blog-source a:hover { color: #8effb2; text-decoration: underline; }
+  .blog-title { font-size: 1.4rem; font-weight: 600; color: #b5ffcc; margin-bottom: 8px; }
+  .blog-subtitle { font-size: 0.95rem; color: #aaa; margin-bottom: 12px; line-height: 1.4; }
+  .blog-excerpt { color: #ccc; font-size: 0.9rem; line-height: 1.6; margin-bottom: 16px; }
+  .blog-link { color: #8effb2; text-decoration: none; font-weight: 500; border-bottom: 1px dotted #5eff8e; }
+  .blog-link:hover { color: #00ff88; }
+  
+  footer { text-align: center; border-top: 1px solid #1e2a1f; padding-top: 32px; margin-top: 48px; font-size: 0.8rem; color: #6f7e6f; }
+  @media (max-width: 700px) { .container { padding: 28px 16px; } h1 { font-size: 2rem; } .blog-title { font-size: 1.2rem; } .blog-content { padding: 18px; } .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 18px; } }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<div class="nav">
+  <a href="index.html" style="font-weight:500;">TRUTH ARCHIVE</a>
+  <div class="nav-links">
+    <a href="scientific.html">Scientific</a>
+    <a href="healing.html">Healing</a>
+    <a href="prophecy.html">Prophecy</a>
+    <a href="christ.html">Christ</a>
+    <a href="deep.html">Deep Waters</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Latest News</h1>
+  <div class="sub">Discoveries and reports that confirm the Bible — updated as new evidence emerges.</div>
+
+  <div class="blog-grid" id="blogGrid"></div>
+
+  <footer>
+    Truth Archive — Blog · News that confirms Scripture.<br>
+    Discord: <a href="https://discord.com/users/1483124335614099513" style="color:#8effb2;">hisforeveramen</a>
+  </footer>
+</div>
+
+<div class="back-to-top" id="backToTop">↑</div>
+
+<script>
+  // ============================================================
+  // 📝 YOUR BLOG POSTS — Add new posts below
+  // Each post needs: date, source, sourceUrl, title, subtitle, excerpt, link
+  // ============================================================
+
+  const posts = [
+    {
+      date: "May 2026",
+      source: "Interesting Engineering",
+      sourceUrl: "https://interestingengineering.com",
+      title: "Oldest-Ever 'Jesus is God' Inscription Found",
+      subtitle: "Ancient mosaic discovery confirms early Christian belief in Christ's deity",
+      excerpt: "Archaeologists have uncovered what is believed to be the oldest inscription declaring 'Jesus is God' in a recently excavated site. The discovery provides tangible evidence that early Christians worshipped Jesus as divine from the very beginning of the faith.",
+      link: "https://interestingengineering.com/culture/oldest-ever-jesus-is-god-inscription"
+    }
+    // ============================================================
+    // Add more posts below — copy the template:
+    // ============================================================
+    // {
+    //   date: "June 2026",
+    //   source: "Source Name",
+    //   sourceUrl: "https://source-website.com",
+    //   title: "Your Headline Here",
+    //   subtitle: "Short subheadline (optional)",
+    //   excerpt: "A 1-2 sentence summary of the article",
+    //   link: "https://www.url-to-full-article.com"
+    // },
+  ];
+
+  // ============================================================
+  // DON'T EDIT BELOW THIS LINE
+  // ============================================================
+
+  function renderPosts() {
+    const grid = document.getElementById('blogGrid');
+    if (!grid) return;
+    
+    if (posts.length === 0) {
+      grid.innerHTML = `
+        <div style="background: #0c0e0c; border: 1px solid #202520; border-radius: 24px; padding: 40px; text-align: center;">
+          <p style="color: #6a9a6a;">📭 No posts yet. Check back soon for updates.</p>
+          <p style="color: #444; font-size: 13px; margin-top: 12px;">News that confirms the Bible will appear here.</p>
+        </div>
+      `;
+      return;
+    }
+    
+    grid.innerHTML = posts.map(post => `
+      <div class="blog-post">
+        <div class="blog-content">
+          <div class="blog-date">📅 ${post.date}</div>
+          <div class="blog-source">📰 Source: <a href="${post.sourceUrl}" target="_blank" rel="noopener noreferrer">${post.source}</a></div>
+          <div class="blog-title">${post.title}</div>
+          ${post.subtitle ? `<div class="blog-subtitle">${post.subtitle}</div>` : ''}
+          <div class="blog-excerpt">${post.excerpt}</div>
+          <a href="${post.link}" class="blog-link" target="_blank" rel="noopener noreferrer">Read full article →</a>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  renderPosts();
+
+  // Back to Top + Progress Bar
+  const backBtn = document.getElementById('backToTop');
+  const progressBar = document.getElementById('progressBar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) backBtn.classList.add('visible');
+    else backBtn.classList.remove('visible');
+    const winScroll = document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (winScroll / height) * 100 + '%';
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+</body>
+</html>
