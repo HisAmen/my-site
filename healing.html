@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -521,6 +523,16 @@
     </div>
   </div>
 
+  <!-- RELATED EVIDENCE SECTION -->
+  <div style="margin-top: 50px; padding: 20px; background: #0f120f; border-radius: 20px;">
+    <h3 style="color: #00ff88;">📖 Related Evidence</h3>
+    <p>🔬 <a href="scientific.html" style="color: #8effb2;">Scientific Evidence</a> — Shroud of Turin, fine-tuning, consciousness</p>
+    <p>🕊️ <strong style="color: #00ff88;">Healing Evidence</strong> — (you are here)</p>
+    <p>📜 <a href="prophecy.html" style="color: #8effb2;">Prophecy Evidence</a> — Trump prediction, Dead Sea Scrolls, Stoner odds</p>
+    <p>✝️ <a href="christ.html" style="color: #8effb2;">Deity of Christ</a> — Scriptural evidence, fulfilled prophecy</p>
+    <p>🌊 <a href="deep.html" style="color: #8effb2;">Deep Waters</a> — Bigfoot DNA, interdimensional beings, transhumanism</p>
+  </div>
+
   <footer>
     Truth Archive — Healing Evidence · Documented miracles, peer-reviewed studies, and medical bureau records.<br>
     Sources: Lourdes Medical Bureau, Amsterdam UMC, Advances in Mind-Body Medicine, ACP Journals, Oxford University Press, Fuller Theological Seminary, Biola University.
@@ -536,14 +548,11 @@
   const progressBar = document.getElementById('progressBar');
 
   window.addEventListener('scroll', () => {
-    // Back to top visibility
     if (window.scrollY > 500) {
       backBtn.classList.add('visible');
     } else {
       backBtn.classList.remove('visible');
     }
-    
-    // Progress bar width
     const winScroll = document.documentElement.scrollTop;
     const height = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = (winScroll / height) * 100;
