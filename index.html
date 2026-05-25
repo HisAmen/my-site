@@ -157,7 +157,7 @@
     border-bottom: 1px solid rgba(0, 255, 136, 0.15);
   }
 
-  /* Gradient text for H1 - Modern aesthetic */
+  /* Gradient text for H1 */
   h1 {
     font-size: 64px;
     letter-spacing: 3px;
@@ -178,7 +178,7 @@
     color: #cccccc;
   }
 
-  /* Stats Ticker - Animated scrolling strip */
+  /* Stats Ticker */
   .stats-strip {
     border-top: 1px solid rgba(0, 255, 136, 0.12);
     border-bottom: 1px solid rgba(0, 255, 136, 0.12);
@@ -337,7 +337,6 @@
     gap: 28px;
   }
 
-  /* Enhanced card styles with arrow animation */
   .card {
     background: rgba(17, 17, 17, 0.85);
     backdrop-filter: blur(4px);
@@ -402,7 +401,6 @@
     padding-top: 12px;
   }
 
-  /* Arrow animation on cards */
   .card-arrow {
     position: absolute;
     bottom: 24px;
@@ -511,7 +509,6 @@
     transform: translate(-50%, -50%);
   }
 
-  /* Language Switcher */
   .language-switcher-container {
     position: fixed;
     bottom: 90px;
@@ -573,11 +570,12 @@
   <h1>TRUTH ARCHIVE</h1>
   <div class="hero-statement">
     A structured archive of evidence — scientific, historical, theological, and prophetic — assembled for those willing to examine the data honestly.
+  </div>
 </div>
 
-<!-- STATS TICKER - Animated scrolling stats -->
+<!-- STATS TICKER -->
 <div class="stats-strip">
-  <div class="stats-track" id="statTrack">
+  <div class="stats-track">
     <div class="stat-pill"><span class="stat-num">10¹⁵⁷</span><span class="stat-label">odds against 48 prophecies</span></div>
     <div class="stat-sep">·</div>
     <div class="stat-pill"><span class="stat-num">72</span><span class="stat-label">Lourdes medical miracles</span></div>
@@ -590,7 +588,6 @@
     <div class="stat-sep">·</div>
     <div class="stat-pill"><span class="stat-num">10⁻⁵⁰</span><span class="stat-label">mathematical impossibility threshold</span></div>
     <div class="stat-sep">·</div>
-    <!-- Duplicate for seamless loop -->
     <div class="stat-pill"><span class="stat-num">10¹⁵⁷</span><span class="stat-label">odds against 48 prophecies</span></div>
     <div class="stat-sep">·</div>
     <div class="stat-pill"><span class="stat-num">72</span><span class="stat-label">Lourdes medical miracles</span></div>
@@ -605,7 +602,7 @@
   </div>
 </div>
 
-<!-- MAIN CONTENT SECTION (1,800+ WORDS FOR SEO) -->
+<!-- MAIN CONTENT SECTION -->
 <div class="content-section">
   <div class="evidence-summary">
     <h2>Is God Real? Here Is the Evidence.</h2>
@@ -701,6 +698,12 @@
       <div class="card-preview">Archaeological finds • Scientific studies • Prophetic updates</div>
       <div class="card-arrow">→</div>
     </div>
+    <div class="card" data-url="answeringislam.html">
+      <h3>🕌 Answering Islam</h3>
+      <p>A thorough, documented examination of Islam's theological, historical and textual claims.</p>
+      <div class="card-preview">Genesis 17 • Qur'an 5:47 • Uthman's burning • Cave of Hira • Mut'ah</div>
+      <div class="card-arrow">→</div>
+    </div>
   </div>
 </div>
 
@@ -776,7 +779,6 @@
     });
   });
 
-  // Manual Language Switcher
   const langSelector = document.getElementById('language-selector');
   if (langSelector) {
     langSelector.addEventListener('change', function() {
