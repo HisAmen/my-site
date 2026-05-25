@@ -407,6 +407,35 @@
     transform: translate(-50%, -50%);
   }
 
+  /* Manual Language Switcher - Matches your theme */
+  .language-switcher-container {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 999;
+  }
+  .language-selector {
+    background: #0f120f;
+    border: 1px solid #2a4b2f;
+    border-radius: 40px;
+    padding: 8px 16px;
+    color: #8effb2;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .language-selector:hover {
+    border-color: #00ff88;
+    background: #1a2a1a;
+    color: #00ff88;
+  }
+  .language-selector option {
+    background: #0f120f;
+    color: #e5e5e5;
+  }
+
   @media (max-width: 768px) {
     .hero { padding: 60px 20px 40px; }
     h1 { font-size: 38px; }
@@ -422,6 +451,8 @@
     .verse-box { font-size: 0.85rem; padding: 8px 18px; }
     .quotes-grid { gap: 16px; }
     .quote-card { padding: 16px 20px; }
+    .language-switcher-container { bottom: 70px; right: 20px; }
+    .language-selector { padding: 6px 12px; font-size: 0.75rem; }
   }
 </style>
 </head>
@@ -518,7 +549,6 @@
       <p>Supernatural encounters, UFOs, Nephilim, and end-times deception.</p>
       <div class="card-preview">Bigfoot DNA • Kandahar giant • Portals • Transhumanism</div>
     </div>
-    <!-- NEW CARDS: About & Blog -->
     <div class="card" data-url="about.html">
       <h3>📖 About</h3>
       <p>The story behind this archive — my testimony and mission.</p>
@@ -553,6 +583,26 @@
 
 <div class="back-to-top" id="backToTop">↑</div>
 
+<!-- Manual Language Switcher - Opens Google Translate in new tab (no cutoff issues) -->
+<div class="language-switcher-container">
+  <select id="language-selector" class="language-selector">
+    <option value="en">🌐 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="ru">🇷🇺 Русский</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="zh">🇨🇳 中文</option>
+    <option value="ja">🇯🇵 日本語</option>
+    <option value="ko">🇰🇷 한국어</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="hi">🇮🇳 हिन्दी</option>
+  </select>
+</div>
+
 <script src="https://www.powr.io/powr.js?platform=html"></script>
 <script>
   const observer = new IntersectionObserver((entries) => {
@@ -584,6 +634,18 @@
       if (url) window.location.href = url;
     });
   });
+
+  // Manual Language Switcher - Opens Google Translate in a new tab
+  const langSelector = document.getElementById('language-selector');
+  if (langSelector) {
+    langSelector.addEventListener('change', function() {
+      const lang = this.value;
+      if (lang !== 'en') {
+        window.open('https://translate.google.com/translate?hl=' + lang + '&sl=en&tl=' + lang + '&u=' + encodeURIComponent(window.location.href), '_blank');
+      }
+      this.value = 'en';
+    });
+  }
 
   const verses = [
     { t: "I am the way, the truth, and the life.", r: "John 14:6" },
