@@ -157,13 +157,17 @@
     border-bottom: 1px solid rgba(0, 255, 136, 0.15);
   }
 
+  /* Gradient text for H1 - Modern aesthetic */
   h1 {
     font-size: 64px;
-    color: #00ff88;
     letter-spacing: 3px;
-    text-shadow: 0 0 30px rgba(0,255,136,0.25);
     margin-bottom: 25px;
     font-weight: 700;
+    background: linear-gradient(135deg, #ffffff 0%, #00ff88 40%, #5effa3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
   }
 
   .hero-statement {
@@ -172,6 +176,60 @@
     font-size: 1.2rem;
     line-height: 1.6;
     color: #cccccc;
+  }
+
+  /* Stats Ticker - Animated scrolling strip */
+  .stats-strip {
+    border-top: 1px solid rgba(0, 255, 136, 0.12);
+    border-bottom: 1px solid rgba(0, 255, 136, 0.12);
+    padding: 20px 0;
+    overflow: hidden;
+    position: relative;
+    background: rgba(5, 10, 5, 0.6);
+    margin: 30px 0 0;
+  }
+  .stats-strip::before, .stats-strip::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .stats-strip::before { left: 0; background: linear-gradient(to right, #0a0a0a, transparent); }
+  .stats-strip::after { right: 0; background: linear-gradient(to left, #0a0a0a, transparent); }
+  .stats-track {
+    display: flex;
+    gap: 48px;
+    width: max-content;
+    animation: ticker 35s linear infinite;
+    align-items: center;
+  }
+  .stat-pill {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    white-space: nowrap;
+  }
+  .stat-num {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #00ff88;
+    letter-spacing: 0.5px;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    color: #8a9a8a;
+    letter-spacing: 0.3px;
+  }
+  .stat-sep {
+    color: rgba(0, 255, 136, 0.2);
+    font-size: 1rem;
+  }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
   }
 
   .content-section {
@@ -279,6 +337,7 @@
     gap: 28px;
   }
 
+  /* Enhanced card styles with arrow animation */
   .card {
     background: rgba(17, 17, 17, 0.85);
     backdrop-filter: blur(4px);
@@ -289,6 +348,17 @@
     transition: all 0.35s ease;
     opacity: 0;
     transform: translateY(30px);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 0%, rgba(0,255,136,0.06) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
   }
 
   .card.visible {
@@ -303,10 +373,19 @@
     box-shadow: 0 12px 28px rgba(0, 255, 136, 0.12);
   }
 
+  .card:hover::before {
+    opacity: 1;
+  }
+
   .card h3 {
     color: #00ff88;
     margin-bottom: 12px;
     font-size: 1.5rem;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover h3 {
+    transform: translateX(4px);
   }
 
   .card p {
@@ -321,6 +400,31 @@
     color: #8a9a8a;
     border-top: 1px solid #2a3a2a;
     padding-top: 12px;
+  }
+
+  /* Arrow animation on cards */
+  .card-arrow {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ff88;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+
+  .card:hover .card-arrow {
+    background: #00ff88;
+    color: #0a0a0a;
+    border-color: #00ff88;
+    transform: rotate(45deg);
   }
 
   .bottom-section {
@@ -407,7 +511,7 @@
     transform: translate(-50%, -50%);
   }
 
-  /* Manual Language Switcher - Matches your theme */
+  /* Language Switcher */
   .language-switcher-container {
     position: fixed;
     bottom: 90px;
@@ -453,6 +557,9 @@
     .quote-card { padding: 16px 20px; }
     .language-switcher-container { bottom: 70px; right: 20px; }
     .language-selector { padding: 6px 12px; font-size: 0.75rem; }
+    .stats-strip { padding: 12px 0; }
+    .stat-num { font-size: 0.75rem; }
+    .stat-label { font-size: 0.6rem; }
   }
 </style>
 </head>
@@ -468,6 +575,36 @@
     A structured archive of evidence — scientific, historical, theological, and prophetic — assembled for those willing to examine the data honestly.
   </div>
   <div class="powr-visitor-counter" id="9cf3e2c0_1779540342" style="margin-top: 30px;"></div>
+</div>
+
+<!-- STATS TICKER - Animated scrolling stats -->
+<div class="stats-strip">
+  <div class="stats-track" id="statTrack">
+    <div class="stat-pill"><span class="stat-num">10¹⁵⁷</span><span class="stat-label">odds against 48 prophecies</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">72</span><span class="stat-label">Lourdes medical miracles</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">1978</span><span class="stat-label">STURP Shroud study</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">3D</span><span class="stat-label">encoded VP-8 data</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">150 yrs</span><span class="stat-label">Isaiah named Cyrus before birth</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">10⁻⁵⁰</span><span class="stat-label">mathematical impossibility threshold</span></div>
+    <div class="stat-sep">·</div>
+    <!-- Duplicate for seamless loop -->
+    <div class="stat-pill"><span class="stat-num">10¹⁵⁷</span><span class="stat-label">odds against 48 prophecies</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">72</span><span class="stat-label">Lourdes medical miracles</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">1978</span><span class="stat-label">STURP Shroud study</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">3D</span><span class="stat-label">encoded VP-8 data</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">150 yrs</span><span class="stat-label">Isaiah named Cyrus before birth</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">10⁻⁵⁰</span><span class="stat-label">mathematical impossibility threshold</span></div>
+  </div>
 </div>
 
 <!-- MAIN CONTENT SECTION (1,800+ WORDS FOR SEO) -->
@@ -528,36 +665,43 @@
       <h3>🔬 Scientific Evidence</h3>
       <p>Cosmology, physics, fine-tuning arguments, and natural law exploration.</p>
       <div class="card-preview">Shroud of Turin • 3D encoded data • Barrow & Tipler odds</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="healing.html">
       <h3>🕊️ Healing & Prayer</h3>
       <p>Documented testimonies and prayer-based healing claims.</p>
       <div class="card-preview">Lourdes 72 miracles • Parkinson healed • Genetic recovery</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="prophecy.html">
       <h3>📜 Prophetic Interpretations</h3>
       <p>Analysis of fulfilled prophecies in modern events.</p>
       <div class="card-preview">Trump ear prophecy • Dead Sea Scrolls • 1 in 10¹⁷ odds</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="christ.html">
       <h3>✝️ Deity of Christ</h3>
       <p>Historical, textual, and theological arguments.</p>
       <div class="card-preview">"I AM" claim • Thomas: "My Lord and my God" • Isaiah 53</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="deep.html">
       <h3>🌊 Deep Waters</h3>
       <p>Supernatural encounters, UFOs, Nephilim, and end-times deception.</p>
       <div class="card-preview">Bigfoot DNA • Kandahar giant • Portals • Transhumanism</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="about.html">
       <h3>📖 About</h3>
       <p>The story behind this archive — my testimony and mission.</p>
       <div class="card-preview">From Lithuania to truth • Why this archive exists</div>
+      <div class="card-arrow">→</div>
     </div>
     <div class="card" data-url="blog.html">
       <h3>📰 Blog</h3>
       <p>Latest news and discoveries that confirm the Bible.</p>
       <div class="card-preview">Archaeological finds • Scientific studies • Prophetic updates</div>
+      <div class="card-arrow">→</div>
     </div>
   </div>
 </div>
@@ -583,7 +727,7 @@
 
 <div class="back-to-top" id="backToTop">↑</div>
 
-<!-- Manual Language Switcher - Opens Google Translate in new tab (no cutoff issues) -->
+<!-- Manual Language Switcher -->
 <div class="language-switcher-container">
   <select id="language-selector" class="language-selector">
     <option value="en">🌐 English</option>
@@ -635,7 +779,7 @@
     });
   });
 
-  // Manual Language Switcher - Opens Google Translate in a new tab
+  // Manual Language Switcher
   const langSelector = document.getElementById('language-selector');
   if (langSelector) {
     langSelector.addEventListener('change', function() {
