@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Answering Islam | Truth Archive — A Case for Christianity Over Islam</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Cpath d='M50 20 L65 45 L58 45 L58 80 L42 80 L42 45 L35 45 Z' fill='%2300ff88'/%3E%3Ccircle cx='50' cy='28' r='6' fill='%2300ff88'/%3E%3C/svg%3E">
+<link rel="canonical" href="https://jesusinvictus.com/islam.html">
+<meta name="description" content="A comprehensive theological, historical and textual case addressing Islam — Qur'anic contradictions, Muhammad's life, the Ishmael question, and why Christianity predates and supersedes Islam.">
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --g: #00ff88;
+    --g2: #5effa3;
+    --g3: #b2ffd0;
+    --dark: #050705;
+    --card-bg: rgba(8,12,8,0.85);
+    --border: rgba(0,255,136,0.1);
+    --border-h: rgba(0,255,136,0.45);
+    --text: #dde8dd;
+    --muted: #6a806a;
+    --red: #ff6b6b;
+    --amber: #ffc87a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--dark); color: var(--text); overflow-x: hidden; cursor: none; }
+
+  .cur-ring { position: fixed; width: 34px; height: 34px; border: 1.5px solid rgba(0,255,136,0.45); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .2s,height .2s,border-color .2s; mix-blend-mode: screen; }
+  .cur-dot { position: fixed; width: 5px; height: 5px; background: var(--g); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+
+  .progress-bar { position: fixed; top: 0; left: 0; width: 0%; height: 2px; background: linear-gradient(90deg,var(--g),var(--g3)); z-index: 1000; box-shadow: 0 0 8px rgba(0,255,136,0.5); }
+  .noise { position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.022; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+
+  .nav { position: sticky; top: 0; z-index: 500; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 16px 32px; background: rgba(5,7,5,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: box-shadow 0.3s; }
+  .nav.scrolled { box-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+  .nav a { color: #8effb2; text-decoration: none; font-weight: 600; transition: .2s; }
+  .nav a:hover { color: #c0ffd6; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 6px; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; font-weight: 500; padding: 6px 14px; border-radius: 100px; border: 1px solid transparent; transition: all .2s; font-family: 'Syne',sans-serif; letter-spacing: .03em; }
+  .nav-links a:hover, .nav-links a.active { color: var(--g); border-color: rgba(0,255,136,.25); background: rgba(0,255,136,.05); }
+
+  .page-header { max-width: 900px; margin: 0 auto; padding: 72px 24px 56px; position: relative; }
+  .page-label { font-family: 'Syne',sans-serif; font-size: .68rem; letter-spacing: .3em; color: var(--g); text-transform: uppercase; margin-bottom: 16px; }
+  .page-header h1 { font-family: 'Syne',sans-serif; font-size: clamp(2.4rem,6vw,4.5rem); font-weight: 800; background: linear-gradient(135deg,#e0f5e0 0%,var(--g2) 50%,var(--g) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.05; letter-spacing: -.03em; margin-bottom: 20px; }
+  .page-header .sub { font-size: 1.05rem; color: #7a9a7a; font-weight: 300; line-height: 1.65; max-width: 680px; }
+
+  .disclaimer-banner { max-width: 900px; margin: 0 auto 24px; padding: 0 24px; }
+  .disclaimer-inner { background: rgba(255,200,0,0.05); border: 1px solid rgba(255,200,0,0.2); border-radius: 16px; padding: 16px 20px; font-size: 0.82rem; color: #c8a840; line-height: 1.6; font-style: italic; }
+
+  .stats-strip { border-top: 1px solid rgba(0,255,136,.12); border-bottom: 1px solid rgba(0,255,136,.12); padding: 16px 0; overflow: hidden; position: relative; background: rgba(5,10,5,.6); margin: 0 0 30px; }
+  .stats-strip::before,.stats-strip::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none; }
+  .stats-strip::before { left: 0; background: linear-gradient(to right,#0a0a0a,transparent); }
+  .stats-strip::after { right: 0; background: linear-gradient(to left,#0a0a0a,transparent); }
+  .stats-track { display: flex; gap: 48px; width: max-content; animation: ticker 40s linear infinite; align-items: center; }
+  .stat-pill { display: flex; align-items: baseline; gap: 10px; white-space: nowrap; }
+  .stat-num { font-family: 'JetBrains Mono',monospace; font-size: 1rem; font-weight: 700; color: #00ff88; }
+  .stat-label { font-size: .75rem; color: #8a9a8a; }
+  .stat-sep { color: rgba(0,255,136,.2); font-size: 1rem; }
+  @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 0 24px 100px; }
+
+  /* TABLE OF CONTENTS */
+  .toc-card { background: rgba(0,20,8,.6); border: 1px solid var(--border); border-radius: 20px; padding: 28px; margin-bottom: 40px; }
+  .toc-card h3 { font-family: 'Syne',sans-serif; font-size: .75rem; letter-spacing: .2em; color: var(--g); text-transform: uppercase; margin-bottom: 18px; }
+  .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+  .toc-item { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 10px; text-decoration: none; color: #8ab08a; font-size: .85rem; transition: all .2s; border: 1px solid transparent; }
+  .toc-item:hover { color: var(--g); background: rgba(0,255,136,.04); border-color: rgba(0,255,136,.15); }
+  .toc-num { font-family: 'JetBrains Mono',monospace; font-size: .7rem; color: var(--muted); min-width: 24px; }
+
+  .evidence-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 24px; margin-bottom: 40px; overflow: hidden; backdrop-filter: blur(10px); transition: border-color .3s,box-shadow .3s; opacity: 0; transform: translateY(28px); }
+  .evidence-card.visible { opacity: 1; transform: translateY(0); transition: opacity .6s ease,transform .6s ease; }
+  .evidence-card:hover { border-color: rgba(0,255,136,.25); box-shadow: 0 16px 50px -20px rgba(0,255,136,.12); }
+  .card-header { background: rgba(0,255,136,.03); padding: 22px 28px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .card-header h2 { font-family: 'Syne',sans-serif; font-size: 1.3rem; font-weight: 700; color: var(--g2); letter-spacing: -.01em; flex: 1; }
+  .badge { font-family: 'Syne',sans-serif; font-size: .65rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; background: rgba(0,255,136,.08); border: 1px solid rgba(0,255,136,.18); color: var(--g); }
+  .badge-red { background: rgba(255,100,100,.08); border-color: rgba(255,100,100,.25); color: #ff8a8a; }
+  .badge-amber { background: rgba(255,180,60,.08); border-color: rgba(255,180,60,.25); color: #ffc060; }
+
+  .card-body { padding: 28px; }
+  .card-body p { font-size: .97rem; line-height: 1.72; color: #b0c8b0; margin-bottom: 18px; font-weight: 300; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body strong { color: var(--g2); font-weight: 500; }
+
+  .stat-block { background: rgba(0,10,4,.6); border-radius: 16px; padding: 20px 22px; margin: 20px 0; border-left: 3px solid var(--g); font-family: 'JetBrains Mono',monospace; font-size: .85rem; line-height: 1.65; color: #a0c0a0; }
+  .stat-block strong { color: var(--g2); }
+
+  .warning-block { background: rgba(255,80,80,.04); border-radius: 16px; padding: 20px 22px; margin: 20px 0; border-left: 3px solid rgba(255,100,100,.5); font-size: .9rem; line-height: 1.65; color: #c0a0a0; }
+  .warning-block strong { color: #ff9a9a; }
+
+  .amber-block { background: rgba(255,180,60,.04); border-radius: 16px; padding: 20px 22px; margin: 20px 0; border-left: 3px solid rgba(255,180,60,.4); font-size: .9rem; line-height: 1.65; color: #c0b080; }
+  .amber-block strong { color: #ffc060; }
+
+  .quote { background: rgba(0,20,8,.5); border: 1px solid rgba(0,255,136,.12); border-radius: 16px; padding: 24px 26px; margin: 20px 0; position: relative; }
+  .quote::before { content: '"'; position: absolute; top: 8px; left: 16px; font-size: 3.5rem; color: rgba(0,255,136,.08); font-family: Georgia,serif; line-height: 1; }
+  .quote p { font-style: italic; color: #c8e0c8 !important; position: relative; z-index: 1; }
+  .quote-author { margin-top: 12px; font-family: 'Syne',sans-serif; font-size: .75rem; color: var(--g); font-weight: 600; letter-spacing: .06em; }
+
+  .scripture { background: rgba(10,25,14,.7); border: 1px solid rgba(0,255,136,.15); border-radius: 14px; padding: 18px 22px; margin: 16px 0; position: relative; }
+  .scripture-ref { font-family: 'Syne',sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .15em; color: var(--g); text-transform: uppercase; margin-bottom: 10px; }
+  .scripture p { font-style: italic; color: #d0ead0 !important; font-size: .93rem !important; line-height: 1.65 !important; font-weight: 300 !important; margin-bottom: 0 !important; }
+
+  .quran-ref { background: rgba(255,180,60,.04); border: 1px solid rgba(255,180,60,.18); border-radius: 14px; padding: 18px 22px; margin: 16px 0; }
+  .quran-ref-label { font-family: 'Syne',sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .15em; color: var(--amber); text-transform: uppercase; margin-bottom: 10px; }
+  .quran-ref p { font-style: italic; color: #d8c090 !important; font-size: .93rem !important; line-height: 1.65 !important; font-weight: 300 !important; margin-bottom: 0 !important; }
+
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  @media (max-width: 600px) { .compare-grid { grid-template-columns: 1fr; } }
+  .compare-col { border-radius: 14px; padding: 18px; }
+  .compare-col.christian { background: rgba(0,255,136,.04); border: 1px solid rgba(0,255,136,.15); }
+  .compare-col.islamic { background: rgba(255,100,100,.04); border: 1px solid rgba(255,100,100,.12); }
+  .compare-label { font-family: 'Syne',sans-serif; font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 12px; }
+  .compare-label.c { color: var(--g); }
+  .compare-label.i { color: #ff8a8a; }
+  .compare-col p,.compare-col li { font-size: .88rem !important; color: #b0c0b0 !important; line-height: 1.6 !important; }
+  .compare-col ul { margin: 8px 0; }
+  .compare-col ul li { padding: 5px 0 5px 20px; border: none; }
+  .compare-col ul li::before { color: var(--g); font-size: .75rem; }
+  .compare-col.islamic ul li::before { color: #ff8a8a; }
+
+  ul { margin: 16px 0; padding-left: 0; list-style: none; }
+  ul li { padding: 8px 0 8px 24px; position: relative; font-size: .95rem; color: #a8c0a8; line-height: 1.6; border-bottom: 1px solid rgba(0,255,136,.04); font-weight: 300; }
+  ul li::before { content: '→'; position: absolute; left: 0; color: var(--g); opacity: .6; font-size: .8rem; }
+
+  .section-divider { display: flex; align-items: center; gap: 16px; margin: 50px 0 30px; }
+  .section-divider-line { flex: 1; height: 1px; background: linear-gradient(90deg,transparent,rgba(0,255,136,.2),transparent); }
+  .section-divider-text { font-family: 'Syne',sans-serif; font-size: .65rem; letter-spacing: .25em; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
+
+  table { width: 100%; border-collapse: collapse; background: rgba(0,10,4,.5); border-radius: 16px; overflow: hidden; margin: 20px 0; font-size: .88rem; }
+  th,td { padding: 12px 16px; text-align: left; }
+  th { background: rgba(0,255,136,.07); font-family: 'Syne',sans-serif; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--g); }
+  td { color: #a8c0a8; border-bottom: 1px solid rgba(0,255,136,.06); }
+  tr:last-child td { border-bottom: none; }
+
+  footer { text-align: center; border-top: 1px solid var(--border); padding-top: 32px; margin-top: 24px; font-size: .75rem; color: var(--muted); line-height: 1.8; }
+
+  .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: #00ff88; color: #0a0a0a; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: all .3s; z-index: 100; font-size: 18px; font-weight: bold; box-shadow: 0 4px 20px rgba(0,255,136,.35); }
+  .back-to-top.visible { opacity: 1; visibility: visible; }
+  .back-to-top:hover { transform: translateY(-3px) scale(1.1); }
+
+  @media (max-width:700px) {
+    .container { padding: 0 16px 60px; }
+    .card-header h2 { font-size: 1.1rem; }
+    .page-header { padding: 48px 20px 36px; }
+    .card-body { padding: 20px; }
+    .nav { padding: 14px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="cur-ring" id="curRing"></div>
+<div class="cur-dot" id="curDot"></div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="noise"></div>
+
+<div class="nav" id="mainNav">
+  <a href="index.html" style="font-weight:500;">← TRUTH ARCHIVE</a>
+  <div class="nav-links">
+    <a href="scientific.html">Scientific</a>
+    <a href="healing.html">Healing</a>
+    <a href="prophecy.html">Prophecy</a>
+    <a href="christ.html">Christ</a>
+    <a href="AnsweringIslam.html" class="active">Answering Islam</a>
+    <a href="deep.html">Deep Waters</a>
+  </div>
+</div>
+
+<div class="page-header">
+  <div class="page-label">Evidence Category 06</div>
+  <h1>Answering Islam</h1>
+  <p class="sub">A thorough, documented examination of Islam's theological, historical and textual claims — including what the Qur'an itself says about the Bible, who Muhammad really was, and why Christianity predates and fulfills what Islam attempts to replace.</p>
+</div>
+
+<div class="disclaimer-banner">
+  <div class="disclaimer-inner">
+    ⚠️ This page presents the Christian theological and historical case regarding Islam. All Qur'anic and Hadith references are cited with chapter/verse. The goal is honest inquiry, not contempt for Muslim individuals — many of whom are sincere seekers of truth. The question on the table is whether the claims of Islam hold up under scrutiny.
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stats-track">
+    <div class="stat-pill"><span class="stat-num">~700 yrs</span><span class="stat-label">Christianity predates Islam</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">10</span><span class="stat-label">distinct Qur'anic qira'at (readings)</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">3×</span><span class="stat-label">Angel squeezed Muhammad — Bukhari 4953</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Genesis 17</span><span class="stat-label">Ishmael explicitly excluded from covenant</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Qur'an 5:47</span><span class="stat-label">Allah commands Christians to judge by Injeel</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Mut'ah</span><span class="stat-label">temporary marriage — sexual contract</span></div>
+    <div class="stat-sep">·</div>
+    <!-- duplicate for loop -->
+    <div class="stat-pill"><span class="stat-num">~700 yrs</span><span class="stat-label">Christianity predates Islam</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">10</span><span class="stat-label">distinct Qur'anic qira'at (readings)</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">3×</span><span class="stat-label">Angel squeezed Muhammad — Bukhari 4953</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Genesis 17</span><span class="stat-label">Ishmael explicitly excluded from covenant</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Qur'an 5:47</span><span class="stat-label">Allah commands Christians to judge by Injeel</span></div>
+    <div class="stat-sep">·</div>
+    <div class="stat-pill"><span class="stat-num">Mut'ah</span><span class="stat-label">temporary marriage — sexual contract</span></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc-card evidence-card">
+    <h3>📋 Contents — What This Page Covers</h3>
+    <div class="toc-grid">
+      <a class="toc-item" href="#ishmael"><span class="toc-num">01</span> Ishmael Was Never the Chosen Line</a>
+      <a class="toc-item" href="#quran-bible"><span class="toc-num">02</span> The Qur'an Endorses the Bible</a>
+      <a class="toc-item" href="#multiple-qurans"><span class="toc-num">03</span> Multiple Qur'ans — Uthman's Burning</a>
+      <a class="toc-item" href="#angel-cave"><span class="toc-num">04</span> The Cave of Hira — Angel Who Attacked</a>
+      <a class="toc-item" href="#muhammad-vs-jesus"><span class="toc-num">05</span> Muhammad vs. Jesus — A Life Comparison</a>
+      <a class="toc-item" href="#mutah"><span class="toc-num">06</span> Mut'ah — Temporary Marriage (Sexual Contract)</a>
+      <a class="toc-item" href="#heaven-virgins"><span class="toc-num">07</span> Islamic Heaven — 72 Virgins & Materialism</a>
+      <a class="toc-item" href="#predates"><span class="toc-num">08</span> Christianity Predates Islam by ~700 Years</a>
+      <a class="toc-item" href="#problematic-hadiths"><span class="toc-num">09</span> Problematic Hadiths & Traditions</a>
+      <a class="toc-item" href="#conclusion"><span class="toc-num">10</span> Conclusion — The Case for Christianity</a>
+    </div>
+  </div>
+
+  <!-- 1. ISHMAEL — NEVER THE CHOSEN LINE -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 01 — Lineage</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="ishmael">
+    <div class="card-header">
+      <h2>🧬 Ishmael Was Never the Chosen Line <span class="badge">Genesis 17 · Covenant theology</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Islam teaches that Ishmael — son of Abraham by Hagar — was the true heir of the Abrahamic covenant and the ancestor of Muhammad and the Arab people. The claim is foundational to the Islamic identity: if Ishmael is the chosen line, Islam is the legitimate continuation of the Abrahamic faith.</p>
+      <p>But the Bible doesn't just leave this ambiguous. God himself makes the answer explicit — and He makes it in the exact moment Ishmael comes up:</p>
+
+      <div class="scripture">
+        <div class="scripture-ref">Genesis 17:18–21 (KJV)</div>
+        <p>"And Abraham said unto God, O that Ishmael might live before thee! And God said, Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac: and I will establish my covenant with him for an everlasting covenant, and with his seed after him. And as for Ishmael, I have heard thee: Behold, I have blessed him, and will make him fruitful, and will multiply him exceedingly; twelve princes shall he beget, and I will make him a great nation. But my covenant will I establish with Isaac, which Sarah shall bear unto thee at this set time in the next year."</p>
+      </div>
+
+      <p>Let's read that carefully. Abraham — visibly emotional — <strong>literally pleads</strong> for Ishmael to be included. He says, "O that Ishmael might live before thee!" And God's answer isn't vague. It is a direct, explicit denial: <strong>"But my covenant will I establish with Isaac."</strong></p>
+
+      <div class="warning-block">
+        <strong>The theological problem for Islam:</strong><br><br>
+        According to Islamic sources, Ishmael is the direct ancestor of the Arab peoples and of the Prophet Muhammad himself (see Ibn Hisham, <em>Sirat Rasul Allah</em>, the earliest biography of Muhammad, which traces his genealogy through Ishmael → Adnan → Arab tribes → Abdullah → Muhammad). Yet Genesis 17 shows that Ishmael's existence was not the plan — he was conceived when Abraham and Sarah took matters into their own hands (Genesis 16) rather than waiting for God's promise. Isaac was the covenant child — born supernaturally to a barren woman (Genesis 21:1-2).<br><br>
+        Ishmael is never said to receive the prophetic gift, the Torah, the Psalms, or the line of kings. The Scripture records no prophets descending from Ishmael. The entire prophetic tradition — from Isaac to Jacob to Moses to David to Isaiah to Jeremiah — flows through Isaac's line.
+      </div>
+
+      <div class="scripture">
+        <div class="scripture-ref">Genesis 21:12 (KJV)</div>
+        <p>"And God said unto Abraham, Let it not be grievous in thy sight because of the lad, and because of thy bondwoman; in all that Sarah hath said unto thee, hearken unto her voice; for in Isaac shall thy seed be called."</p>
+      </div>
+
+      <p>The Apostle Paul makes this covenant argument explicit in Galatians 4, calling Hagar a figure of bondage (law) and Sarah a figure of freedom (grace). The child of the promise is Isaac, not Ishmael. The prophetic, covenant, and messianic lineage in Scripture <strong>uniformly and exclusively</strong> passes through Isaac → Jacob → the twelve tribes → David → Jesus.</p>
+
+      <div class="stat-block">
+        📌 <strong>The lineage of prophecy:</strong><br>
+        Abraham (covenant) → Isaac (Genesis 17:21) → Jacob/Israel (Genesis 35:10) → Judah (Genesis 49:10, "the scepter shall not depart from Judah") → David (2 Samuel 7:12-16) → Jesus (Matthew 1:1, "Jesus Christ, son of David, son of Abraham")<br><br>
+        ❌ Ishmael → <em>No prophets. No covenant. No Psalms. No Torah. No Messiah.</em>
+      </div>
+
+      <p>The Islamic claim requires that the entire Hebrew prophetic tradition got the lineage backwards — that Allah's chosen line was Ishmael but that centuries of prophets all taught the opposite. This creates an extraordinary burden of proof. The Qur'an itself even claims to confirm the Torah and the Gospel (we'll get to that). You cannot simultaneously confirm those books and overturn their most explicit covenant promise.</p>
+    </div>
+  </div>
+
+  <!-- 2. QUR'AN ENDORSES THE BIBLE -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 02 — Internal Contradiction</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="quran-bible">
+    <div class="card-header">
+      <h2>📖 The Qur'an Endorses the Bible <span class="badge amber-border">Internal contradiction · Qur'anic sources</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Here is perhaps the single most devastating internal problem in Islamic theology — and it comes from the Qur'an itself. The Qur'an repeatedly and explicitly says that the Torah (Tawrat) and the Gospel (Injeel) are from Allah, that Muhammad confirmed them, and that Jews and Christians are to judge by them. This creates an irresolvable contradiction.</p>
+
+      <p><strong>If the Bible is the Word of God — as the Qur'an says — then the Bible's testimony about Jesus, the covenant, and the prophetic line cannot be dismissed.</strong></p>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 3:3 (Al Imran)</div>
+        <p>"He has revealed to you the Book with truth, confirming what was revealed before it, and He revealed the Torah and the Injeel, before this, as guidance for the people."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 5:47 (Al-Ma'idah)</div>
+        <p>"Let the people of the Gospel judge by what Allah has revealed in it. Whoever does not judge by what Allah has revealed — they are the defiantly disobedient."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 5:43 (Al-Ma'idah)</div>
+        <p>"But how is it that they come to you for judgment while they have the Torah, in which is the judgment of Allah? Then they turn away after that; but those are not [in fact] believers."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 10:94 (Yunus)</div>
+        <p>"So if you are in doubt about what We have revealed to you, then ask those who have been reading the Scripture before you. The truth has certainly come to you from your Lord, so never be among the doubters."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 5:46 (Al-Ma'idah)</div>
+        <p>"And We sent, following in their footsteps, Jesus, the son of Mary, confirming that which came before him in the Torah; and We gave him the Gospel, in which was guidance and light and confirming that which preceded it of the Torah as guidance and instruction for the righteous."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 2:136 (Al-Baqarah)</div>
+        <p>"Say, 'We have believed in Allah and what has been revealed to us and what has been revealed to Abraham and Ishmael and Isaac and Jacob and the Descendants and what was given to Moses and Jesus and what was given to the prophets from their Lord. We make no distinction between any of them, and we are Muslims in submission to Him.'"</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 5:68 (Al-Ma'idah)</div>
+        <p>"Say, O People of the Scripture, you are on nothing until you uphold the Torah, the Gospel, and what has been revealed to you from your Lord."</p>
+      </div>
+
+      <p>The standard Islamic response is that the Bible has been "corrupted" (tahrif). But here is the fatal problem:</p>
+
+      <div class="warning-block">
+        <strong>The Corruption Argument Destroys the Qur'an's Own Claims:</strong><br><br>
+        1. The Qur'an tells Jews and Christians to judge by their scriptures in 7th-century Arabia — meaning the Bible at that time was reliable enough to judge by (Qur'an 5:47, 5:43).<br><br>
+        2. The Qur'an says Muhammad was told to ask "those who read Scripture before you" if he was in doubt (Qur'an 10:94). You don't ask someone to consult a corrupted document for theological certainty.<br><br>
+        3. No Muslim scholar has ever identified <em>when</em> the corruption happened, <em>who</em> did it, <em>which manuscripts</em> were changed, or <em>what the original said</em>. Modern textual criticism shows the New Testament manuscripts are among the most reliably preserved documents of antiquity — with over 5,800 Greek manuscripts and manuscript traditions predating Islam by centuries.<br><br>
+        4. The Dead Sea Scrolls (discovered 1947) show that the Hebrew Old Testament text matches modern Bibles almost exactly — and those scrolls predate Muhammad by 600–700 years.
+      </div>
+
+      <p>If the Bible was corrupt when the Qur'an was written, then the Qur'an was directing people to a corrupt document for divine judgment — which makes Allah either deceived or deceptive. If it wasn't corrupt then, it can't be dismissed now. The argument has no exit.</p>
+    </div>
+  </div>
+
+  <!-- 3. MULTIPLE QUR'ANS -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 03 — Textual Integrity</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="multiple-qurans">
+    <div class="card-header">
+      <h2>📚 Multiple Qur'ans — Uthman's Burning <span class="badge-red badge">Textual variants · Historical record</span></h2>
+    </div>
+    <div class="card-body">
+      <p>The Muslim claim of perfect Qur'anic preservation is one of Islam's most repeated arguments. "There is only one Qur'an," Muslims say. "Every copy in the world is identical, down to the dot." This is taught from childhood and repeated by scholars. And it is factually incorrect.</p>
+
+      <p>The Qur'an has not one version but <strong>multiple distinct textual traditions called <em>qira'at</em> (readings)</strong>. There are at minimum ten accepted qira'at, each with its own chain of transmission, its own voweling, and in many cases its own <em>different words</em>.</p>
+
+      <div class="stat-block">
+        <strong>Currently used distinct Qur'anic text traditions:</strong><br><br>
+        Hafs — Muslim world in general (most common)<br>
+        Warsh — Algeria, Morocco, West Africa, parts of Sudan<br>
+        Qalun — Libya, Tunisia, parts of Qatar<br>
+        Al-Duri — Parts of Sudan and West Africa<br>
+        Hisham — Parts of Yemen<br><br>
+        Source: Abu Ammaar Yasir Qadhi, <em>An Introduction to the Sciences of the Qur'an</em>, 1999, p. 199.
+      </div>
+
+      <p>This is not just a pronunciation difference. The textual variants between, for example, the Hafs and Warsh Qur'ans include:</p>
+
+      <table>
+        <thead>
+          <tr><th>Verse</th><th>Hafs Reading</th><th>Warsh Reading</th><th>Meaning Difference</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Qur'an 1:4</td><td>Māliki yawmi (Owner of the Day)</td><td>Maliki yawmi (King of the Day)</td><td>Owner vs. King — different attributes of God</td></tr>
+          <tr><td>Qur'an 2:9</td><td>Yakhda'ūna (they deceive)</td><td>Yukhaadi'ūna (they seek to deceive)</td><td>Active deception vs. attempted deception</td></tr>
+          <tr><td>Qur'an 3:81</td><td>Ataytukum (I gave you)</td><td>Ataynakum (We gave you)</td><td>First person singular vs. plural — changes who is speaking</td></tr>
+          <tr><td>Qur'an 5:54</td><td>Yartadda (turn back)</td><td>Yartadid (turn back)</td><td>Dialectal difference, same meaning</td></tr>
+          <tr><td>Qur'an 21:4</td><td>Qaala — "He said, My lord knows"</td><td>Qul — "Say: My Lord knows" (command)</td><td>Muhammad speaking vs. God commanding Muhammad — different theological meaning</td></tr>
+          <tr><td>Qur'an 43:19</td><td>'Ibādu l-raḥmāni (slaves of the Most Gracious)</td><td>'Inda l-raḥmāni (with the Most Gracious)</td><td>Noun "slaves" vs. preposition "with" — completely different meaning</td></tr>
+          <tr><td>Qur'an 66:12</td><td>Kutubihi (his books — plural)</td><td>Kitābihi (his book — singular)</td><td>Mary believes all God's books vs. one specific book</td></tr>
+        </tbody>
+      </table>
+
+      <div class="amber-block">
+        <strong>Uthman's Burning of Qur'anic Manuscripts:</strong><br><br>
+        Early Islamic history records that the third Caliph, Uthman ibn Affan (644–656 AD), commissioned a standardized Qur'an and then ordered the destruction of all other existing manuscripts. This is not disputed — it is recorded in Islamic sources themselves:<br><br>
+        <em>"Uthman sent to every Muslim province one copy of what they had copied, and ordered that all the other Qur'anic materials, whether written in fragmentary manuscripts or whole copies, be burnt."</em><br>— Sahih al-Bukhari, Volume 6, Book 61, Number 510 (Narrated Anas bin Malik)<br><br>
+        Why would you burn manuscripts of the "perfectly preserved" word of God? The Islamic answer — that he was standardizing, not suppressing — cannot explain why existing valid Qur'ans needed to be destroyed rather than simply retired. Burning is not archiving. Burning is suppression.
+      </div>
+
+      <p>This happened approximately 20 years after Muhammad's death. Before Uthman's standardization, there were well-known variant codices — including those of Ibn Mas'ud (a companion personally taught by Muhammad), Ubayy ibn Ka'b, and Ali ibn Abi Talib. Ibn Mas'ud, notably, refused to surrender his copy and publicly rejected Uthman's version, saying it differed materially from what he had received directly from the Prophet.</p>
+
+      <div class="quote">
+        <p>"Ibn Mas'ud said: 'I recited from the mouth of the Messenger of Allah seventy chapters of the Qur'an while Zayd ibn Thabit was still a boy. Am I now to abandon what I have received directly from the Messenger of Allah?'"</p>
+        <div class="quote-author">— Reported in Musnad Ahmad; see also Itqan fi 'Ulum al-Qur'an by al-Suyuti</div>
+      </div>
+
+      <p>Contrast this with the New Testament. We have over 5,800 Greek manuscripts of the New Testament, many predating Muhammad. Textual scholars can identify variants, trace them, and reconstruct the original text with a reliability no other ancient document approaches. No Christian authority ever burned manuscript variants. The New Testament's transmission is demonstrably more transparent, more documented, and more verifiable than the Qur'an's.</p>
+    </div>
+  </div>
+
+  <!-- 4. THE CAVE — ANGEL WHO ATTACKED -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 04 — The Revelation</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="angel-cave">
+    <div class="card-header">
+      <h2>🕳️ The Cave of Hira — An Angel That Attacked <span class="badge-red badge">Bukhari 4953 · vs. biblical angelic encounters</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Muhammad's first "revelation" is the foundational event of Islam. According to the tradition, the angel Jibreel (Gabriel) appeared to Muhammad in the Cave of Hira around 610 AD. What happened in that cave is recorded in Islam's most authoritative hadith collection — and it raises a question that deserves serious attention.</p>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Sahih al-Bukhari 4953 — Narrated by Aisha</div>
+        <p>"An Angel came to him and asked him to read. Allah's Messenger replied, 'I do not know how to read.' The Prophet added, 'Then the Angel held me (forcibly) and pressed me so hard that I felt distressed. Then he released me and again asked me to read, and I replied, I do not know how to read. Thereupon he held me again and pressed me for the second time till I felt distressed. He then released me and asked me to read, but again I replied, I do not know how to read. Thereupon he held me for the third time and pressed me till I got distressed, and then he released me...'"</p>
+      </div>
+
+      <p>After this experience, Muhammad ran home in terror, shaking so violently he asked Khadija to cover him with blankets. He then told her: <em>"I was afraid that something bad had happened to me."</em></p>
+
+      <p>Muhammad's initial explanation — which even Khadija had to reassure him against — was that he feared he had been possessed by an evil spirit (jinn). The Hadith records this fear as genuine, and Islamic commentators acknowledge it.</p>
+
+      <div class="warning-block">
+        <strong>This is not how God's angels behave in the Bible.</strong><br><br>
+        In every biblical encounter where angels appear to prophets — Moses, Daniel, Isaiah, Ezekiel, Mary, the disciples — the angel's first words are typically <em>"Fear not."</em> The angelic encounter is frightening to humans, yes — but the angel immediately reassures. Angels in Scripture never physically assault the person they are delivering a message to.<br><br>
+        There is, however, a spirit in the Bible that does choke, compress, oppress, and terrify — and it is not the Holy Spirit.
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-col christian">
+          <div class="compare-label c">Biblical Angelic Encounters</div>
+          <ul>
+            <li>Angel to Mary: <em>"Fear not, Mary: for thou hast found favour with God."</em> (Luke 1:30)</li>
+            <li>Angel to Daniel: <em>"Fear not, Daniel: for from the first day... thy words were heard."</em> (Daniel 10:12)</li>
+            <li>Angel to Moses: speaks from burning bush — doesn't touch him</li>
+            <li>Angel to Isaiah: touches his lips with coal — for cleansing (Isaiah 6:7)</li>
+            <li>Gabriel to Zacharias: <em>"Fear not... thy prayer is heard."</em> (Luke 1:13)</li>
+            <li>After resurrection: <em>"Fear not ye"</em> — angels comfort the disciples (Matthew 28:5)</li>
+          </ul>
+        </div>
+        <div class="compare-col islamic">
+          <div class="compare-label i">Muhammad's First "Revelation"</div>
+          <ul>
+            <li>Angel seizes Muhammad and physically squeezes him — three times</li>
+            <li>Muhammad is left in distress each time</li>
+            <li>Muhammad runs home in terror</li>
+            <li>Muhammad fears he has become possessed by a jinn (demon)</li>
+            <li>Muhammad initially contemplates that something <em>bad</em> has happened to him</li>
+            <li>Khadija takes him to her Christian cousin Waraqah for spiritual discernment</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The detail about Khadija taking Muhammad to <strong>Waraqah ibn Nawfal</strong> — a Nestorian Christian scholar — to interpret his experience is particularly significant. The very person who first identified Muhammad's experience as prophetic was a <em>Christian</em>, who compared it to the revelation given to Moses. Waraqah was the theological authority in the room. Islam's founding moment was discerned through Christian scholarship.</p>
+
+      <div class="stat-block">
+        📖 <strong>For further study:</strong> Sahih al-Bukhari, Book 1, Hadith 3 — the full cave narrative. Sunnah.com reference: bukhari:4953. The physical distress, the fear of demonic possession, and the appeal to a Christian scholar are all present in the canonical Islamic text itself — this is not an outside critic's interpretation.
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. MUHAMMAD VS JESUS -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 05 — Character Comparison</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="muhammad-vs-jesus">
+    <div class="card-header">
+      <h2>⚖️ Muhammad vs. Jesus — A Life Comparison <span class="badge">Historical record · Sunnah & Gospel sources</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Islam teaches that Muhammad was the greatest of all prophets — the "seal of the prophets" (Qur'an 33:40). Jesus is treated as a prophet, but considered inferior to Muhammad. Yet when you compare the documented lives of both men side by side — using Islamic sources for Muhammad and the Gospels for Jesus — the contrast is stark.</p>
+
+      <div class="compare-grid">
+        <div class="compare-col christian">
+          <div class="compare-label c">Jesus — According to the Gospels</div>
+          <ul>
+            <li>Born of a virgin — no human father (Matthew 1:20)</li>
+            <li>Sinless — "Which of you convinceth me of sin?" (John 8:46). The Qur'an itself agrees: Jesus was born "pure" (Qur'an 19:19)</li>
+            <li>Never married. Never had sexual relations.</li>
+            <li>Never ordered anyone killed</li>
+            <li>Healed the sick, raised the dead — including enemies</li>
+            <li>Commanded: "Love your enemies, pray for those who persecute you." (Matthew 5:44)</li>
+            <li>Was himself crucified rather than crucifying others</li>
+            <li>Said: "My kingdom is not of this world" (John 18:36) — no political empire, no conquest</li>
+            <li>Died without sin, without blood on his hands, without wealth accumulated through plunder</li>
+          </ul>
+        </div>
+        <div class="compare-col islamic">
+          <div class="compare-label i">Muhammad — According to Islamic Sources</div>
+          <ul>
+            <li>Married at least 11 wives (Sahih Muslim 1452a)</li>
+            <li>Married Aisha at age 6, consummated at age 9 (Sahih al-Bukhari 5134)</li>
+            <li>Ordered and led military campaigns — over 60 battles or raids in his lifetime (Ibn Hisham, Sirat)</li>
+            <li>Ordered executions — including the beheading of 600–900 men of the Banu Qurayza tribe (Sahih al-Bukhari 4122)</li>
+            <li>Received "revelation" permitting him to marry his adopted son's divorced wife (Qur'an 33:37) — Zaynab bint Jahsh</li>
+            <li>Permitted keeping concubines (women captured in war) — Qur'an 4:24</li>
+            <li>Received revelations that conveniently addressed personal situations (Aisha reportedly noted this)</li>
+            <li>Built a theocratic state with political, military and religious authority in one person</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="amber-block">
+        <strong>The Zaynab Incident (Qur'an 33:37):</strong><br><br>
+        Muhammad's adopted son Zayd divorced his wife Zaynab bint Jahsh. Muhammad then wished to marry her. The problem: Islamic custom held that a man could not marry his son's wife. So a Qur'anic revelation came — conveniently abolishing the custom of adopted sons counting as real sons, and permitting the marriage. Aisha, Muhammad's youngest wife, was reported in Sahih al-Bukhari to have said: <em>"I feel that your Lord hastens in fulfilling your wishes and desires."</em> (Sahih al-Bukhari 4788)<br><br>
+        When revelations appear to solve the prophet's personal romantic and political problems, it raises a question any honest person should ask.
+      </div>
+
+      <div class="amber-block">
+        <strong>The Marriage to Aisha (Bukhari 5134):</strong><br><br>
+        Narrated Aisha: "The Prophet engaged me when I was a girl of six. We went to Medina... and I was swung up high and then brought down low, and this went on for a month, and then the Prophet came to me and my mother handed me over to him, and at that time I was a girl of nine years of age." — Sahih al-Bukhari, Book 62, Hadith 5134.<br><br>
+        This is not a minor or contested tradition. It appears in the most authoritative Sunni hadith collection and is affirmed by Sahih Muslim as well. Jesus, by contrast, never touched a child in anything but healing.
+      </div>
+
+      <p>The Qur'an itself refers to Jesus (<em>Isa</em>) as: born of a virgin (19:20), sinless/pure from birth (19:19), one who healed the blind and raised the dead (3:49), the "Word" of God and a "Spirit from Him" (4:171), and one who will return at the end of time to judge the world (various hadith). The Qur'an even says Jesus will return — not Muhammad. In Islamic eschatology, Muhammad is dead and stays dead. Jesus descends from heaven.</p>
+
+      <div class="quote">
+        <p>The Qur'an gives Jesus titles it gives no other prophet — "Word of God," "Spirit from God," "Messiah." It does not call Muhammad any of these things. If you follow the internal logic of the Qur'an's own descriptions, Jesus occupies a category unlike anyone else in it.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. MUT'AH -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 06 — Sexual Ethics</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="mutah">
+    <div class="card-header">
+      <h2>💍 Mut'ah — Islam's Temporary Marriage <span class="badge-red badge">Sahih Muslim · sexual contract</span></h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Mut'ah</strong> (Arabic: متعة — "pleasure") is a practice of contracted temporary marriage. A man and a woman agree to a marriage for a fixed period — hours, days, or weeks — in exchange for a payment (mahr) to the woman. When the period ends, the marriage automatically dissolves. No divorce required. No ongoing obligation.</p>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 4:24 (An-Nisa) — the textual basis</div>
+        <p>"And also forbidden to you are all married women except those your right hands possess. This is the decree of Allah for you. Beyond these, it is lawful for you to seek [in marriage] with your wealth in a proper manner, desiring chastity, not unlawful sexual intercourse. So for whatever you enjoy [of marriage] from them, give them their due compensation as an obligation. And there is no blame upon you for what you mutually agree to beyond the obligation. Indeed, Allah is ever Knowing and Wise."</p>
+      </div>
+
+      <div class="stat-block">
+        <strong>Hadith confirmation:</strong><br><br>
+        "We used to participate in the holy battles led by Allah's Messenger and we had no women with us. So we said, 'Shall we castrate ourselves?' But the Prophet forbade us to do that and thenceforth he allowed us to marry a woman temporarily by giving her even a garment, and then he recited: 'O you who believe! Do not make unlawful the good things which Allah has made lawful for you.'" — Sahih al-Bukhari, Book 62, Hadith 13 (Narrated Abdullah)<br><br>
+        Sahih Muslim 1404b: "Allah's Messenger permitted us to contract temporary marriage for three nights." — Narrated Salama bin Al-Akwa
+      </div>
+
+      <p>Mut'ah is still practiced today in Shia Islam, where it is called <em>sigheh</em> in Iran. While mainstream Sunni Islam later declared it forbidden (citing a separate hadith where it was prohibited), the critical point is that it was explicitly practiced by Muhammad and permitted under his direct authority. You cannot say it was fabricated by later followers — it is in Sahih Bukhari and Sahih Muslim.</p>
+
+      <div class="warning-block">
+        <strong>What this is in plain terms:</strong><br><br>
+        Strip away the religious terminology. A man pays a woman a sum. They agree to be "married" for a set number of hours or days. They have sexual relations. The arrangement ends. The woman may remarry the same way with a different man.<br><br>
+        In any secular legal framework, this is a sexual transaction — what in the West would be called prostitution, given that the defining characteristic (payment exchanged for sexual access for a defined period, with no lasting commitment) is identical. The Islamic framework gives it a religious label, but the structure is identical.<br><br>
+        Jesus, by contrast, elevated marriage to a covenant image of God's love for His people — permanent, sacrificial, and exclusive (Matthew 19:4-6). Paul called the marriage relationship an image of Christ and the Church (Ephesians 5:25-32). The contrast in sexual ethics between the two systems could not be more stark.
+      </div>
+    </div>
+  </div>
+
+  <!-- 7. HEAVEN & 72 VIRGINS -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 07 — Theology of Heaven</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="heaven-virgins">
+    <div class="card-header">
+      <h2>🌙 Islamic Heaven — The 72 Virgins Problem <span class="badge amber-border">Materialism · Sunan al-Tirmidhi</span></h2>
+    </div>
+    <div class="card-body">
+      <p>The Islamic vision of paradise (Jannah) deserves honest examination — not mockery, but analysis. What kind of God is being worshipped? What is the ultimate reward being promised?</p>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 44:54 (Ad-Dukhan)</div>
+        <p>"So it will be. And We will marry them to fair women with large, beautiful eyes."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 55:70-72 (Ar-Rahman)</div>
+        <p>"In them are good and beautiful women — so which of the favors of your Lord would you deny? Fair ones reserved in pavilions."</p>
+      </div>
+
+      <div class="quran-ref">
+        <div class="quran-ref-label">Qur'an 56:35-38 (Al-Waqia)</div>
+        <p>"Indeed, We have produced the women of Paradise in a new creation and made them virgins, devoted and of equal age, for the companions of the right."</p>
+      </div>
+
+      <div class="stat-block">
+        <strong>The 72 virgins — Hadith source:</strong><br><br>
+        "The smallest reward for the people of Heaven is an abode where there are 80,000 servants and 72 wives, over which stands a dome decorated with pearls, aquamarine, and ruby..." — Sunan al-Tirmidhi, Book 37, Hadith 2687 (Classified Hasan — reliable)
+      </div>
+
+      <div class="warning-block">
+        <strong>The Materialist Heaven Problem:</strong><br><br>
+        The Islamic paradise is described almost entirely in physical, sensory, and sexual terms — rivers of wine (Qur'an 47:15), rivers of milk and honey, silk garments, silver couches, fruit in abundance, and perpetually virgin sexual companions. The "houri" (حُور, divine women) are described as having never been touched by man or jinn, with large beautiful eyes, and renewed virginity.<br><br>
+        This is a fundamentally <em>materialist</em> conception of eternity. It is heaven described not as closeness to God, not as transformation into holiness, not as the Beatific Vision — but as the continuation and amplification of earthly male appetites, forever.<br><br>
+        The question is: what does this reveal about the God being described? A being whose highest reward for faithful human beings is women, wine, and couches — offered predominantly to men — has more in common with a powerful human ruler rewarding soldiers than with the Holy God who created the universe.
+      </div>
+
+      <div class="compare-grid">
+        <div class="compare-col christian">
+          <div class="compare-label c">Christian Heaven — Biblical Description</div>
+          <ul>
+            <li>"Blessed are the pure in heart: for they shall see God." (Matthew 5:8)</li>
+            <li>"We shall be like him; for we shall see him as he is." (1 John 3:2)</li>
+            <li>"In the resurrection they neither marry nor are given in marriage, but are as the angels of God in heaven." (Matthew 22:30)</li>
+            <li>The New Jerusalem — the presence of God himself (Revelation 21:3)</li>
+            <li>Heaven is the fullness of knowing, loving, and being with God — not the amplification of physical pleasure</li>
+          </ul>
+        </div>
+        <div class="compare-col islamic">
+          <div class="compare-label i">Islamic Heaven — Qur'anic/Hadith Description</div>
+          <ul>
+            <li>72+ houri (virgin sexual companions) — Tirmidhi 2687</li>
+            <li>Rivers of wine, milk, honey — Qur'an 47:15</li>
+            <li>Silk couches, servants — Qur'an 55:54</li>
+            <li>Perpetually renewed appetites and youthful bodies</li>
+            <li>No clear role described for women believers as recipients — the description is almost exclusively addressed to men</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The great Christian mystics — Augustine, Aquinas, Teresa of Ávila, C.S. Lewis — understood heaven as the ultimate orientation toward the Source of all being, all beauty, all love. "Our heart is restless, until it repose in Thee," Augustine wrote. The soul longs for God, not for more of what earth provided. A paradise built on sensual reward is not theology — it is marketing to the appetites of desert warriors.</p>
+    </div>
+  </div>
+
+  <!-- 8. CHRISTIANITY PREDATES ISLAM -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 08 — Historical Priority</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="predates">
+    <div class="card-header">
+      <h2>⏳ Christianity Predates Islam by ~700 Years <span class="badge">Historical priority · The replacement problem</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Islam presents itself as the final, corrective revelation — superseding and completing what Christianity and Judaism got wrong. But the chronological and historical facts create a significant problem for this claim.</p>
+
+      <div class="stat-block">
+        <strong>Timeline:</strong><br><br>
+        c. 4 BC — Birth of Jesus Christ<br>
+        c. 30–33 AD — Crucifixion, Resurrection, Pentecost — the Church begins<br>
+        c. 50–100 AD — New Testament documents written and circulated<br>
+        180–200 AD — New Testament canon widely established in practice<br>
+        313 AD — Edict of Milan — Christianity legally recognized in Rome<br>
+        c. 570 AD — Birth of Muhammad<br>
+        610 AD — Muhammad's first "revelation" in the Cave of Hira<br>
+        632 AD — Death of Muhammad<br>
+        650 AD — Uthman's standardized Qur'an compiled and variants burned<br><br>
+        <strong>Gap: ~600–700 years between Jesus and Muhammad.</strong>
+      </div>
+
+      <p>Christianity was not a regional sect in 610 AD. By the time Muhammad received his first revelation, Christianity had:</p>
+
+      <ul>
+        <li>Spread across the Roman Empire, North Africa, Persia, India (Thomas), Ethiopia, and Armenia</li>
+        <li>Produced thousands of manuscripts of the New Testament in Greek, Latin, Syriac, Coptic, Armenian, and Ethiopic</li>
+        <li>Established four major theological schools (Alexandria, Antioch, Rome, Carthage)</li>
+        <li>Defended its doctrines through seven Ecumenical Councils</li>
+        <li>Produced systematic theologians including Origen, Tertullian, Athanasius, Augustine, and John Chrysostom</li>
+        <li>Suffered and documented hundreds of years of martyrdom under Rome</li>
+      </ul>
+
+      <p>Islam's claim is essentially this: <em>for six centuries, the entire Christian world — scholars, martyrs, bishops, missionaries, councils — preserved a corrupted gospel. They all got it wrong. Then Muhammad, an illiterate Arab merchant, received the correction from an angel.</em></p>
+
+      <div class="warning-block">
+        <strong>Consider what this requires you to believe:</strong><br><br>
+        → The disciples of Jesus — who watched him die and claimed to watch him rise — taught a lie and died for it.<br>
+        → The Apostle Paul, who records meeting eyewitnesses of the risen Jesus (1 Corinthians 15:3-8), fabricated the resurrection narrative.<br>
+        → The Roman Empire, which had every incentive to destroy Christianity, failed to produce the dead body of Jesus — and Christians maintained the resurrection across centuries of torture without recanting.<br>
+        → Every letter, manuscript, and theological text produced in six centuries — in multiple languages and geographies — was corrupted before Islam could "correct" it.<br>
+        → And yet the Qur'an simultaneously tells Muhammad to consult these same scriptures when in doubt (Qur'an 10:94).<br><br>
+        These claims cannot all be simultaneously true.
+      </div>
+
+      <p>Christianity doesn't just predate Islam historically — it has a documented chain of eyewitness testimony going back to the first generation. Paul writes to the Corinthians c. 55 AD that Jesus "appeared to Peter, then to the twelve. After that, he appeared to more than five hundred brothers and sisters at the same time, most of whom are still living" (1 Corinthians 15:5-6). He is inviting the audience to check. Five hundred living witnesses, named in a verifiable letter. Islam's founding revelation, by contrast, occurred in a private cave with no witnesses except Muhammad's own account.</p>
+    </div>
+  </div>
+
+  <!-- 9. PROBLEMATIC HADITHS -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 09 — The Hadith Record</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="problematic-hadiths">
+    <div class="card-header">
+      <h2>📜 Problematic Hadith Traditions <span class="badge-red badge">Canonical sources · Bukhari · Muslim</span></h2>
+    </div>
+    <div class="card-body">
+      <p>The following are not obscure traditions buried in discredited texts. These appear in Sahih al-Bukhari and Sahih Muslim — the two most authoritative hadith collections in Sunni Islam, whose very name <em>Sahih</em> means "authentic."</p>
+
+      <div class="amber-block">
+        <strong>📌 Muhammad and the Magic Spell (Bukhari 5765):</strong><br><br>
+        Narrated Aisha: "Allah's Messenger was bewitched so that he used to think that he had done a thing which in fact he had not done." A spell was cast on Muhammad by a Jewish man named Labid ibn al-Asam using a comb, a piece of hair, and a pollen spathe of a male date palm. Muhammad was under the delusion that he had done things he had not done — for up to a year. He was eventually shown the location of the spell in a vision and it was removed.<br><br>
+        This is a profound theological problem: the man receiving divine revelation was himself vulnerable to being deceived through witchcraft. If his perception of reality was manipulable by a Jewish magician, how does one verify any revelation received during that period?
+      </div>
+
+      <div class="amber-block">
+        <strong>📌 Fly Wings and Medicine (Bukhari 3320):</strong><br><br>
+        "The Prophet said, 'If a house fly falls in the drink of anyone of you, he should dip it (in the drink), because one of its wings has a disease and the other has the cure for the disease.'"<br><br>
+        Modern microbiology establishes that houseflies carry bacteria, fungi, and pathogens on both wings and all surfaces. Immersing a fly deeper into a drink is not a medical remedy — it increases contamination. This tradition, presented as prophetic guidance, is medically false.
+      </div>
+
+      <div class="amber-block">
+        <strong>📌 The Satanic Verses Incident:</strong><br><br>
+        Early Islamic historical sources (al-Tabari, Ibn Ishaq in his Sirat) record that Muhammad temporarily recited verses approving of three pagan Meccan goddesses — Al-Lat, Al-Uzza, and Manat — as intercessors. He later said Satan had inserted these words into his recitation (hence the name "Satanic Verses"). Gabriel then corrected him with the true verses.<br><br>
+        This means — by Islam's own tradition — that Satan was able to insert false divine revelations into Muhammad's prophetic utterances indistinguishably from true ones. If one episode of Satanic corruption is admitted, the reliability of the entire prophetic corpus is placed in question. How does one know which verses were corrupted and which were not?
+      </div>
+
+      <div class="amber-block">
+        <strong>📌 Killing Those Who Leave Islam (Bukhari 6922):</strong><br><br>
+        "Allah's Messenger said, 'Whoever changes his Islamic religion, then kill him.'" — Sahih al-Bukhari 6922<br><br>
+        Jesus: "Love your enemies, bless them that curse you" (Matthew 5:44). "If any man hear my words and believe not, I judge him not: for I came not to judge the world, but to save the world." (John 12:47)<br><br>
+        The mandate to execute apostates does not appear in the New Testament. The contrast is absolute.
+      </div>
+
+      <div class="amber-block">
+        <strong>📌 Permission for Domestic Discipline (Qur'an 4:34):</strong><br><br>
+        "Men are in charge of women by right of what Allah has given one over the other... But those wives from whom you fear arrogance — advise them; forsake them in bed; and strike them." — Qur'an 4:34 (Sahih International)<br><br>
+        This is not a hadith — it is Qur'anic text. The verse permits a husband to physically discipline a wife. Islamic scholars debate the degree and method, but the text is unambiguous in its permission. The New Testament's instruction to husbands is: "Husbands, love your wives, just as Christ loved the Church and gave himself up for her." (Ephesians 5:25) — a command of sacrificial love, not hierarchical control.
+      </div>
+
+      <p>None of these are presented with malice. They are documented in Islam's own authoritative sources. The honest question they raise: does the character, conduct, and revelatory reliability of Muhammad reflect the standard of holiness associated with the God of Abraham, Isaac, and Jacob — the same God whose prophets never acted this way?</p>
+    </div>
+  </div>
+
+  <!-- 10. CONCLUSION -->
+  <div class="section-divider"><div class="section-divider-line"></div><div class="section-divider-text">Section 10 — Conclusion</div><div class="section-divider-line"></div></div>
+
+  <div class="evidence-card" id="conclusion">
+    <div class="card-header">
+      <h2>📊 Conclusion — The Case for Christianity <span class="badge">Cumulative case · Rational faith</span></h2>
+    </div>
+    <div class="card-body">
+      <p>Let me put this all together plainly.</p>
+
+      <p>Islam appeared approximately 600 years after Christianity. It claimed to correct Christianity. But to make that correction, it had to contradict documents that it simultaneously called the Word of God. It said the Bible was reliable enough to consult for guidance — then said it was too corrupt to trust. It said the prophetic covenant ran through Ishmael — while the very scriptures it claimed to confirm say explicitly and repeatedly that it ran through Isaac. It claimed perfect textual preservation — then history records a caliph burning the competing manuscripts of Muhammad's own companions.</p>
+
+      <p>The founding "revelation" came to a man alone in a cave, delivered through physical assault and terror, leaving him convinced he might be demonically possessed — and interpreted by a Christian scholar named Waraqah. That same prophet later received verses that conveniently solved his romantic dilemmas, permitted sexual contracts for temporary pleasure, authorized the killing of those who left his religion, and was apparently vulnerable to Jewish witchcraft for up to a year.</p>
+
+      <p>Contrast this with Jesus. Born of a virgin. Spent his ministry healing, teaching, raising the dead, and forgiving enemies. Never married. Never ordered an execution. Never enriched himself. Walked into death voluntarily and rose from it — witnessed by hundreds of people who then died rather than recant what they saw.</p>
+
+      <p>The Qur'an calls Jesus the Word of God and Spirit of God. It calls him born of a virgin and sinless. It says he performed miracles of resurrection. It says he will return at the end of history. Muhammad does none of these things. Islam gives Jesus every title short of Lord — and then tells you to follow someone else.</p>
+
+      <div class="quote">
+        <p>"Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me."</p>
+        <div class="quote-author">— John 14:6 (KJV)</div>
+      </div>
+
+      <div class="stat-block">
+        <strong>The cumulative case, summarized:</strong><br><br>
+        ✅ Genesis 17 explicitly assigns the covenant to Isaac, not Ishmael — God himself says so when directly asked<br>
+        ✅ The Qur'an commands Christians to judge by the Gospel — which means the Gospel it knew was reliable<br>
+        ✅ At least 10 distinct Qur'anic text traditions exist — Uthman burned the competing manuscripts<br>
+        ✅ Muhammad's first revelation involved physical assault, terror, fear of demon possession, and was interpreted by a Christian<br>
+        ✅ Jesus is described in the Qur'an as virgin-born, sinless, miracle-working, and returning — Muhammad is described as none of these<br>
+        ✅ Mut'ah is a documented sexual contract permitted by the Prophet himself — in Bukhari and Muslim<br>
+        ✅ Islamic paradise is described in physical and sexual terms — a materialist vision aimed at male appetite<br>
+        ✅ Christianity predates Islam by 600+ years with documented eyewitness testimony, while Islam's founding revelation has a single witness<br>
+        ✅ The apostasy law, the fly-wing medicine, the bewitchment episode, the Zaynab convenience-revelation — all in canonical Islamic sources
+      </div>
+
+      <p>This is not about hating Muslim people. The Muslim world contains millions of sincere people genuinely seeking God. This is about whether the <em>system</em> they've been handed is true. And when you examine it honestly — using its own sources, its own scholars, its own hadith collections — it does not hold together.</p>
+
+      <p>The God of the Bible didn't need to burn manuscripts to protect His revelation. The God of the Bible sent His Son not to conquer by the sword but to die for the people He loved. The God of the Bible chose the line of promise — Isaac, Jacob, David — and fulfilled that promise in the most unexpected way possible: through a carpenter from Galilee who healed lepers, befriended prostitutes, blessed children, and walked out of His own grave.</p>
+
+      <p>That God doesn't need you to be afraid. That God says: <em>"Fear not."</em></p>
+
+      <div class="quote">
+        <p>"Come unto me, all ye that labour and are heavy laden, and I will give you rest."</p>
+        <div class="quote-author">— Matthew 11:28 (KJV) — Jesus of Nazareth</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div style="margin-bottom: 16px;">Truth Archive — Answering Islam · Theological, historical and textual analysis.</div>
+    <div style="font-size: 0.75rem; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+      Primary Sources: Genesis 17:18–21 (KJV); Qur'an 3:3, 5:43, 5:47, 5:68, 10:94, 33:37, 4:34, 56:35-38, 55:70-72, 44:54, 47:15, 19:19-20, 4:24; Sahih al-Bukhari 4953, 5134, 5765, 4788, 6922, 4122, Book 62 Hadith 13, Book 61 Hadith 510; Sahih Muslim 1452a, 1404b; Sunan al-Tirmidhi 2687; Ibn Hisham <em>Sirat Rasul Allah</em>; al-Tabari <em>Tarikh</em>; Abu Ammaar Yasir Qadhi <em>Introduction to the Sciences of the Qur'an</em> (1999); Cyril Glasse <em>Concise Encyclopedia of Islam</em> 4th ed. (2013).
+    </div>
+    <div style="margin-top: 20px; font-size: 0.75rem; color: #6a7a6a;">
+      This page presents a Christian apologetics case. Muslim scholars hold different interpretations of the texts cited. Readers are encouraged to consult primary sources directly.
+    </div>
+    <div class="discord-link" style="margin-top: 20px;">
+      💬 Connect · Discord: <a href="https://discord.com/users/1483124335614099513" target="_blank" rel="noopener noreferrer">hisforeveramen</a>
+    </div>
+    <div style="margin-top: 16px;">Built to seek truth — not opinion.</div>
+  </footer>
+</div>
+
+<div class="back-to-top" id="backToTop">↑</div>
+
+<script>
+  // CURSOR
+  const ring = document.getElementById('curRing');
+  const dot = document.getElementById('curDot');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', (e) => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    rx += (mx - rx) * 0.16;
+    ry += (my - ry) * 0.16;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+
+  document.querySelectorAll('a, button, .evidence-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { ring.style.width = '50px'; ring.style.height = '50px'; ring.style.borderColor = 'rgba(0,255,136,0.7)'; });
+    el.addEventListener('mouseleave', () => { ring.style.width = '34px'; ring.style.height = '34px'; ring.style.borderColor = 'rgba(0,255,136,0.45)'; });
+  });
+
+  // PROGRESS + SCROLL
+  const backBtn = document.getElementById('backToTop');
+  const progressBar = document.getElementById('progressBar');
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    const s = document.documentElement.scrollTop;
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (s / h * 100) + '%';
+    backBtn.classList.toggle('visible', s > 400);
+    nav.classList.toggle('scrolled', s > 60);
+  });
+  backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // CARD ANIMATIONS
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.evidence-card').forEach(el => observer.observe(el));
+</script>
+
+<!-- Manual Language Switcher - Opens Google Translate in new tab -->
+<div class="language-switcher-container">
+  <select id="language-selector" class="language-selector">
+    <option value="en">🌐 English</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="it">🇮🇹 Italiano</option>
+    <option value="pt">🇵🇹 Português</option>
+    <option value="ru">🇷🇺 Русский</option>
+    <option value="ar">🇸🇦 العربية</option>
+    <option value="zh">🇨🇳 中文</option>
+    <option value="ja">🇯🇵 日本語</option>
+    <option value="ko">🇰🇷 한국어</option>
+    <option value="pl">🇵🇱 Polski</option>
+    <option value="tr">🇹🇷 Türkçe</option>
+    <option value="hi">🇮🇳 हिन्दी</option>
+  </select>
+</div>
+
+<style>
+  .language-switcher-container {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 999;
+  }
+  .language-selector {
+    background: #0f120f;
+    border: 1px solid #2a4b2f;
+    border-radius: 40px;
+    padding: 8px 16px;
+    color: #8effb2;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .language-selector:hover {
+    border-color: #00ff88;
+    background: #1a2a1a;
+    color: #00ff88;
+  }
+  .language-selector option {
+    background: #0f120f;
+    color: #e5e5e5;
+  }
+  @media (max-width: 768px) {
+    .language-switcher-container {
+      bottom: 70px;
+      right: 20px;
+    }
+    .language-selector {
+      padding: 6px 12px;
+      font-size: 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  const langSelector = document.getElementById('language-selector');
+  if (langSelector) {
+    langSelector.addEventListener('change', function() {
+      const lang = this.value;
+      if (lang !== 'en') {
+        window.open('https://translate.google.com/translate?hl=' + lang + '&sl=en&tl=' + lang + '&u=' + encodeURIComponent(window.location.href), '_blank');
+      }
+      this.value = 'en';
+    });
+  }
+</script>
+
+</body>
+</html>
