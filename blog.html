@@ -3,9 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Truth Archive</title>
+<title>Blog | Truth Archive — Latest News That Confirms the Bible</title>
 <link rel="canonical" href="https://jesusinvictus.com/blog.html">
 <meta name="description" content="Latest news and discoveries that confirm the Bible — archaeological finds, scientific studies, and prophetic updates.">
+
+<!-- Open Graph / Social Sharing -->
+<meta property="og:title" content="Blog | Truth Archive — Latest News That Confirms the Bible">
+<meta property="og:description" content="Latest discoveries and reports that confirm Scripture — archaeological finds, scientific studies, and prophetic updates.">
+<meta property="og:url" content="https://jesusinvictus.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jesusinvictus.com/og-preview.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | Truth Archive">
+<meta name="twitter:description" content="Discoveries that confirm the Bible — updated as new evidence emerges.">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,7 +35,7 @@
   .nav-links a:hover { background: #1e3a22; border-color: #8effb2; }
   .container { max-width: 1100px; margin: 0 auto; padding: 48px 24px 80px 24px; }
   h1 { font-size: 3rem; font-weight: 700; background: linear-gradient(135deg, #d0ffd0, #7effa3); background-clip: text; -webkit-background-clip: text; color: transparent; margin-bottom: 12px; letter-spacing: -1px; }
-  .sub { color: #9aa899; border-left: 3px solid #5eff8e; padding-left: 20px; margin-bottom: 40px; font-weight: 400; }
+  h2 { color: #8effb2; font-size: 1.3rem; font-weight: 500; margin-bottom: 40px; border-left: 3px solid #5eff8e; padding-left: 20px; }
   
   .blog-grid { display: flex; flex-direction: column; gap: 24px; }
   .blog-post { background: #0c0e0c; border: 1px solid #202520; border-radius: 20px; overflow: hidden; transition: all 0.3s ease; }
@@ -39,7 +52,7 @@
   .blog-link:hover { color: #00ff88; }
   
   footer { text-align: center; border-top: 1px solid #1e2a1f; padding-top: 32px; margin-top: 48px; font-size: 0.8rem; color: #6f7e6f; }
-  @media (max-width: 700px) { .container { padding: 28px 16px; } h1 { font-size: 2rem; } .blog-title { font-size: 1.2rem; } .blog-content { padding: 18px; } .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 18px; } }
+  @media (max-width: 700px) { .container { padding: 28px 16px; } h1 { font-size: 2rem; } h2 { font-size: 1.1rem; } .blog-title { font-size: 1.2rem; } .blog-content { padding: 18px; } .back-to-top { bottom: 20px; right: 20px; width: 40px; height: 40px; font-size: 18px; } }
 </style>
 </head>
 <body>
@@ -61,7 +74,7 @@
 
 <div class="container">
   <h1>Latest News</h1>
-  <div class="sub">Discoveries and reports that confirm the Bible — updated as new evidence emerges.</div>
+  <h2>Discoveries and reports that confirm the Bible — updated as new evidence emerges.</h2>
 
   <div class="blog-grid" id="blogGrid"></div>
 
@@ -74,11 +87,6 @@
 <div class="back-to-top" id="backToTop">↑</div>
 
 <script>
-  // ============================================================
-  // 📝 YOUR BLOG POSTS — Add new posts below
-  // Each post needs: date, source, sourceUrl, title, subtitle, excerpt, link
-  // ============================================================
-
   const posts = [
     {
       date: "May 2026",
@@ -89,35 +97,14 @@
       excerpt: "Archaeologists have uncovered what is believed to be the oldest inscription declaring 'Jesus is God' in a recently excavated site. The discovery provides tangible evidence that early Christians worshipped Jesus as divine from the very beginning of the faith.",
       link: "https://interestingengineering.com/culture/oldest-ever-jesus-is-god-inscription"
     }
-    // ============================================================
-    // Add more posts below — copy the template:
-    // ============================================================
-    // {
-    //   date: "June 2026",
-    //   source: "Source Name",
-    //   sourceUrl: "https://source-website.com",
-    //   title: "Your Headline Here",
-    //   subtitle: "Short subheadline (optional)",
-    //   excerpt: "A 1-2 sentence summary of the article",
-    //   link: "https://www.url-to-full-article.com"
-    // },
   ];
-
-  // ============================================================
-  // DON'T EDIT BELOW THIS LINE
-  // ============================================================
 
   function renderPosts() {
     const grid = document.getElementById('blogGrid');
     if (!grid) return;
     
     if (posts.length === 0) {
-      grid.innerHTML = `
-        <div style="background: #0c0e0c; border: 1px solid #202520; border-radius: 24px; padding: 40px; text-align: center;">
-          <p style="color: #6a9a6a;">📭 No posts yet. Check back soon for updates.</p>
-          <p style="color: #444; font-size: 13px; margin-top: 12px;">News that confirms the Bible will appear here.</p>
-        </div>
-      `;
+      grid.innerHTML = `<div style="background: #0c0e0c; border: 1px solid #202520; border-radius: 24px; padding: 40px; text-align: center;"><p style="color: #6a9a6a;">📭 No posts yet. Check back soon for updates.</p><p style="color: #444; font-size: 13px; margin-top: 12px;">News that confirms the Bible will appear here.</p></div>`;
       return;
     }
     
@@ -137,7 +124,6 @@
 
   renderPosts();
 
-  // Back to Top + Progress Bar
   const backBtn = document.getElementById('backToTop');
   const progressBar = document.getElementById('progressBar');
   window.addEventListener('scroll', () => {
