@@ -4,7 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Answering Islam | Truth Archive — A Case for Christianity Over Islam</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Cpath d='M50 20 L65 45 L58 45 L58 80 L42 80 L42 45 L35 45 Z' fill='%2300ff88'/%3E%3Ccircle cx='50' cy='28' r='6' fill='%2300ff88'/%3E%3C/svg%3E">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileColor" content="#0a0a0a">
+<meta name="theme-color" content="#0a0a0a">
 <link rel="canonical" href="https://jesusinvictus.com/answeringislam.html">
 <meta name="description" content="A comprehensive theological, historical and textual case addressing Islam — Qur'anic contradictions, Muhammad's life, the Ishmael question, and why Christianity predates and supersedes Islam.">
 
@@ -135,11 +141,84 @@
   td { color: #a8c0a8; border-bottom: 1px solid rgba(0,255,136,.06); }
   tr:last-child td { border-bottom: none; }
 
-  footer { text-align: center; border-top: 1px solid var(--border); padding-top: 32px; margin-top: 24px; font-size: .75rem; color: var(--muted); line-height: 1.8; }
+  /* RELATED SECTION STYLES - FIXED */
+  .related-section {
+    background: rgba(8,12,8,0.8);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 40px;
+  }
+  .related-section h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.9rem;
+    color: var(--g);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+  .related-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,255,136,0.05);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .related-link:last-child {
+    border-bottom: none;
+  }
+  .related-link:hover {
+    padding-left: 6px;
+  }
+  .related-link span {
+    font-size: 0.9rem;
+    color: #8ab08a;
+    transition: color 0.2s;
+  }
+  .related-link:hover span {
+    color: var(--g2);
+  }
 
-  .back-to-top { position: fixed; bottom: 28px; right: 28px; width: 44px; height: 44px; background: #00ff88; color: #0a0a0a; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; visibility: hidden; transition: all .3s; z-index: 100; font-size: 18px; font-weight: bold; box-shadow: 0 4px 20px rgba(0,255,136,.35); }
-  .back-to-top.visible { opacity: 1; visibility: visible; }
-  .back-to-top:hover { transform: translateY(-3px) scale(1.1); }
+  footer {
+    text-align: center;
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    margin-top: 24px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    background: #00ff88;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+    z-index: 100;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(0,255,136,.35);
+  }
+  .back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .back-to-top:hover {
+    transform: translateY(-3px) scale(1.1);
+  }
 
   @media (max-width:700px) {
     .container { padding: 0 16px 60px; }
@@ -147,6 +226,7 @@
     .page-header { padding: 48px 20px 36px; }
     .card-body { padding: 20px; }
     .nav { padding: 14px 18px; }
+    .related-link span { font-size: 0.8rem; }
   }
 </style>
 </head>
@@ -164,7 +244,7 @@
     <a href="healing.html">Healing</a>
     <a href="prophecy.html">Prophecy</a>
     <a href="christ.html">Christ</a>
-    <a href="answeringislam.html">Answering Islam</a>
+    <a href="answeringislam.html" class="active">Answering Islam</a>
     <a href="deep.html">Deep Waters</a>
   </div>
 </div>
@@ -275,7 +355,7 @@
 
   <div class="evidence-card" id="quran-bible">
     <div class="card-header">
-      <h2>📖 The Qur'an Endorses the Bible <span class="badge amber-border">Internal contradiction · Qur'anic sources</span></h2>
+      <h2>📖 The Qur'an Endorses the Bible <span class="badge-amber badge">Internal contradiction · Qur'anic sources</span></h2>
     </div>
     <div class="card-body">
       <p>Here is perhaps the single most devastating internal problem in Islamic theology — and it comes from the Qur'an itself. The Qur'an repeatedly and explicitly says that the Torah (Tawrat) and the Gospel (Injeel) are from Allah, that Muhammad confirmed them, and that Jews and Christians are to judge by them. This creates an irresolvable contradiction.</p>
@@ -543,7 +623,7 @@
 
   <div class="evidence-card" id="heaven-virgins">
     <div class="card-header">
-      <h2>🌙 Islamic Heaven — The 72 Virgins Problem <span class="badge amber-border">Materialism · Sunan al-Tirmidhi</span></h2>
+      <h2>🌙 Islamic Heaven — The 72 Virgins Problem <span class="badge-amber badge">Materialism · Sunan al-Tirmidhi</span></h2>
     </div>
     <div class="card-body">
       <p>The Islamic vision of paradise (Jannah) deserves honest examination — not mockery, but analysis. What kind of God is being worshipped? What is the ultimate reward being promised?</p>
@@ -745,6 +825,32 @@
         <div class="quote-author">— Matthew 11:28 (KJV) — Jesus of Nazareth</div>
       </div>
     </div>
+  </div>
+
+  <!-- RELATED EVIDENCE SECTION - FIXED -->
+  <div class="related-section">
+    <h3>📖 Related Evidence</h3>
+    <a class="related-link" href="https://jesusinvictus.com/">
+      <span>🏠 MAIN PAGE — Truth Archive Home</span>
+    </a>
+    <a class="related-link" href="scientific.html">
+      <span>🔬 Scientific Evidence — Shroud of Turin, fine-tuning, consciousness</span>
+    </a>
+    <a class="related-link" href="healing.html">
+      <span>🕊️ Healing Evidence — Lourdes miracles, prayer studies, documented healings</span>
+    </a>
+    <a class="related-link" href="prophecy.html">
+      <span>📜 Prophecy Evidence — Trump prediction, Dead Sea Scrolls, Stoner odds</span>
+    </a>
+    <a class="related-link" href="christ.html">
+      <span>✝️ Deity of Christ — Scriptural evidence, fulfilled prophecy</span>
+    </a>
+    <a class="related-link" href="answeringislam.html">
+      <span>🕌 Answering Islam — (you are here)</span>
+    </a>
+    <a class="related-link" href="deep.html">
+      <span>🌊 Deep Waters — Bigfoot DNA, interdimensional beings, transhumanism</span>
+    </a>
   </div>
 
   <footer>
