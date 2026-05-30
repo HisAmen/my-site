@@ -27,7 +27,6 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Scientific Evidence for God | Jesus Invictus">
 
-<!-- JSON-LD Structured Data for Homepage -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -311,7 +310,8 @@
     border-radius: 20px;
     padding: 28px 32px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .quotes-grid {
@@ -319,7 +319,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 28px;
-    margin: 40px auto;
+    margin: 0 auto 40px;
     max-width: 1100px;
     padding: 0 20px;
   }
@@ -416,9 +416,7 @@
     box-shadow: 0 12px 28px rgba(0, 255, 136, 0.12);
   }
 
-  .card:hover::before {
-    opacity: 1;
-  }
+  .card:hover::before { opacity: 1; }
 
   .card h3 {
     color: #00ff88;
@@ -427,9 +425,7 @@
     transition: transform 0.2s ease;
   }
 
-  .card:hover h3 {
-    transform: translateX(4px);
-  }
+  .card:hover h3 { transform: translateX(4px); }
 
   .card p {
     color: #bbb;
@@ -535,14 +531,9 @@
     transition: color 0.2s;
   }
 
-  .footer-links a:hover {
-    color: #00ff88;
-  }
+  .footer-links a:hover { color: #00ff88; }
 
-  .discord-link {
-    margin-top: 12px;
-    font-size: 13px;
-  }
+  .discord-link { margin-top: 12px; font-size: 13px; }
 
   .discord-link a {
     color: #8effb2;
@@ -603,6 +594,139 @@
     color: #e5e5e5;
   }
 
+  .image-wrap {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 255, 136, 0.12);
+    background: rgba(0, 15, 6, 0.4);
+    text-align: center;
+  }
+  .image-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .image-caption {
+    font-size: 0.75rem;
+    color: #7a9a7a;
+    padding: 10px 12px;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.02em;
+    border-top: 1px solid rgba(0, 255, 136, 0.08);
+  }
+
+  .scientist-block {
+    margin: 36px 0;
+    padding: 30px 32px;
+    background: rgba(0, 20, 8, 0.45);
+    border-radius: 22px;
+    border: 1px solid rgba(0, 255, 136, 0.18);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .scientist-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff88, transparent);
+  }
+
+  .scientist-block .block-label {
+    font-size: 0.68rem;
+    letter-spacing: 2.5px;
+    color: #00ff88;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .scientist-block h4 {
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .scientist-block p {
+    color: #cccccc;
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-size: 0.97rem;
+  }
+
+  .scientist-block .inline-quote {
+    background: rgba(0, 10, 4, 0.7);
+    border-left: 3px solid #00ff88;
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-style: italic;
+    color: #d0ecd0;
+    font-size: 0.93rem;
+    line-height: 1.65;
+  }
+
+  .scientist-block .inline-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-style: normal;
+    font-size: 0.75rem;
+    color: #00ff88;
+    font-weight: 600;
+  }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin: 20px 0 8px;
+  }
+
+  .video-item {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 255, 136, 0.15);
+    background: #000;
+  }
+
+  .video-item iframe {
+    display: block;
+    width: 100%;
+    height: 200px;
+  }
+
+  .video-caption {
+    padding: 10px 14px;
+    font-size: 0.72rem;
+    color: #6a8a6a;
+    background: rgba(0,10,4,0.5);
+    border-top: 1px solid rgba(0,255,136,0.1);
+    line-height: 1.45;
+  }
+
+  .math-pill {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 14px 0;
+    font-family: monospace;
+    font-size: 0.88rem;
+    color: #8effb2;
+    line-height: 1.6;
+    width: 100%;
+  }
+
+  .math-pill strong {
+    color: #00ff88;
+    font-size: 1.1rem;
+  }
+
   @media (max-width: 768px) {
     .hero { padding: 60px 20px 40px; }
     h1 { font-size: 38px; }
@@ -626,6 +750,10 @@
     .stat-label { font-size: 0.6rem; }
     .footer-links { gap: 12px; }
     .toc ul { flex-direction: column; align-items: center; }
+    .scientist-block { padding: 20px 18px; }
+    .video-grid { grid-template-columns: 1fr; }
+    .video-item iframe { height: 185px; }
+    .image-wrap { max-width: 100% !important; }
   }
 </style>
 </head>
@@ -684,34 +812,36 @@
         <li><a href="#healing">🕊️ Healing Miracles</a></li>
         <li><a href="#finetuning">🌌 Fine Tuning</a></li>
         <li><a href="#consciousness">🧠 Consciousness</a></li>
+        <li><a href="#origins">🧬 Origin of Life</a></li>
       </ul>
     </div>
     
     <p>Growing up, I didn't know who God was. I wanted to be sure about everything, as it was a major step for me, especially when I consider myself a rational person. So I started looking up a lot of information and then compiling it here.</p>
     
     <p>The thing with me is, I no longer have enough faith to be an atheist, and I learned to no longer follow emotions or the way I feel to shape the surrounding reality, but merely the truth, which you can call an immovable foundation, whereas the feelings are like the constantly changing weather.</p>
-    
-    <!-- Frank TUREK IMAGE - Centered with Green Theme -->
-<div class="image-wrap" style="max-width: 400px; margin: 24px auto; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0, 255, 136, 0.3); background: rgba(0, 15, 6, 0.5); text-align: center;">
-  <img src="FrankTurek.jpg" 
-       alt="Christian apologist Frank Turek calmly answering an atheist's objections about morality"
-       loading="lazy"
-       style="width: 100%; height: auto; display: block;">
-  <div class="image-caption" style="padding: 12px 16px; font-size: 0.8rem; color: #a0c0a0; border-top: 1px solid rgba(0, 255, 136, 0.15);">
-    📸 Frank Turek answering objections from an atheist regarding moral values. 
-    <a href="https://www.youtube.com/watch?v=avCgYlbuniM" target="_blank" rel="noopener noreferrer" style="color: #00ff88; text-decoration: none; border-bottom: 1px dotted #00ff88;">Watch the full debate →</a>
-  </div>
-</div>
-    
-    
-    <p>Mr. Frank Turek, a Christian apologist who holds debates with atheists in colleges, once asked people a simple question: "If Christianity were true, would you become a Christian?" And you would be surprised how many people said no.</p>
-    
-    <p> This in a way proves that belief in God is not a scientific issue in most cases, but that of a heart. I want you to not feel insecure in any way, shape, or form in the belief in God. I firmly believe God exists, that he loves you, and that he cares about you. The Bible, in the end, is God's love letter to you, and don't let anyone change your mind.</p>
-    
-    <p> Overall, I included a lot of information on this website, ranging from peer-reviewed studies. Archaeological discoveries. Mathematical probabilities that are hard to ignore. The list goes on. This archive is what I wish someone had handed me when I first started searching. Not opinions! Not someone telling me what to believe! Just the evidence. The facts. Something that you do is verified and well documented. You can check it yourself.</p>
+
+    <!-- FRANK TUREK IMAGE - Centered, Properly Sized -->
+    <div class="image-wrap" style="max-width: 400px; margin: 24px auto; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0, 255, 136, 0.3); background: rgba(0, 15, 6, 0.5); text-align: center;">
+      <img src="FrankTurek.jpg" 
+           alt="Christian apologist Frank Turek calmly answering an atheist's objections about morality"
+           loading="lazy"
+           style="width: 100%; height: auto; display: block; max-width: 100%;">
+      <div class="image-caption" style="padding: 12px 16px; font-size: 0.8rem; color: #a0c0a0; border-top: 1px solid rgba(0, 255, 136, 0.15);">
+        📸 <span style="color: #00ff88; font-weight: 500;">Frank Turek</span> answering objections from an atheist regarding moral values. 
+        <a href="https://www.youtube.com/watch?v=avCgYlbuniM" target="_blank" rel="noopener noreferrer" style="color: #00ff88; text-decoration: none; border-bottom: 1px dotted #00ff88;">Watch the full debate →</a>
+      </div>
+    </div>
+
+    <p>Mr. <span style="color: #00ff88; font-weight: 500;">Frank Turek</span>, a Christian apologist who holds debates with atheists in colleges, once asked people a simple question: "If Christianity were true, would you become a Christian?" And you would be surprised how many people said no.</p>
+
+    <p>This in a way proves that belief in God is <span style="color: #00ff88; font-weight: 500;">not a scientific issue in most cases, but that of a heart</span>. I want you to not feel insecure in any way, shape, or form in the belief in God. I firmly believe God exists, that He loves you, and that He cares about you. The Bible, in the end, is God's love letter to you, and don't let anyone change your mind.</p>
+
+    <p>Overall, I included a lot of information on this website, ranging from peer-reviewed studies. Archaeological discoveries. Mathematical probabilities that are hard to ignore. The list goes on. This archive is what I wish someone had handed me when I first started searching. Not opinions! Not someone telling me what to believe! Just the evidence. The facts. Something that is verified and well documented. You can check it yourself by scrolling down.</p>
+
     <div class="video-wrapper" style="margin: 30px 0; border-radius: 16px; overflow: hidden; border: 1px solid rgba(0, 255, 136, 0.2);">
-  <iframe width="100%" height="400" src="https://www.youtube.com/embed/ZsBhvSMQUk4" title="A Letter From God" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" style="display: block;"></iframe>
-</div>
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/ZsBhvSMQUk4" title="A Letter From God" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy" style="display: block;"></iframe>
+    </div>
+
     <p>Whatever the case, the following sections are the most compelling pieces of information I found and documented. Each one has sources. Look them up.</p>
     
     <div class="divider-light"></div>
@@ -752,7 +882,7 @@
     <div class="divider-light"></div>
     
     <h3 id="finetuning">🌌 Fine Tuning of the Universe</h3>
-    <p><strong>Barrow and Tipler's probability calculations.</strong> Physicists John D. Barrow and Frank J. Tipler wrote <em>The Anthropic Cosmological Principle</em> (Oxford University Press, 1986). They demonstrated that the universe's physical constants are finely tuned to a degree that physicists find genuinely disturbing. The odds they calculate for the human genome range from 4 to the negative 19.800,000 power to 4 to the negative 39,600,000 power. That is roughly 10 to the negative 11.9 million to 10 to the negative 23.8 million.</p>
+    <p><strong>Barrow and Tipler's probability calculations.</strong> Physicists John D. Barrow and Frank J. Tipler wrote <em>The Anthropic Cosmological Principle</em> (Oxford University Press, 1986). They demonstrated that the universe's physical constants are finely tuned to a degree that physicists find genuinely disturbing. The odds they calculate for the human genome range from 4 to the negative 19,800,000 power to 4 to the negative 39,600,000 power. That is roughly 10 to the negative 11.9 million to 10 to the negative 23.8 million.</p>
     
     <p>Let me put that in plain English. Even if every grain of sand on Earth were a slot machine spinning every second for the entire age of the universe, you would not expect the required sequence to emerge even once. The universe sits inside a very narrow life permitting range. Change any single constant and you get no stars, no chemistry, no life.</p>
     
@@ -768,9 +898,102 @@
     <p>No one has ever had a "math seizure." Millions of seizures documented. None cause logic problems. Brain stimulation can trigger movement and emotions but never reasoning across 400,000 plus brain surgeries. People live normally with half a brain missing. Conjoined twins who share brain tissue still have separate minds. Near death experiences like Pam Reynolds, who was brain dead with no blood flow yet described her surgery from the ceiling, defy explanation. The brain does not think. You think, using your brain. A piano does not play music. The pianist does.</p>
     
     <div class="divider-light"></div>
+
+    <!-- ===================== ORIGIN OF LIFE SECTION ===================== -->
+    <h3 id="origins">🧬 Origin of Life: The Problem Nobody Talks About</h3>
+
+    <p>This is the one that gets glossed over the most. You hear a lot about evolution, the Big Bang, cosmology. What you almost never hear discussed honestly is the question that actually sits underneath all of it: where did the first living cell come from? Not how life diversified once it existed. Not what happened after the universe began. But that very first step. Getting from dead chemistry to something that could copy itself, repair itself, build proteins, and pass on instructions. That step is where the atheist explanation completely falls apart, and the people who actually work on this problem are the first ones to say so.</p>
+
+    <!-- JAMES TOUR BLOCK -->
+    <div class="scientist-block">
+      <div class="block-label">🧪 James Tour — Rice University</div>
+      <h4>One of the World's Most Cited Chemists Says the Origin of Life Is an Unsolved Crisis</h4>
+
+      <p>James Tour is not a preacher with a chemistry degree. He is one of the most decorated synthetic chemists working today. He builds molecules in a lab at Rice University. He has done this for decades. He knows exactly what organic chemistry can and cannot do, and he has been very public about the fact that nobody in the field has come close to explaining how life assembled from non-life.</p>
+
+      <div class="inline-quote">
+        "I build molecules for a living. I can't begin to tell you how difficult that job is. I stand in awe of God because of what He has done through His creation. My faith has been increased through my research. Only a rookie who knows nothing about science would say science takes away from faith. If you really study science, it will bring you closer to God."
+        <cite>Dr. James Tour, synthetic chemist, Rice University</cite>
+      </div>
+
+      <p>Here is what Tour wants people to understand. Getting life started is not one problem. It is a stack of separate, crushing problems that all have to be solved at the same time.</p>
+
+      <p>First, the amino acid handedness problem. Amino acids come in two mirror image forms, left and right. Random chemistry produces them in a 50/50 mix. Every single protein in every living thing uses only the left-handed version. Every one. If even a few right-handed ones sneak in during assembly, the protein folds wrong and does nothing useful. Life requires 100 percent purity in the correct form, and nature on its own has never been shown to produce that.</p>
+
+      <p>Second, the sequencing problem. Even if you had the right amino acids with the right handedness, they need to be chained together in a very specific order to produce a working protein. You cannot just stack them randomly and expect something functional. The odds of getting even a short functional sequence by chance are somewhere around 1 in 10⁷⁴. That number alone is already beyond the total number of atoms in the observable universe.</p>
+
+      <p>Third, the chicken and egg problem. DNA carries the instructions to build proteins. But you need proteins to read and copy DNA. You cannot have one without the other. There is no naturalistic explanation for how this loop got started. There are many of these chicken and egg problems, this is just one example. Tour has actually challenged origin of life researchers publicly and repeatedly asking to show him a credible pathway to get needed compounds to make life. The responses have not been satisfying, as one could expect...</p>
+
+      <p>He does not say this because he gave up on science. He says it because he went deep enough into science to see what is actually there. The more you understand how a living cell actually works, the harder it is to believe any of it assembled by accident.</p>
+
+      <div class="video-grid">
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/I0InjvwBXTg" title="James Tour: Origin of Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Dr. James Tour on why the chemistry of life cannot assemble itself</div>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/Mhrz5OqJVCk" title="James Tour: Origin of Life Problems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Tour addressing the specific chemical barriers no one has solved</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEPHEN MEYER BLOCK -->
+    <div class="scientist-block">
+      <div class="block-label">📘 Stephen C. Meyer — Cambridge PhD</div>
+      <h4>The Information Problem: DNA Is a Language, and Languages Don't Write Themselves</h4>
+
+      <p>Stephen Meyer earned his PhD in the philosophy of science from Cambridge University. He has spent years going through what origin of life researchers actually publish, not just what gets reported in science journalism, but the real papers with the real numbers. What he found is something most people have never heard, because it never gets presented in a straightforward way.</p>
+
+      <p>His central argument is this. DNA carries information. Not metaphorically. Literally. It is a four-character digital code, organized into sequences that specify exactly how to build proteins. A single human cell contains around three billion of these characters arranged in a precise functional order. Bill Gates has said that DNA is like a computer program but far more complex than anything we have ever written. And Meyer's point is simple: in all of human experience, the only known source of functional, specified information is an intelligent mind. Not chemistry. Not physics. Not random processes. Minds.</p>
+
+      <div class="inline-quote">
+        "The discovery of the information-bearing properties of DNA provides strong grounds for inferring that intelligence played a role in the origin of life."
+        <cite>Stephen C. Meyer, Signature in the Cell (HarperOne, 2009)</cite>
+      </div>
+
+      <p>Meyer draws on research by Cambridge-trained molecular biologist Douglas Axe, who spent years running experiments on protein sequences and published his results in the Journal of Molecular Biology. What Axe found was that functional proteins are extraordinarily rare among all possible amino acid sequences. The ratio of functional to non-functional sequences is roughly 1 in 10⁷⁷. For a single protein. And a minimally functional cell requires not one protein but hundreds of them all working together.</p>
+
+      <div class="math-pill">
+        <strong>1 in 10¹⁶⁴</strong> — odds of randomly assembling one functional 150-amino-acid protein<br>
+        <span style="color:#6a8a6a; font-size:0.82rem;">That is 84 orders of magnitude beyond the number of atoms in the entire observable universe (10⁸⁰).<br>The mathematical impossibility threshold scientists use is 1 in 10⁵⁰. This number blows past that by 114 powers of ten.</span>
+      </div>
+
+      <div class="inline-quote">
+        "With odds standing at 1 chance in 10¹⁶⁴ of finding a functional protein among the possible 150-amino-acid compounds, the probability is 84 orders of magnitude smaller than the probability of finding the marked particle in the whole universe. The probability of finding a functional protein by chance alone is a trillion, trillion, trillion, trillion, trillion, trillion, trillion times smaller than the odds of finding a single specified particle among all the particles in the universe."
+        <cite>Stephen C. Meyer, Signature in the Cell</cite>
+      </div>
+
+      <p>These numbers are not made up. They come from actual experiments published in real scientific journals. Biologists who disagree with Meyer do not argue that the numbers are wrong. They argue about what the numbers mean. But here is the thing. In every other area of science, when we find something that looks designed, we conclude it was designed. That is how archaeology works. That is how forensics works. That is how the Search for "Extraterrestrial Intelligence" works. If we picked up a radio signal from space that contained words, numbers, nobody would say it was a coincidence. They would say it was a message. DNA is a message. The only question is who sent it.</p>
+
+      <p>Then there is the Cambrian explosion. Meyer wrote a whole book about it called Darwin's Doubt. Here is what happened. Around 541 million years ago, in a very short window of time, almost every major animal body plan just shows up in the fossil record. No slow buildup. No clear ancestors in the layers below. They appear suddenly. Biologists have been trying to explain it since Darwin. He called it a serious objection to his own theory. It still is. Where did all that new genetic information come from? Random mutation and natural selection can tweak existing features. They have never been shown to generate completely new body plans from scratch. The Cambrian explosion is not a solved problem. It is a pattern that looks exactly like what you would expect if someone was designing things, not if everything was stumbling along by accident.</p>
+
+      <div class="video-grid">
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/COyRH27wc84" title="Stephen Meyer: Signature in the Cell" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Meyer on the DNA information problem and what it points to</div>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/JW9gcjpt89o" title="Stephen Meyer: Darwin's Doubt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Darwin's Doubt — the Cambrian explosion and missing information</div>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/i8J3BG64TMU" title="Stephen Meyer: Return of the God Hypothesis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Return of the God Hypothesis — cosmology, physics, and fine tuning</div>
+        </div>
+        <div class="video-item">
+          <iframe src="https://www.youtube.com/embed/zBI8vU7vadY" title="Stephen Meyer: God and the Origin of the Universe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          <div class="video-caption">📹 Meyer on the origin of the universe and what the science actually shows</div>
+        </div>
+      </div>
+
+      <!-- REMOVED SENTENCE: The paragraph about Return of the God Hypothesis has been deleted as requested -->
+    </div>
+
+    <div class="divider-light"></div>
     
     <div class="cta-box">
-      <p>I put this archive together because I could not find all this evidence in one place when I was searching. If this raises questions for you, explore the full archives below. Each category contains hundreds of additional sources and documentation. <strong>Jesus Invictus. Jesus the Undefeated.</strong></p>
+      <p>I put this archive together because I could not find all this evidence in one place when I was searching. If this raises questions for you, explore the full archives below. Each category contains dozens upon dozens of additional sources and documentation. <strong>Jesus Invictus. Jesus the Undefeated.</strong></p>
     </div>
   </div>
 </div>
@@ -787,6 +1010,18 @@
   <div class="quote-card">
     <div class="quote-text">"The fine tuning of the universe is the most powerful evidence for the existence of God."</div>
     <div class="quote-author">Antony Flew, former atheist philosopher</div>
+  </div>
+  <div class="quote-card">
+    <div class="quote-text">"I build molecules for a living. I can't begin to tell you how difficult that job is. I stand in awe of God because of what He has done through His creation. Only a rookie who knows nothing about science would say science takes away from faith. If you really study science, it will bring you closer to God."</div>
+    <div class="quote-author">Dr. James Tour, synthetic chemist, Rice University</div>
+  </div>
+  <div class="quote-card">
+    <div class="quote-text">"The probability of finding a functional protein by chance alone is a trillion, trillion, trillion, trillion, trillion, trillion, trillion times smaller than the odds of finding a single specified particle among all the particles in the universe."</div>
+    <div class="quote-author">Stephen C. Meyer, Signature in the Cell</div>
+  </div>
+  <div class="quote-card">
+    <div class="quote-text">"My argument against God was that the universe seemed so cruel and unjust. But how had I got this idea of just and unjust? A man does not call a line crooked unless he has some idea of a straight line. What was I comparing this universe with when I called it unjust?"</div>
+    <div class="quote-author">C.S. Lewis, Mere Christianity</div>
   </div>
 </div>
 
@@ -895,7 +1130,6 @@
 </div>
 
 <script>
-  // Intersection Observer for animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -903,7 +1137,6 @@
   }, { threshold: 0.1, rootMargin: '20px' });
   document.querySelectorAll('.card, .quote-card').forEach(el => observer.observe(el));
 
-  // Back to top button
   const backBtn = document.getElementById('backToTop');
   const progressBar = document.getElementById('progressBar');
   window.addEventListener('scroll', () => {
@@ -915,13 +1148,11 @@
   });
   backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  // Cursor glow effect
   const cursorGlow = document.getElementById('cursorGlow');
   document.addEventListener('mousemove', (e) => {
     cursorGlow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
   });
 
-  // Card click navigation
   document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
       const url = card.getAttribute('data-url');
@@ -929,7 +1160,6 @@
     });
   });
 
-  // Language switcher
   const langSelector = document.getElementById('language-selector');
   if (langSelector) {
     langSelector.addEventListener('change', function() {
@@ -941,7 +1171,6 @@
     });
   }
 
-  // Floating verses
   const verses = [
     { t: "I am the way, the truth, and the life.", r: "John 14:6" },
     { t: "Nor is there salvation in any other.", r: "Acts 4:12" },
